@@ -20,26 +20,38 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7lW-45-MsE" customClass="CameraButton" customModule="SJ90" customModuleProvider="target">
-                    <rect key="frame" x="154" y="561" width="66" height="66"/>
-                    <color key="backgroundColor" red="0.89411764709999997" green="0.94509803920000002" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wyJ-pn-Jpc" userLabel="Frame For Capture">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBo-xk-d70" customClass="CameraButton" customModule="SJ90" customModuleProvider="target">
+                            <rect key="frame" x="154" y="563" width="66" height="66"/>
+                            <color key="backgroundColor" red="0.89411764709999997" green="0.94509803920000002" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="66" id="Dw2-yK-skK"/>
+                                <constraint firstAttribute="width" constant="66" id="inU-q9-Zda"/>
+                            </constraints>
+                            <state key="normal">
+                                <color key="titleColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="66" id="0zT-d3-WPY"/>
-                        <constraint firstAttribute="width" constant="66" id="WjQ-ZW-Job"/>
+                        <constraint firstItem="dBo-xk-d70" firstAttribute="centerX" secondItem="wyJ-pn-Jpc" secondAttribute="centerX" id="fNi-CL-6lM"/>
+                        <constraint firstAttribute="bottom" secondItem="dBo-xk-d70" secondAttribute="bottom" constant="38" id="mZS-iz-Bk3"/>
                     </constraints>
-                    <state key="normal">
-                        <color key="titleColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </state>
-                </button>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="7lW-45-MsE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="m5D-5v-MrI"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="7lW-45-MsE" secondAttribute="bottom" constant="40" id="qIJ-ln-nJ0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wyJ-pn-Jpc" secondAttribute="trailing" id="7PE-Fq-usk"/>
+                <constraint firstItem="wyJ-pn-Jpc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="-20" id="7SR-Z9-wZX"/>
+                <constraint firstItem="wyJ-pn-Jpc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Y3E-NO-Uuo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="wyJ-pn-Jpc" secondAttribute="bottom" id="yYM-hm-GG3"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="-151" y="-29"/>
+            <point key="canvasLocation" x="-151.5" y="-29.5"/>
         </view>
     </objects>
 </document>
