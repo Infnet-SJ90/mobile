@@ -54,14 +54,54 @@
 		D1B02FC22145A6C1003EE67F /* SJ90 */ = {
 			isa = PBXGroup;
 			children = (
-				D1B02FC32145A6C1003EE67F /* AppDelegate.swift */,
-				D1B02FC52145A6C1003EE67F /* ViewController.swift */,
-				D1B02FC72145A6C2003EE67F /* Main.storyboard */,
-				D1B02FCA2145A6C7003EE67F /* Assets.xcassets */,
-				D1B02FCC2145A6C7003EE67F /* LaunchScreen.storyboard */,
-				D1B02FCF2145A6C7003EE67F /* Info.plist */,
+				D1B02FD52145A7E3003EE67F /* Features */,
+				D1B02FD62145A7F4003EE67F /* Helpers */,
+				D1B02FD72145A7FD003EE67F /* Resources */,
+				D1B02FD82145A806003EE67F /* Services */,
+				D1B02FD92145A813003EE67F /* Storyboards */,
 			);
 			path = SJ90;
+			sourceTree = "<group>";
+		};
+		D1B02FD52145A7E3003EE67F /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				D1B02FC52145A6C1003EE67F /* ViewController.swift */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		D1B02FD62145A7F4003EE67F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D1B02FD72145A7FD003EE67F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D1B02FC32145A6C1003EE67F /* AppDelegate.swift */,
+				D1B02FCA2145A6C7003EE67F /* Assets.xcassets */,
+				D1B02FCF2145A6C7003EE67F /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D1B02FD82145A806003EE67F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D1B02FD92145A813003EE67F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D1B02FCC2145A6C7003EE67F /* LaunchScreen.storyboard */,
+				D1B02FC72145A6C2003EE67F /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,7 +253,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -267,7 +307,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -290,7 +330,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = infnet.SJ90;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -309,7 +349,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = infnet.SJ90;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
