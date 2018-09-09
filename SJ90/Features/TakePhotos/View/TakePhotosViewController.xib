@@ -20,22 +20,26 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="33445" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsv-2E-XU8">
-                    <rect key="frame" x="166" y="293" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                    <color key="textColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7lW-45-MsE" customClass="CameraButton" customModule="SJ90" customModuleProvider="target">
+                    <rect key="frame" x="154" y="561" width="66" height="66"/>
+                    <color key="backgroundColor" red="0.89411764709999997" green="0.94509803920000002" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="66" id="0zT-d3-WPY"/>
+                        <constraint firstAttribute="width" constant="66" id="WjQ-ZW-Job"/>
+                    </constraints>
+                    <state key="normal">
+                        <color key="titleColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="lsv-2E-XU8" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="273" id="UVX-eH-9qt"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="lsv-2E-XU8" secondAttribute="bottom" constant="353" id="UYK-cn-GUh"/>
-                <constraint firstItem="lsv-2E-XU8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="166" id="Ux3-dU-5S4"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lsv-2E-XU8" secondAttribute="trailing" constant="167" id="VTS-GV-g0E"/>
+                <constraint firstItem="7lW-45-MsE" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="m5D-5v-MrI"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="7lW-45-MsE" secondAttribute="bottom" constant="40" id="qIJ-ln-nJ0"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="33.5" y="74.5"/>
+            <point key="canvasLocation" x="-151" y="-29"/>
         </view>
     </objects>
 </document>
