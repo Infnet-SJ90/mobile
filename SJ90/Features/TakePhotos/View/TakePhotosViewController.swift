@@ -57,29 +57,6 @@ class TakePhotosViewController: UIViewController {
             } catch {print(error)}
         }
     }
-    
-    fileprivate func updatePreviewLayer(layer: AVCaptureConnection, orientation: AVCaptureVideoOrientation) {
-        layer.videoOrientation = orientation
-        previewLayer?.frame = self.view.bounds
-    }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        if let connection =  self.previewLayer?.connection {
-            let orientation: UIDeviceOrientation = UIDevice.current.orientation
-            let previewLayerConnection : AVCaptureConnection = connection
-            if previewLayerConnection.isVideoOrientationSupported {
-                switch (orientation) {
-                    case .portrait: updatePreviewLayer(layer: previewLayerConnection, orientation: .portrait)
-                    case .landscapeRight: updatePreviewLayer(layer: previewLayerConnection, orientation: .landscapeLeft)
-                    case .landscapeLeft: updatePreviewLayer(layer: previewLayerConnection, orientation: .landscapeRight)
-                    case .portraitUpsideDown: updatePreviewLayer(layer: previewLayerConnection, orientation: .portraitUpsideDown)
-                    default: updatePreviewLayer(layer: previewLayerConnection, orientation: .portrait)
-                }
-            }
-        }
-    }
 }
 
 // MARK: - Frame for capture methods
@@ -116,9 +93,6 @@ extension TakePhotosViewController {
                     let orientation: UIDeviceOrientation = UIDevice.current.orientation
                     switch (orientation) {
                         case .portrait: self.previewLayer!.connection?.videoOrientation = .portrait
-                        case .portraitUpsideDown: self.previewLayer!.connection?.videoOrientation = .portraitUpsideDown
-                        case .landscapeRight: self.previewLayer!.connection?.videoOrientation = .landscapeLeft
-                        case .landscapeLeft: self.previewLayer!.connection?.videoOrientation = .landscapeRight
                         default: self.previewLayer!.connection?.videoOrientation = .portrait
                     }
                     
@@ -175,16 +149,6 @@ extension TakePhotosViewController {
             
             if let videoConnection = self.stillImageOutput!.connection(withMediaType: AVMediaTypeVideo) {   //2a
                 
-                let orientation: UIDeviceOrientation = UIDevice.current.orientation
-                
-                switch (orientation) {
-                case .portrait: videoConnection.videoOrientation = AVCaptureVideoOrientation.portrait
-                case .portraitUpsideDown: videoConnection.videoOrientation = AVCaptureVideoOrientation.portraitUpsideDown
-                case .landscapeRight: videoConnection.videoOrientation = AVCaptureVideoOrientation.landscapeLeft
-                case .landscapeLeft: videoConnection.videoOrientation = AVCaptureVideoOrientation.landscapeRight
-                default: videoConnection.videoOrientation = AVCaptureVideoOrientation.portrait
-                }
-                
                 self.stillImageOutput?.captureStillImageAsynchronously(from: videoConnection, completionHandler: {(sampleBuffer, error) in
                     
                     if (sampleBuffer != nil) {
@@ -196,7 +160,6 @@ extension TakePhotosViewController {
                         let cgImageRef = CGImage(jpegDataProviderSource: dataProvider!, decode: nil, shouldInterpolate: true, intent: CGColorRenderingIntent.defaultIntent)
                         
                         let imagePortrait = UIImage(cgImage: cgImageRef!, scale: 1.0, orientation: .right).ImageOrientation
-                        let imageLandscape = UIImage(cgImage: cgImageRef!, scale: 1.0, orientation: .up).ImageOrientation
                         
                         DispatchQueue.main.async(execute: {
                             
@@ -204,9 +167,9 @@ extension TakePhotosViewController {
                             self.captureSession!.removeInput(currentCameraInput)
                             
                             if (currentCameraInput as! AVCaptureDeviceInput).device.position == .back {
-                                
-                                if UIDevice.current.orientation.isPortrait {PhotoTakenImg.sharedInstance.photoTakenImg.image = imagePortrait()}
-                                else if UIDevice.current.orientation.isLandscape {PhotoTakenImg.sharedInstance.photoTakenImg.image = imageLandscape()}
+                                if UIDevice.current.orientation.isPortrait {
+                                    PhotoTakenImg.sharedInstance.photoTakenImg.image = imagePortrait()
+                                }
                             }
                             self.captureSession!.stopRunning()
                             
