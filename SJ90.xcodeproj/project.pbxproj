@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D1B02FC42145A6C1003EE67F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B02FC32145A6C1003EE67F /* AppDelegate.swift */; };
-		D1B02FC62145A6C1003EE67F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B02FC52145A6C1003EE67F /* ViewController.swift */; };
 		D1B02FC92145A6C2003EE67F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1B02FC72145A6C2003EE67F /* Main.storyboard */; };
 		D1B02FCB2145A6C7003EE67F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1B02FCA2145A6C7003EE67F /* Assets.xcassets */; };
 		D1B02FCE2145A6C7003EE67F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1B02FCC2145A6C7003EE67F /* LaunchScreen.storyboard */; };
@@ -17,7 +16,6 @@
 /* Begin PBXFileReference section */
 		D1B02FC02145A6C1003EE67F /* SJ90.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SJ90.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1B02FC32145A6C1003EE67F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D1B02FC52145A6C1003EE67F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D1B02FC82145A6C2003EE67F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D1B02FCA2145A6C7003EE67F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1B02FCD2145A6C7003EE67F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -66,7 +64,7 @@
 		D1B02FD52145A7E3003EE67F /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				D1B02FC52145A6C1003EE67F /* ViewController.swift */,
+				D1B02FDA2145AF42003EE67F /* TakePhoto */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -102,6 +100,13 @@
 				D1B02FC72145A6C2003EE67F /* Main.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D1B02FDA2145AF42003EE67F /* TakePhoto */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TakePhoto;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,7 +180,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1B02FC62145A6C1003EE67F /* ViewController.swift in Sources */,
 				D1B02FC42145A6C1003EE67F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
