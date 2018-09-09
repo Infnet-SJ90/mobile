@@ -15,6 +15,7 @@ class TakePhotosViewController: UIViewController {
     
     @IBOutlet weak fileprivate var takePhotoButton: CameraButton!
     @IBOutlet weak fileprivate var frameForCapture: UIView!
+    @IBOutlet weak fileprivate var flashButton: UIButton!
     
     fileprivate var captureSession: AVCaptureSession?
     fileprivate var stillImageOutput: AVCaptureStillImageOutput?
@@ -24,10 +25,16 @@ class TakePhotosViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.captureSessions()
+        self.fetchOptions()
+        self.flashButtonOff()
     }
-    
+}
 
-    private func captureSessions() {
+extension TakePhotosViewController {
+    
+    fileprivate func captureSessions() {
         
         captureSession = AVCaptureSession()
         captureSession!.sessionPreset = AVCaptureSessionPresetHigh
@@ -42,48 +49,67 @@ class TakePhotosViewController: UIViewController {
             input = nil
         }
         
-        let otherQueue: DispatchQueue = DispatchQueue(label: "CameraSessionController Session", attributes: [])
+        let cameraSessionControllerQueue: DispatchQueue = DispatchQueue(label: "CameraSessionController Session", attributes: [])
         
-        otherQueue.async(execute: { () -> Void in
-            
+        cameraSessionControllerQueue.async(execute: { () -> Void in
             if erro == nil && self.captureSession!.canAddInput(input) {
-                
                 self.captureSession!.addInput(input)
                 self.stillImageOutput = AVCaptureStillImageOutput()
                 self.stillImageOutput!.outputSettings = [AVVideoCodecKey: AVVideoCodecJPEG]
                 
                 if self.captureSession!.canAddOutput(self.stillImageOutput) {
-                    
                     self.captureSession!.addOutput(self.stillImageOutput)
                     self.previewLayer = AVCaptureVideoPreviewLayer(session: self.captureSession)
                     self.previewLayer!.videoGravity = AVLayerVideoGravityResizeAspectFill
                     
                     let orientation: UIDeviceOrientation = UIDevice.current.orientation
-                    
                     switch (orientation) {
-                        
-                    case .portrait: self.previewLayer!.connection?.videoOrientation = .portrait
-                    case .portraitUpsideDown: self.previewLayer!.connection?.videoOrientation = .portraitUpsideDown
-                    case .landscapeRight: self.previewLayer!.connection?.videoOrientation = .landscapeLeft
-                    case .landscapeLeft: self.previewLayer!.connection?.videoOrientation = .landscapeRight
-                    default: self.previewLayer!.connection?.videoOrientation = .portrait
-                        
+                        case .portrait: self.previewLayer!.connection?.videoOrientation = .portrait
+                        case .portraitUpsideDown: self.previewLayer!.connection?.videoOrientation = .portraitUpsideDown
+                        case .landscapeRight: self.previewLayer!.connection?.videoOrientation = .landscapeLeft
+                        case .landscapeLeft: self.previewLayer!.connection?.videoOrientation = .landscapeRight
+                        default: self.previewLayer!.connection?.videoOrientation = .portrait
                     }
                     
                     self.captureSession!.startRunning()
                     
                     DispatchQueue.main.async(execute: {
-                        
                         self.previewLayer!.frame = self.frameForCapture.bounds
                         self.frameForCapture.layer.addSublayer(self.previewLayer!)
                         self.frameForCapture.addSubview(self.takePhotoButton)
-//                        self.frameForCapture.addSubview(self.flashButton)
+                        self.frameForCapture.addSubview(self.flashButton)
                         self.view.layoutIfNeeded()
-                        
                     })
                 }
             }
         })
+    }
+}
+
+extension TakePhotosViewController {
+    
+    fileprivate func fetchOptions() {
+        let fetchOptions: PHFetchOptions = PHFetchOptions()
+        fetchOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: true)]
         
+        if let device = backCamera {
+            if device.hasFlash {
+                do {
+                    try device.lockForConfiguration()
+                } catch _ {
+                    print("closer")
+                }
+                
+                device.flashMode = AVCaptureFlashMode.off
+                device.unlockForConfiguration()
+            }
+        }
+    }
+    
+    fileprivate func flashButtonOff() {
+        let flashOffImage = UIImage(named: "betterflash")
+        flashOffImage?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+        flashButton.setImage(flashOffImage, for: UIControlState())
+        flashButton.tintColor = UIColor.white
     }
 }

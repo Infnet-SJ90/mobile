@@ -35,9 +35,22 @@
                                 <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9v-gS-Cqn">
+                            <rect key="frame" x="16" y="36" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="Oqt-4k-HBB"/>
+                                <constraint firstAttribute="height" constant="44" id="VzU-Za-zwn"/>
+                            </constraints>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" image="betterflash">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
+                        <constraint firstItem="d9v-gS-Cqn" firstAttribute="top" secondItem="wyJ-pn-Jpc" secondAttribute="top" constant="36" id="WHI-hv-x56"/>
+                        <constraint firstItem="d9v-gS-Cqn" firstAttribute="leading" secondItem="wyJ-pn-Jpc" secondAttribute="leading" constant="16" id="Yiw-bN-A7b"/>
                         <constraint firstItem="dBo-xk-d70" firstAttribute="centerX" secondItem="wyJ-pn-Jpc" secondAttribute="centerX" id="fNi-CL-6lM"/>
                         <constraint firstAttribute="bottom" secondItem="dBo-xk-d70" secondAttribute="bottom" constant="38" id="mZS-iz-Bk3"/>
                     </constraints>
@@ -54,4 +67,7 @@
             <point key="canvasLocation" x="-151.5" y="-29.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="betterflash" width="188" height="224"/>
+    </resources>
 </document>
