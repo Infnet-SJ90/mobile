@@ -12,6 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TakePhotosViewController" customModule="SJ90" customModuleProvider="target">
             <connections>
+                <outlet property="flashButton" destination="d9v-gS-Cqn" id="pyZ-ZM-s35"/>
+                <outlet property="frameForCapture" destination="wyJ-pn-Jpc" id="3kb-vS-GvB"/>
+                <outlet property="takePhotoButton" destination="dBo-xk-d70" id="5K8-5r-5FG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -34,6 +37,9 @@
                                 <color key="titleColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <connections>
+                                <action selector="takePhoto:" destination="-1" eventType="touchUpInside" id="Foi-b4-f4y"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9v-gS-Cqn">
                             <rect key="frame" x="16" y="36" width="44" height="44"/>
@@ -45,6 +51,9 @@
                             <state key="normal" image="betterflash">
                                 <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <connections>
+                                <action selector="flashButton:" destination="-1" eventType="touchUpInside" id="xeV-ps-SR5"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.66799789669999998" green="0.47512125970000002" blue="0.25860109930000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -30,6 +30,52 @@ class TakePhotosViewController: UIViewController {
         self.fetchOptions()
         self.flashButtonOff()
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touchPer = touches.first! as UITouch
+        let screenSize = frameForCapture.bounds
+        let focus_x =  touchPer.location(in: frameForCapture).y / screenSize.width
+        let focus_y =  touchPer.location(in: frameForCapture).y / screenSize.height
+        let focusPoint = CGPoint(x: focus_x, y: focus_y)
+        
+        if let device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo) {
+            
+            do {
+                
+                try device.lockForConfiguration()
+                
+                device.focusPointOfInterest = focusPoint
+                device.focusMode = AVCaptureFocusMode.continuousAutoFocus
+                device.exposurePointOfInterest = focusPoint
+                device.exposureMode = AVCaptureExposureMode.continuousAutoExposure
+                device.unlockForConfiguration()
+                
+            } catch {print(error)}
+        }
+    }
+    
+    fileprivate func updatePreviewLayer(layer: AVCaptureConnection, orientation: AVCaptureVideoOrientation) {
+        layer.videoOrientation = orientation
+        previewLayer?.frame = self.view.bounds
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        if let connection =  self.previewLayer?.connection {
+            let orientation: UIDeviceOrientation = UIDevice.current.orientation
+            let previewLayerConnection : AVCaptureConnection = connection
+            if previewLayerConnection.isVideoOrientationSupported {
+                switch (orientation) {
+                    case .portrait: updatePreviewLayer(layer: previewLayerConnection, orientation: .portrait)
+                    case .landscapeRight: updatePreviewLayer(layer: previewLayerConnection, orientation: .landscapeLeft)
+                    case .landscapeLeft: updatePreviewLayer(layer: previewLayerConnection, orientation: .landscapeRight)
+                    case .portraitUpsideDown: updatePreviewLayer(layer: previewLayerConnection, orientation: .portraitUpsideDown)
+                    default: updatePreviewLayer(layer: previewLayerConnection, orientation: .portrait)
+                }
+            }
+        }
+    }
 }
 
 extension TakePhotosViewController {
@@ -111,5 +157,82 @@ extension TakePhotosViewController {
         flashOffImage?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
         flashButton.setImage(flashOffImage, for: UIControlState())
         flashButton.tintColor = UIColor.white
+    }
+}
+
+extension TakePhotosViewController {
+    
+    @IBAction func takePhoto(_ sender: AnyObject) {
+        let TakePhoto: DispatchQueue = DispatchQueue(label:"TakePhoto", attributes: .concurrent)
+        TakePhoto.async(execute: { () in
+            
+            if let videoConnection = self.stillImageOutput!.connection(withMediaType: AVMediaTypeVideo) {   //2a
+                
+                let orientation: UIDeviceOrientation = UIDevice.current.orientation
+                
+                switch (orientation) {
+                case .portrait: videoConnection.videoOrientation = AVCaptureVideoOrientation.portrait
+                case .portraitUpsideDown: videoConnection.videoOrientation = AVCaptureVideoOrientation.portraitUpsideDown
+                case .landscapeRight: videoConnection.videoOrientation = AVCaptureVideoOrientation.landscapeLeft
+                case .landscapeLeft: videoConnection.videoOrientation = AVCaptureVideoOrientation.landscapeRight
+                default: videoConnection.videoOrientation = AVCaptureVideoOrientation.portrait
+                }
+                
+                self.stillImageOutput?.captureStillImageAsynchronously(from: videoConnection, completionHandler: {(sampleBuffer, error) in
+                    
+                    if (sampleBuffer != nil) {
+                        
+                        let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)
+                        
+                        let dataProvider = CGDataProvider(data: imageData! as CFData)
+                        
+                        let cgImageRef = CGImage(jpegDataProviderSource: dataProvider!, decode: nil, shouldInterpolate: true, intent: CGColorRenderingIntent.defaultIntent)
+                        
+                        let imagePortrait = UIImage(cgImage: cgImageRef!, scale: 1.0, orientation: .right).ImageOrientation
+                        let imageLandscape = UIImage(cgImage: cgImageRef!, scale: 1.0, orientation: .up).ImageOrientation
+                        
+                        DispatchQueue.main.async(execute: {
+                            
+                            let currentCameraInput: AVCaptureInput = self.captureSession!.inputs[0] as! AVCaptureInput
+                            self.captureSession!.removeInput(currentCameraInput)
+                            
+                            if (currentCameraInput as! AVCaptureDeviceInput).device.position == .back {
+                                
+                                if UIDevice.current.orientation.isPortrait {PhotoTakenImg.sharedInstance.photoTakenImg.image = imagePortrait()}
+                                else if UIDevice.current.orientation.isLandscape {PhotoTakenImg.sharedInstance.photoTakenImg.image = imageLandscape()}
+                            }
+                            self.captureSession!.stopRunning()
+                            self.performSegue(withIdentifier: "showCapturedImageSegue", sender: self)
+                        })
+                    }
+                })
+            }
+        })
+    }
+    
+    @IBAction private func flashButton(_ sender: AnyObject) {
+        if let device = backCamera {
+            if device.hasFlash {
+                if (device.hasFlash && (device.flashMode == AVCaptureFlashMode.on)) {
+                    do {
+                        try device.lockForConfiguration()
+                    }catch _ {}
+                    device.flashMode = AVCaptureFlashMode.off
+                    device.unlockForConfiguration()
+                    self.flashButtonOff()
+                } else if (device.hasFlash && (device.flashMode == AVCaptureFlashMode.off)) {
+                    do {
+                        try device.lockForConfiguration()
+                    } catch _ {}
+                    device.flashMode = AVCaptureFlashMode.on
+                    device.unlockForConfiguration()
+                    
+                    let flashOnImage = UIImage(named: "flashOn")
+                    flashOnImage?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
+                    flashButton.setImage(flashOnImage, for: UIControlState())
+                    flashButton.tintColor = UIColor.yellow
+                }
+            }
+        }
     }
 }
