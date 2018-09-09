@@ -31,6 +31,10 @@ class TakePhotosViewController: UIViewController {
         self.flashButtonOff()
     }
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let touchPer = touches.first! as UITouch
         let screenSize = frameForCapture.bounds

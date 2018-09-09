@@ -20,6 +20,10 @@ class SavePhotosViewController: UIViewController {
        self.capturedImage.image = PhotoTakenImg.sharedInstance.photoTakenImg.image
     }
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     @IBAction private func cancelButtonTapped(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)
     }
