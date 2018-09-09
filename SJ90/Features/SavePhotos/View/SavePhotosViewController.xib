@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SavePhotosViewController" customModule="SJ90" customModuleProvider="target">
+            <connections>
+                <outlet property="capturedImage" destination="dzm-Wt-9Oa" id="wfz-Zi-Qal"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dzm-Wt-9Oa">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="akh-W1-Hey" userLabel="Close">
+                    <rect key="frame" x="16" y="30" width="33" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="33" id="JJS-vK-cut"/>
+                        <constraint firstAttribute="width" constant="33" id="Jao-0e-fMs"/>
+                    </constraints>
+                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" image="closer">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="cancelButtonTapped:" destination="-1" eventType="touchUpInside" id="mYD-v6-QzM"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="dzm-Wt-9Oa" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="-20" id="3GZ-lK-YEx"/>
+                <constraint firstItem="akh-W1-Hey" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="30" id="6JV-xQ-Fg5"/>
+                <constraint firstItem="dzm-Wt-9Oa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="TLl-1J-XM1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="dzm-Wt-9Oa" secondAttribute="bottom" id="dso-6a-aYY"/>
+                <constraint firstItem="akh-W1-Hey" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="sgg-Rl-AG6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dzm-Wt-9Oa" secondAttribute="trailing" id="whj-rR-WjJ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="35.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="closer" width="196" height="196"/>
+    </resources>
+</document>

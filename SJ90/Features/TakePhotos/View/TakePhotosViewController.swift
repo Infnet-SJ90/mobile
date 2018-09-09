@@ -205,7 +205,9 @@ extension TakePhotosViewController {
                                 else if UIDevice.current.orientation.isLandscape {PhotoTakenImg.sharedInstance.photoTakenImg.image = imageLandscape()}
                             }
                             self.captureSession!.stopRunning()
-                            self.performSegue(withIdentifier: "showCapturedImageSegue", sender: self)
+                            
+                            let newViewController = SavePhotosViewController(nibName: "SavePhotosViewController", bundle: nil)
+                            self.present(newViewController, animated: true, completion: nil)
                         })
                     }
                 })

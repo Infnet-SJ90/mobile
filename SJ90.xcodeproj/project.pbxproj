@@ -16,6 +16,8 @@
 		D1B02FE22145B2FC003EE67F /* CameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B02FE12145B2FC003EE67F /* CameraButton.swift */; };
 		D1B02FE42145B859003EE67F /* ImageOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B02FE32145B859003EE67F /* ImageOrientation.swift */; };
 		D1B02FE62145BE92003EE67F /* PhotoTakenImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B02FE52145BE92003EE67F /* PhotoTakenImg.swift */; };
+		D1B02FEB2145C6CA003EE67F /* SavePhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B02FE92145C6CA003EE67F /* SavePhotosViewController.swift */; };
+		D1B02FEC2145C6CA003EE67F /* SavePhotosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1B02FEA2145C6CA003EE67F /* SavePhotosViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		D1B02FE12145B2FC003EE67F /* CameraButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraButton.swift; sourceTree = "<group>"; };
 		D1B02FE32145B859003EE67F /* ImageOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageOrientation.swift; sourceTree = "<group>"; };
 		D1B02FE52145BE92003EE67F /* PhotoTakenImg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTakenImg.swift; sourceTree = "<group>"; };
+		D1B02FE92145C6CA003EE67F /* SavePhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePhotosViewController.swift; sourceTree = "<group>"; };
+		D1B02FEA2145C6CA003EE67F /* SavePhotosViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavePhotosViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,7 @@
 		D1B02FD52145A7E3003EE67F /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				D1B02FE72145C689003EE67F /* SavePhotos */,
 				D1B02FDA2145AF42003EE67F /* TakePhotos */,
 			);
 			path = Features;
@@ -140,6 +145,23 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		D1B02FE72145C689003EE67F /* SavePhotos */ = {
+			isa = PBXGroup;
+			children = (
+				D1B02FE82145C699003EE67F /* View */,
+			);
+			path = SavePhotos;
+			sourceTree = "<group>";
+		};
+		D1B02FE82145C699003EE67F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D1B02FE92145C6CA003EE67F /* SavePhotosViewController.swift */,
+				D1B02FEA2145C6CA003EE67F /* SavePhotosViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -201,6 +223,7 @@
 				D1B02FCE2145A6C7003EE67F /* LaunchScreen.storyboard in Resources */,
 				D1B02FCB2145A6C7003EE67F /* Assets.xcassets in Resources */,
 				D1B02FDE2145B049003EE67F /* TakePhotosViewController.xib in Resources */,
+				D1B02FEC2145C6CA003EE67F /* SavePhotosViewController.xib in Resources */,
 				D1B02FC92145A6C2003EE67F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,6 +239,7 @@
 				D1B02FE62145BE92003EE67F /* PhotoTakenImg.swift in Sources */,
 				D1B02FDD2145B049003EE67F /* TakePhotosViewController.swift in Sources */,
 				D1B02FE22145B2FC003EE67F /* CameraButton.swift in Sources */,
+				D1B02FEB2145C6CA003EE67F /* SavePhotosViewController.swift in Sources */,
 				D1B02FC42145A6C1003EE67F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
