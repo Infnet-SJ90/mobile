@@ -19,7 +19,7 @@ class TakePhotosViewController: UIViewController {
     fileprivate var captureSession: AVCaptureSession?
     fileprivate var stillImageOutput: AVCaptureStillImageOutput?
     fileprivate var image: UIImageView = UIImageView()
-    fileprivate var previewLayer: AVCaptureVideoPreviewLayer? // 1a
+    fileprivate var previewLayer: AVCaptureVideoPreviewLayer? 
     fileprivate let backCamera = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
 
     override func viewDidLoad() {

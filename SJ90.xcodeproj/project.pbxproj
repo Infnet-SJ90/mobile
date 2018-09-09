@@ -14,6 +14,7 @@
 		D1B02FDD2145B049003EE67F /* TakePhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B02FDB2145B049003EE67F /* TakePhotosViewController.swift */; };
 		D1B02FDE2145B049003EE67F /* TakePhotosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1B02FDC2145B049003EE67F /* TakePhotosViewController.xib */; };
 		D1B02FE22145B2FC003EE67F /* CameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B02FE12145B2FC003EE67F /* CameraButton.swift */; };
+		D1B02FE42145B859003EE67F /* ImageOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B02FE32145B859003EE67F /* ImageOrientation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D1B02FDB2145B049003EE67F /* TakePhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePhotosViewController.swift; sourceTree = "<group>"; };
 		D1B02FDC2145B049003EE67F /* TakePhotosViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TakePhotosViewController.xib; sourceTree = "<group>"; };
 		D1B02FE12145B2FC003EE67F /* CameraButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraButton.swift; sourceTree = "<group>"; };
+		D1B02FE32145B859003EE67F /* ImageOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageOrientation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				D1B02FE12145B2FC003EE67F /* CameraButton.swift */,
+				D1B02FE32145B859003EE67F /* ImageOrientation.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1B02FE42145B859003EE67F /* ImageOrientation.swift in Sources */,
 				D1B02FDD2145B049003EE67F /* TakePhotosViewController.swift in Sources */,
 				D1B02FE22145B2FC003EE67F /* CameraButton.swift in Sources */,
 				D1B02FC42145A6C1003EE67F /* AppDelegate.swift in Sources */,
