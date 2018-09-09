@@ -78,6 +78,7 @@ class TakePhotosViewController: UIViewController {
     }
 }
 
+// MARK: - Frame for capture methods
 extension TakePhotosViewController {
     
     fileprivate func captureSessions() {
@@ -132,6 +133,7 @@ extension TakePhotosViewController {
     }
 }
 
+// MARK: - Flash methods
 extension TakePhotosViewController {
     
     fileprivate func fetchOptions() {
@@ -160,6 +162,7 @@ extension TakePhotosViewController {
     }
 }
 
+// MARK: - Action methods
 extension TakePhotosViewController {
     
     @IBAction func takePhoto(_ sender: AnyObject) {
