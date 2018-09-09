@@ -34,29 +34,6 @@ class TakePhotosViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let touchPer = touches.first! as UITouch
-        let screenSize = frameForCapture.bounds
-        let focus_x =  touchPer.location(in: frameForCapture).y / screenSize.width
-        let focus_y =  touchPer.location(in: frameForCapture).y / screenSize.height
-        let focusPoint = CGPoint(x: focus_x, y: focus_y)
-        
-        if let device = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo) {
-            
-            do {
-                
-                try device.lockForConfiguration()
-                
-                device.focusPointOfInterest = focusPoint
-                device.focusMode = AVCaptureFocusMode.continuousAutoFocus
-                device.exposurePointOfInterest = focusPoint
-                device.exposureMode = AVCaptureExposureMode.continuousAutoExposure
-                device.unlockForConfiguration()
-                
-            } catch {print(error)}
-        }
-    }
 }
 
 // MARK: - Frame for capture methods
