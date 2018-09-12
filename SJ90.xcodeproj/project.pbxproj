@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5630DB440203A2CA34ACF220 /* Pods_SJ90.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 349B62EBE36F695AD6EF0B71 /* Pods_SJ90.framework */; };
 		D1B02FC42145A6C1003EE67F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B02FC32145A6C1003EE67F /* AppDelegate.swift */; };
 		D1B02FC92145A6C2003EE67F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1B02FC72145A6C2003EE67F /* Main.storyboard */; };
 		D1B02FCB2145A6C7003EE67F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1B02FCA2145A6C7003EE67F /* Assets.xcassets */; };
@@ -14,6 +15,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		349B62EBE36F695AD6EF0B71 /* Pods_SJ90.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SJ90.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52BEE60425111FC342EE5985 /* Pods-SJ90.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJ90.release.xcconfig"; path = "Pods/Target Support Files/Pods-SJ90/Pods-SJ90.release.xcconfig"; sourceTree = "<group>"; };
+		A6A1567885B1309FEFF872E2 /* Pods-SJ90.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJ90.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SJ90/Pods-SJ90.debug.xcconfig"; sourceTree = "<group>"; };
 		D1B02FC02145A6C1003EE67F /* SJ90.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SJ90.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1B02FC32145A6C1003EE67F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1B02FC82145A6C2003EE67F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -27,17 +31,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5630DB440203A2CA34ACF220 /* Pods_SJ90.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		734C48778B3744CB0279692D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				349B62EBE36F695AD6EF0B71 /* Pods_SJ90.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A40559A852ACEB4172D931F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A6A1567885B1309FEFF872E2 /* Pods-SJ90.debug.xcconfig */,
+				52BEE60425111FC342EE5985 /* Pods-SJ90.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D1B02FB72145A6C1003EE67F = {
 			isa = PBXGroup;
 			children = (
 				D1B02FC22145A6C1003EE67F /* SJ90 */,
 				D1B02FC12145A6C1003EE67F /* Products */,
+				7A40559A852ACEB4172D931F /* Pods */,
+				734C48778B3744CB0279692D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,9 +140,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1B02FD22145A6C7003EE67F /* Build configuration list for PBXNativeTarget "SJ90" */;
 			buildPhases = (
+				4F3C70C42886BB49D931A492 /* [CP] Check Pods Manifest.lock */,
 				D1B02FBC2145A6C1003EE67F /* Sources */,
 				D1B02FBD2145A6C1003EE67F /* Frameworks */,
 				D1B02FBE2145A6C1003EE67F /* Resources */,
+				C19355C81E9835AD6D7E5358 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -174,6 +200,57 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4F3C70C42886BB49D931A492 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SJ90-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C19355C81E9835AD6D7E5358 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SJ90/Pods-SJ90-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SJ90/Pods-SJ90-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D1B02FBC2145A6C1003EE67F /* Sources */ = {
@@ -322,6 +399,7 @@
 		};
 		D1B02FD32145A6C7003EE67F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6A1567885B1309FEFF872E2 /* Pods-SJ90.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -341,6 +419,7 @@
 		};
 		D1B02FD42145A6C7003EE67F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52BEE60425111FC342EE5985 /* Pods-SJ90.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
