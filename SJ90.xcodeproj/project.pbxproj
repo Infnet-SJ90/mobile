@@ -22,6 +22,7 @@
 		D1CD8E3B2149E68D00A688B5 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD8E3A2149E68D00A688B5 /* ServiceError.swift */; };
 		D1CD8E3D2149E6DE00A688B5 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD8E3C2149E6DE00A688B5 /* ServiceManager.swift */; };
 		D1CD8E3F2149E72200A688B5 /* ServiceManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD8E3E2149E72200A688B5 /* ServiceManagerProtocol.swift */; };
+		D1CD8E412149E7AB00A688B5 /* ServiceURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD8E402149E7AB00A688B5 /* ServiceURL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		D1CD8E3A2149E68D00A688B5 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		D1CD8E3C2149E6DE00A688B5 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		D1CD8E3E2149E72200A688B5 /* ServiceManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManagerProtocol.swift; sourceTree = "<group>"; };
+		D1CD8E402149E7AB00A688B5 /* ServiceURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceURL.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 		D1B02FD62145A7F4003EE67F /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				D1CD8E422149E7F400A688B5 /* Service */,
 				D1B02FE02145B2DE003EE67F /* Extensions */,
 			);
 			path = Helpers;
@@ -128,6 +131,7 @@
 				D1B02FC32145A6C1003EE67F /* AppDelegate.swift */,
 				D1B02FCA2145A6C7003EE67F /* Assets.xcassets */,
 				D1B02FCF2145A6C7003EE67F /* Info.plist */,
+				D1CD8E402149E7AB00A688B5 /* ServiceURL.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -188,11 +192,18 @@
 		D1CD8E392149E66600A688B5 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D1CD8E422149E7F400A688B5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
 				D1CD8E3A2149E68D00A688B5 /* ServiceError.swift */,
 				D1CD8E3C2149E6DE00A688B5 /* ServiceManager.swift */,
 				D1CD8E3E2149E72200A688B5 /* ServiceManagerProtocol.swift */,
 			);
-			path = Services;
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,6 +323,7 @@
 				D1B02FE42145B859003EE67F /* ImageOrientation.swift in Sources */,
 				D1B02FE62145BE92003EE67F /* PhotoTakenImg.swift in Sources */,
 				D1CD8E3F2149E72200A688B5 /* ServiceManagerProtocol.swift in Sources */,
+				D1CD8E412149E7AB00A688B5 /* ServiceURL.swift in Sources */,
 				D1B02FDD2145B049003EE67F /* TakePhotosViewController.swift in Sources */,
 				D1CD8E3D2149E6DE00A688B5 /* ServiceManager.swift in Sources */,
 				D1B02FE22145B2FC003EE67F /* CameraButton.swift in Sources */,
