@@ -20,6 +20,8 @@
 		D1B02FEB2145C6CA003EE67F /* SavePhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B02FE92145C6CA003EE67F /* SavePhotosViewController.swift */; };
 		D1B02FEC2145C6CA003EE67F /* SavePhotosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1B02FEA2145C6CA003EE67F /* SavePhotosViewController.xib */; };
 		D1CD8E3B2149E68D00A688B5 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD8E3A2149E68D00A688B5 /* ServiceError.swift */; };
+		D1CD8E3D2149E6DE00A688B5 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD8E3C2149E6DE00A688B5 /* ServiceManager.swift */; };
+		D1CD8E3F2149E72200A688B5 /* ServiceManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD8E3E2149E72200A688B5 /* ServiceManagerProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		D1B02FE92145C6CA003EE67F /* SavePhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePhotosViewController.swift; sourceTree = "<group>"; };
 		D1B02FEA2145C6CA003EE67F /* SavePhotosViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavePhotosViewController.xib; sourceTree = "<group>"; };
 		D1CD8E3A2149E68D00A688B5 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
+		D1CD8E3C2149E6DE00A688B5 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
+		D1CD8E3E2149E72200A688B5 /* ServiceManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManagerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +189,8 @@
 			isa = PBXGroup;
 			children = (
 				D1CD8E3A2149E68D00A688B5 /* ServiceError.swift */,
+				D1CD8E3C2149E6DE00A688B5 /* ServiceManager.swift */,
+				D1CD8E3E2149E72200A688B5 /* ServiceManagerProtocol.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -305,7 +311,9 @@
 			files = (
 				D1B02FE42145B859003EE67F /* ImageOrientation.swift in Sources */,
 				D1B02FE62145BE92003EE67F /* PhotoTakenImg.swift in Sources */,
+				D1CD8E3F2149E72200A688B5 /* ServiceManagerProtocol.swift in Sources */,
 				D1B02FDD2145B049003EE67F /* TakePhotosViewController.swift in Sources */,
+				D1CD8E3D2149E6DE00A688B5 /* ServiceManager.swift in Sources */,
 				D1B02FE22145B2FC003EE67F /* CameraButton.swift in Sources */,
 				D1B02FEB2145C6CA003EE67F /* SavePhotosViewController.swift in Sources */,
 				D1CD8E3B2149E68D00A688B5 /* ServiceError.swift in Sources */,
