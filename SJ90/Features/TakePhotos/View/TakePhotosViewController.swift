@@ -29,6 +29,7 @@ class TakePhotosViewController: UIViewController {
     fileprivate var placemark: CLPlacemark?
     fileprivate var city: String?
     fileprivate var country: String?
+    fileprivate var street: String?
     fileprivate var countryShortName: String?
     
     override func viewWillAppear(_ animated: Bool) {
@@ -198,8 +199,18 @@ extension TakePhotosViewController {
 // MARK: - Location methods
 extension TakePhotosViewController {
     func getLocation()  {
+        let authStatus = CLLocationManager.authorizationStatus()
+        if authStatus == .notDetermined {
+            locationManager.requestWhenInUseAuthorization()
+        }
         
-
+        if authStatus == .denied || authStatus == .restricted {
+            // add any alert or inform the user to to enable location services
+        }
+        
+        // here you can call the start location function
+        startLocationManager()
+        
     }
     
     func startLocationManager() {
@@ -215,5 +226,61 @@ extension TakePhotosViewController {
         locationManager.stopUpdatingLocation()
         locationManager.delegate = nil
     }
-
 }
+
+extension TakePhotosViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        // print the error to see what went wrong
+        print("didFailwithError\(error)")
+        // stop location manager if failed
+        stopLocationManager()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let latestLocation = locations.last!
+    
+        if latestLocation.horizontalAccuracy < 0 {
+            return
+        }
+
+        if location == nil || location!.horizontalAccuracy > latestLocation.horizontalAccuracy {
+            location = latestLocation
+            stopLocationManager()
+            
+            geocoder.reverseGeocodeLocation(latestLocation, completionHandler: { (placemarks, error) in
+                if error == nil, let placemark = placemarks, !placemark.isEmpty {
+                    self.placemark = placemark.last
+                }
+                self.parsePlacemarks()
+                
+            })
+        }
+    }
+    
+    func parsePlacemarks() {
+        if let _ = location {
+            if let placemark = placemark {
+                if let city = placemark.locality, !city.isEmpty {
+                    self.city = city
+                    print("city : \(city)")
+                }
+                if let country = placemark.country, !country.isEmpty {
+                    self.country = country
+                    print("country : \(country)")
+                }
+                if let thoroughfare = placemark.thoroughfare, !thoroughfare.isEmpty {
+                    self.street = thoroughfare
+                    print("street : \(thoroughfare)")
+                }
+                if let countryShortName = placemark.isoCountryCode, !countryShortName.isEmpty {
+                    self.countryShortName = countryShortName
+                    print("countryShortName : \(countryShortName)")
+                }
+            }
+        } else {
+            // add some more check's if for some reason location manager is nil
+        }
+        
+    }
+}
+
