@@ -22,6 +22,10 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>Aceita</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>Your location is required for xyz benefits for you</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Your location is required for xyz benefits for you</string>
 	<key>NSCameraUsageDescription - 2</key>
 	<string>Aceita </string>
 	<key>NSPhotoLibraryUsageDescription</key>
