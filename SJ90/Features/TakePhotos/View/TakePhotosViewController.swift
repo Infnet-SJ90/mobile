@@ -23,6 +23,14 @@ class TakePhotosViewController: UIViewController {
     fileprivate var previewLayer: AVCaptureVideoPreviewLayer? 
     fileprivate let backCamera = AVCaptureDevice.defaultDevice(withMediaType: AVMediaTypeVideo)
     
+    fileprivate let locationManager = CLLocationManager()
+    fileprivate var location: CLLocation?
+    fileprivate let geocoder = CLGeocoder()
+    fileprivate var placemark: CLPlacemark?
+    fileprivate var city: String?
+    fileprivate var country: String?
+    fileprivate var countryShortName: String?
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -149,6 +157,7 @@ extension TakePhotosViewController {
                                 }
                             }
                             self.captureSession!.stopRunning()
+                            self.getLocation()
                             
                             let newViewController = SavePhotosViewController(nibName: "SavePhotosViewController", bundle: nil)
                             self.present(newViewController, animated: true, completion: nil)
@@ -184,4 +193,27 @@ extension TakePhotosViewController {
             }
         }
     }
+}
+
+// MARK: - Location methods
+extension TakePhotosViewController {
+    func getLocation()  {
+        
+
+    }
+    
+    func startLocationManager() {
+        // always good habit to check if locationServicesEnabled
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+        }
+    }
+    
+    func stopLocationManager() {
+        locationManager.stopUpdatingLocation()
+        locationManager.delegate = nil
+    }
+
 }
