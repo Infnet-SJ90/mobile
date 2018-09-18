@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+protocol LoginProtocol: class {
+    
+    func startLoading()
+    func stopLoading()
+    func reloadTableView()
+}

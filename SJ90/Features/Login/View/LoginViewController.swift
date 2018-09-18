@@ -9,9 +9,23 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    
+    fileprivate var presenter: LoginPresenter!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.presenter = LoginPresenter(view: self)
     }
+}
 
+extension LoginViewController: LoginProtocol {
+    func startLoading() {
+    }
+    
+    func stopLoading() {
+    }
+    
+    func reloadTableView() {
+    }
 }

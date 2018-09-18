@@ -7,3 +7,23 @@
 //
 
 import Foundation
+
+final class LoginPresenter {
+    
+    fileprivate unowned let view: LoginProtocol
+//    fileprivate let service: Service
+//    fileprivate(set) var hotels
+    
+    init(view: LoginProtocol) {
+        self.view = view
+//        self.service = Service()
+    }
+}
+
+// MARK: - Public methods
+extension HotelListPresenter {
+}
+
+// MARK: - Private methods
+extension HotelListPresenter {
+}
