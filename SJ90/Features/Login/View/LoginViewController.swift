@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class LoginViewController: UIViewController {
     
+    @IBOutlet fileprivate weak var username: UITextField!
+    @IBOutlet fileprivate weak var password: UITextField!
     fileprivate var presenter: LoginPresenter!
 
     override func viewDidLoad() {
@@ -19,13 +22,29 @@ class LoginViewController: UIViewController {
     }
 }
 
+// MARK: - Action methods
+extension LoginViewController {
+    @IBAction func login(_ sender: UIButton) {
+    }
+}
+
+// MARK: - LoginProtocol
 extension LoginViewController: LoginProtocol {
     func startLoading() {
+        SVProgressHUD.setDefaultStyle(.custom)
+        SVProgressHUD.setForegroundColor(.white)
+        SVProgressHUD.setBackgroundColor(UIColor.lightGray)
+        SVProgressHUD.setDefaultMaskType(.clear)
+        SVProgressHUD.show()
     }
     
     func stopLoading() {
+        SVProgressHUD.dismiss()
     }
     
-    func reloadTableView() {
+    func showAlertError(with title: String, message: String, buttonTitle: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: buttonTitle, style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }

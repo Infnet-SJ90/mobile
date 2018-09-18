@@ -13,6 +13,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="SJ90" customModuleProvider="target">
             <connections>
+                <outlet property="password" destination="XCy-dh-a1q" id="FDN-zG-SiQ"/>
+                <outlet property="username" destination="STR-QJ-Ykf" id="uCY-mX-Vl6"/>
                 <outlet property="view" destination="b2M-Zb-ZgU" id="H8P-Wx-nvX"/>
             </connections>
         </placeholder>
@@ -101,6 +103,9 @@
                                     <state key="normal" title="Login">
                                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </state>
+                                    <connections>
+                                        <action selector="login:" destination="-1" eventType="touchUpInside" id="g9c-cV-70b"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <variation key="heightClass=compact" axis="horizontal" distribution="fillEqually"/>

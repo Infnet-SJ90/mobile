@@ -12,5 +12,5 @@ protocol LoginProtocol: class {
     
     func startLoading()
     func stopLoading()
-    func reloadTableView()
+    func showAlertError(with title: String, message: String, buttonTitle: String)
 }
