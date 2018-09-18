@@ -120,6 +120,21 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		D17E45732151B23800D6233C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D17E45742151B24A00D6233C /* Login */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D17E45742151B24A00D6233C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		D1B02FB72145A6C1003EE67F = {
 			isa = PBXGroup;
 			children = (
@@ -144,7 +159,6 @@
 				D1B02FD52145A7E3003EE67F /* Features */,
 				D1B02FD62145A7F4003EE67F /* Helpers */,
 				D1B02FD72145A7FD003EE67F /* Resources */,
-				D1CD8E392149E66600A688B5 /* Services */,
 				D1B02FD92145A813003EE67F /* Storyboards */,
 			);
 			path = SJ90;
@@ -155,6 +169,7 @@
 			children = (
 				D17E45652151A66800D6233C /* Login */,
 				D1B02FE72145C689003EE67F /* SavePhotos */,
+				D17E45732151B23800D6233C /* Services */,
 				D1B02FDA2145AF42003EE67F /* TakePhotos */,
 			);
 			path = Features;
@@ -231,13 +246,6 @@
 				D1B02FEA2145C6CA003EE67F /* SavePhotosViewController.xib */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		D1CD8E392149E66600A688B5 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		D1CD8E422149E7F400A688B5 /* Service */ = {
