@@ -1,0 +1,88 @@
+Pods/Manifest.lock
+Pods/Alamofire/LICENSE
+Pods/Alamofire/README.md
+Pods/Alamofire/Source/AFError.swift
+Pods/Alamofire/Source/Alamofire.swift
+Pods/Alamofire/Source/DispatchQueue+Alamofire.swift
+Pods/Alamofire/Source/MultipartFormData.swift
+Pods/Alamofire/Source/NetworkReachabilityManager.swift
+Pods/Alamofire/Source/Notifications.swift
+Pods/Alamofire/Source/ParameterEncoding.swift
+Pods/Alamofire/Source/Request.swift
+Pods/Alamofire/Source/Response.swift
+Pods/Alamofire/Source/ResponseSerialization.swift
+Pods/Alamofire/Source/Result.swift
+Pods/Alamofire/Source/ServerTrustPolicy.swift
+Pods/Alamofire/Source/SessionDelegate.swift
+Pods/Alamofire/Source/SessionManager.swift
+Pods/Alamofire/Source/TaskDelegate.swift
+Pods/Alamofire/Source/Timeline.swift
+Pods/Alamofire/Source/Validation.swift
+Pods/AlamofireImage/LICENSE
+Pods/AlamofireImage/README.md
+Pods/AlamofireImage/Source/AFIError.swift
+Pods/AlamofireImage/Source/Image.swift
+Pods/AlamofireImage/Source/ImageCache.swift
+Pods/AlamofireImage/Source/ImageDownloader.swift
+Pods/AlamofireImage/Source/ImageFilter.swift
+Pods/AlamofireImage/Source/Request+AlamofireImage.swift
+Pods/AlamofireImage/Source/UIButton+AlamofireImage.swift
+Pods/AlamofireImage/Source/UIImage+AlamofireImage.swift
+Pods/AlamofireImage/Source/UIImageView+AlamofireImage.swift
+Pods/Local Podspecs/SVProgressHUD.podspec.json
+Pods/Pods.xcodeproj/project.pbxproj
+Pods/Pods.xcodeproj/xcuserdata/ronilsonbatista.xcuserdatad/xcschemes/Alamofire.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/ronilsonbatista.xcuserdatad/xcschemes/AlamofireImage.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/ronilsonbatista.xcuserdatad/xcschemes/Pods-SJ90.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/ronilsonbatista.xcuserdatad/xcschemes/SVProgressHUD.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/ronilsonbatista.xcuserdatad/xcschemes/xcschememanagement.plist
+Pods/SVProgressHUD/LICENSE
+Pods/SVProgressHUD/README.md
+Pods/SVProgressHUD/SVProgressHUD/SVIndefiniteAnimatedView.h
+Pods/SVProgressHUD/SVProgressHUD/SVIndefiniteAnimatedView.m
+Pods/SVProgressHUD/SVProgressHUD/SVProgressAnimatedView.h
+Pods/SVProgressHUD/SVProgressHUD/SVProgressAnimatedView.m
+Pods/SVProgressHUD/SVProgressHUD/SVProgressHUD.h
+Pods/SVProgressHUD/SVProgressHUD/SVProgressHUD.m
+Pods/SVProgressHUD/SVProgressHUD/SVRadialGradientLayer.h
+Pods/SVProgressHUD/SVProgressHUD/SVRadialGradientLayer.m
+Pods/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle/angle-mask.png
+Pods/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle/angle-mask@2x.png
+Pods/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle/angle-mask@3x.png
+Pods/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle/error.png
+Pods/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle/error@2x.png
+Pods/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle/error@3x.png
+Pods/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle/info.png
+Pods/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle/info@2x.png
+Pods/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle/info@3x.png
+Pods/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle/success.png
+Pods/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle/success@2x.png
+Pods/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle/success@3x.png
+Pods/Target Support Files/Alamofire/Alamofire-dummy.m
+Pods/Target Support Files/Alamofire/Alamofire-prefix.pch
+Pods/Target Support Files/Alamofire/Alamofire-umbrella.h
+Pods/Target Support Files/Alamofire/Alamofire.modulemap
+Pods/Target Support Files/Alamofire/Alamofire.xcconfig
+Pods/Target Support Files/Alamofire/Info.plist
+Pods/Target Support Files/AlamofireImage/AlamofireImage-dummy.m
+Pods/Target Support Files/AlamofireImage/AlamofireImage-prefix.pch
+Pods/Target Support Files/AlamofireImage/AlamofireImage-umbrella.h
+Pods/Target Support Files/AlamofireImage/AlamofireImage.modulemap
+Pods/Target Support Files/AlamofireImage/AlamofireImage.xcconfig
+Pods/Target Support Files/AlamofireImage/Info.plist
+Pods/Target Support Files/Pods-SJ90/Info.plist
+Pods/Target Support Files/Pods-SJ90/Pods-SJ90-acknowledgements.markdown
+Pods/Target Support Files/Pods-SJ90/Pods-SJ90-acknowledgements.plist
+Pods/Target Support Files/Pods-SJ90/Pods-SJ90-dummy.m
+Pods/Target Support Files/Pods-SJ90/Pods-SJ90-frameworks.sh
+Pods/Target Support Files/Pods-SJ90/Pods-SJ90-resources.sh
+Pods/Target Support Files/Pods-SJ90/Pods-SJ90-umbrella.h
+Pods/Target Support Files/Pods-SJ90/Pods-SJ90.debug.xcconfig
+Pods/Target Support Files/Pods-SJ90/Pods-SJ90.modulemap
+Pods/Target Support Files/Pods-SJ90/Pods-SJ90.release.xcconfig
+Pods/Target Support Files/SVProgressHUD/Info.plist
+Pods/Target Support Files/SVProgressHUD/SVProgressHUD-dummy.m
+Pods/Target Support Files/SVProgressHUD/SVProgressHUD-prefix.pch
+Pods/Target Support Files/SVProgressHUD/SVProgressHUD-umbrella.h
+Pods/Target Support Files/SVProgressHUD/SVProgressHUD.modulemap
+Pods/Target Support Files/SVProgressHUD/SVProgressHUD.xcconfig

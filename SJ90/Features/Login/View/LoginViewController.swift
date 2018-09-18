@@ -11,13 +11,12 @@ import SVProgressHUD
 
 class LoginViewController: UIViewController {
     
-    @IBOutlet fileprivate weak var username: UITextField!
-    @IBOutlet fileprivate weak var password: UITextField!
+    @IBOutlet fileprivate weak var usernameTextField: UITextField!
+    @IBOutlet fileprivate weak var passwordTextField: UITextField!
     fileprivate var presenter: LoginPresenter!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.presenter = LoginPresenter(view: self)
     }
 }
@@ -25,6 +24,8 @@ class LoginViewController: UIViewController {
 // MARK: - Action methods
 extension LoginViewController {
     @IBAction func login(_ sender: UIButton) {
+        guard let username = self.usernameTextField.text, let password = self.passwordTextField.text else { return  }
+        self.presenter.login(username: username, password: password)
     }
 }
 
