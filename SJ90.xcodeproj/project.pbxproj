@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5630DB440203A2CA34ACF220 /* Pods_SJ90.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 349B62EBE36F695AD6EF0B71 /* Pods_SJ90.framework */; };
+		D17E456A2151A76C00D6233C /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E45692151A76C00D6233C /* LoginPresenter.swift */; };
+		D17E456D2151A77F00D6233C /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E456C2151A77F00D6233C /* LoginProtocol.swift */; };
+		D17E45712151A79D00D6233C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E456F2151A79D00D6233C /* LoginViewController.swift */; };
+		D17E45722151A79D00D6233C /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17E45702151A79D00D6233C /* LoginViewController.xib */; };
 		D1B02FC42145A6C1003EE67F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B02FC32145A6C1003EE67F /* AppDelegate.swift */; };
 		D1B02FC92145A6C2003EE67F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1B02FC72145A6C2003EE67F /* Main.storyboard */; };
 		D1B02FCB2145A6C7003EE67F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1B02FCA2145A6C7003EE67F /* Assets.xcassets */; };
@@ -29,6 +33,10 @@
 		349B62EBE36F695AD6EF0B71 /* Pods_SJ90.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SJ90.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		52BEE60425111FC342EE5985 /* Pods-SJ90.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJ90.release.xcconfig"; path = "Pods/Target Support Files/Pods-SJ90/Pods-SJ90.release.xcconfig"; sourceTree = "<group>"; };
 		A6A1567885B1309FEFF872E2 /* Pods-SJ90.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJ90.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SJ90/Pods-SJ90.debug.xcconfig"; sourceTree = "<group>"; };
+		D17E45692151A76C00D6233C /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		D17E456C2151A77F00D6233C /* LoginProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocol.swift; sourceTree = "<group>"; };
+		D17E456F2151A79D00D6233C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D17E45702151A79D00D6233C /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		D1B02FC02145A6C1003EE67F /* SJ90.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SJ90.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1B02FC32145A6C1003EE67F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1B02FC82145A6C2003EE67F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -97,6 +105,8 @@
 		D17E45672151A68000D6233C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D17E456F2151A79D00D6233C /* LoginViewController.swift */,
+				D17E45702151A79D00D6233C /* LoginViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -104,6 +114,8 @@
 		D17E45682151A68800D6233C /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				D17E45692151A76C00D6233C /* LoginPresenter.swift */,
+				D17E456C2151A77F00D6233C /* LoginProtocol.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -300,6 +312,7 @@
 			files = (
 				D1B02FCE2145A6C7003EE67F /* LaunchScreen.storyboard in Resources */,
 				D1B02FCB2145A6C7003EE67F /* Assets.xcassets in Resources */,
+				D17E45722151A79D00D6233C /* LoginViewController.xib in Resources */,
 				D1B02FDE2145B049003EE67F /* TakePhotosViewController.xib in Resources */,
 				D1B02FEC2145C6CA003EE67F /* SavePhotosViewController.xib in Resources */,
 				D1B02FC92145A6C2003EE67F /* Main.storyboard in Resources */,
@@ -360,11 +373,14 @@
 				D1B02FE62145BE92003EE67F /* PhotoTakenImg.swift in Sources */,
 				D1CD8E3F2149E72200A688B5 /* ServiceManagerProtocol.swift in Sources */,
 				D1CD8E412149E7AB00A688B5 /* ServiceURL.swift in Sources */,
+				D17E456A2151A76C00D6233C /* LoginPresenter.swift in Sources */,
 				D1B02FDD2145B049003EE67F /* TakePhotosViewController.swift in Sources */,
 				D1CD8E3D2149E6DE00A688B5 /* ServiceManager.swift in Sources */,
 				D1B02FE22145B2FC003EE67F /* CameraButton.swift in Sources */,
 				D1B02FEB2145C6CA003EE67F /* SavePhotosViewController.swift in Sources */,
+				D17E456D2151A77F00D6233C /* LoginProtocol.swift in Sources */,
 				D1CD8E3B2149E68D00A688B5 /* ServiceError.swift in Sources */,
+				D17E45712151A79D00D6233C /* LoginViewController.swift in Sources */,
 				D1B02FC42145A6C1003EE67F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

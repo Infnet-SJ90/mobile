@@ -280,7 +280,6 @@ extension TakePhotosViewController: CLLocationManagerDelegate {
         } else {
             // add some more check's if for some reason location manager is nil
         }
-        
     }
 }
 
