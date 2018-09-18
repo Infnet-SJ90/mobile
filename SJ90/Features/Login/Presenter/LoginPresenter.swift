@@ -21,9 +21,9 @@ final class LoginPresenter {
 }
 
 // MARK: - Public methods
-extension HotelListPresenter {
+extension LoginPresenter {
 }
 
 // MARK: - Private methods
-extension HotelListPresenter {
+extension LoginPresenter {
 }
