@@ -28,5 +28,4 @@ final class ServiceManager: ServiceManagerProtocol {
                 success(response.result.value!)
         }
     }
-    
 }

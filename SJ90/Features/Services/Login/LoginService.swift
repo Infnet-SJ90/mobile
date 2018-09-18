@@ -7,3 +7,17 @@
 //
 
 import Foundation
+
+final class LoginService {
+    
+    func postLogin(success: @escaping (_ login: Bool) -> Void, fail: @escaping (_ error: ServiceError) -> Void) {
+        
+        ServiceManager.shared.GetData(url: ServiceURL.postLogin.value, parameters: nil, success: { result in
+//            let response = try! JSONDecoder().decode(Hotels.self, from: result)
+            success(response)
+        }, failure: { error in
+            fail(ServiceError(code: error.code))
+        })
+    }
+    
+}

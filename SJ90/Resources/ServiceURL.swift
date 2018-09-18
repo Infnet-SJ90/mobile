@@ -9,11 +9,11 @@
 import Foundation
 
 enum ServiceURL {
-    case urls
+    case postLogin
     
     var value: String {
         switch self {
-        case .urls: return "https://"
+        case .postLogin: return "https://"
         }
     }
 }

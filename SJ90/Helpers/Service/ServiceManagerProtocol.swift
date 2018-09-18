@@ -11,5 +11,4 @@ import Foundation
 protocol ServiceManagerProtocol {
     
     func GetData(url: String, parameters: [String : Any]?, success: @escaping (Data) -> Void, failure: @escaping (ServiceError) -> Void)
-    
 }
