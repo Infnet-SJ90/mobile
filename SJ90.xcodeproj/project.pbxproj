@@ -77,6 +77,37 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		D17E45652151A66800D6233C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D17E45662151A67900D6233C /* Model */,
+				D17E45682151A68800D6233C /* Presenter */,
+				D17E45672151A68000D6233C /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		D17E45662151A67900D6233C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D17E45672151A68000D6233C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D17E45682151A68800D6233C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		D1B02FB72145A6C1003EE67F = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +141,7 @@
 		D1B02FD52145A7E3003EE67F /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				D17E45652151A66800D6233C /* Login */,
 				D1B02FE72145C689003EE67F /* SavePhotos */,
 				D1B02FDA2145AF42003EE67F /* TakePhotos */,
 			);
