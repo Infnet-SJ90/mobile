@@ -11,6 +11,15 @@ import SVProgressHUD
 
 class MakeComplaintsViewController: UITableViewController {
     
+    @IBOutlet fileprivate weak var address: UITextField!
+    @IBOutlet fileprivate weak var CEP: UITextField!
+    @IBOutlet fileprivate weak var number: UITextField!
+    @IBOutlet fileprivate weak var neighborhood: UITextField!
+    @IBOutlet fileprivate weak var date: UITextField!
+    @IBOutlet fileprivate weak var shadowLocation: UIView!
+    @IBOutlet fileprivate weak var containerLocation: UIView!
+    @IBOutlet fileprivate weak var img: UIImageView!
+    
     fileprivate var presenter: MakeComplaintsPresenter!
     
     override func viewDidLoad() {
@@ -18,6 +27,10 @@ class MakeComplaintsViewController: UITableViewController {
         
         self.presenter = MakeComplaintsPresenter(view: self)
         self.presenter.setupInitialization()
+        self.styleTextField()
+        self.viewParameterization()
+        
+        self.img.image = self.img.image?.overlayImage(AppColor.shared.colorPrimary)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -29,7 +42,22 @@ class MakeComplaintsViewController: UITableViewController {
         self.tabBarController?.tabBar.tintColor = AppColor.shared.colorPrimary
         self.tabBarController?.tabBar.unselectedItemTintColor = UIColor.black
     }
+}
 
+// MARK: - Private methods
+extension MakeComplaintsViewController {
+    
+    fileprivate func styleTextField() {
+        self.address.layer.cornerRadius = 10
+        self.CEP.layer.cornerRadius = 10
+        self.number.layer.cornerRadius = 10
+        self.neighborhood.layer.cornerRadius = 10
+        self.date.layer.cornerRadius = 10
+    }
+    fileprivate func viewParameterization() {
+        ButtonViewParameterization.cornerRadius(view: self.containerLocation)
+        ButtonViewParameterization.shadowView(view: self.shadowLocation, color: .white)
+    }
 }
 
 // MARK: - MakeComplaintsProtocol
@@ -39,9 +67,30 @@ extension MakeComplaintsViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 6
     }
     
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        
+        let customView = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 41))
+        customView.backgroundColor = AppColor.shared.colorPrimary
+        customView.layer.cornerRadius = 10.0
+        customView.layer.shadowOpacity = 0.8
+        customView.layer.shadowColor = AppColor.shared.colorSnow.cgColor
+        customView.layer.shadowRadius = 3.0
+        customView.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 330, height: 50))
+        button.setTitle("                 Continuar", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 20.0, weight: UIFontWeightMedium)
+        button.addTarget(self, action: #selector(self.typesComplaints), for: .touchUpInside)
+        customView.addSubview(button)
+        
+        return customView
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 50
+    }
 }
 
 // MARK: - MakeComplaintsProtocol
@@ -60,6 +109,11 @@ extension MakeComplaintsViewController: MakeComplaintsProtocol {
         SVProgressHUD.setBackgroundColor(UIColor.lightGray)
         SVProgressHUD.setDefaultMaskType(.clear)
         SVProgressHUD.show()
+    }
+    
+    @objc func typesComplaints() {
+        let types = "typesComplaints"
+        performSegue(withIdentifier: types, sender: nil)
     }
     
     func stopLoading() {

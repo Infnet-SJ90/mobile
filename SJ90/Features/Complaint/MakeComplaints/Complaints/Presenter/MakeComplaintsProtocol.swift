@@ -13,4 +13,5 @@ protocol MakeComplaintsProtocol: class {
     func stopLoading()
     func showAlertError(with title: String, message: String, buttonTitle: String)
     func setupNavigationController()
+    func typesComplaints()
 }

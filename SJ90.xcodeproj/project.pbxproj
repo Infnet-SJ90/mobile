@@ -17,6 +17,8 @@
 		D110D4AF2156C79400E4918D /* MakeComplaintsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D110D4AE2156C79400E4918D /* MakeComplaintsPresenter.swift */; };
 		D110D4B32156CC8F00E4918D /* MyComplaintsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D110D4B22156CC8F00E4918D /* MyComplaintsPresenter.swift */; };
 		D110D4B52156CCA500E4918D /* MyComplaintsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D110D4B42156CCA500E4918D /* MyComplaintsProtocol.swift */; };
+		D110D4B72156D6B800E4918D /* ButtonViewParameterization.swift in Sources */ = {isa = PBXBuildFile; fileRef = D110D4B62156D6B800E4918D /* ButtonViewParameterization.swift */; };
+		D110D4BB2156DEA800E4918D /* TypesComplaintsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D110D4BA2156DEA800E4918D /* TypesComplaintsViewController.swift */; };
 		D17E456A2151A76C00D6233C /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E45692151A76C00D6233C /* LoginPresenter.swift */; };
 		D17E456D2151A77F00D6233C /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E456C2151A77F00D6233C /* LoginProtocol.swift */; };
 		D17E45712151A79D00D6233C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E456F2151A79D00D6233C /* LoginViewController.swift */; };
@@ -66,6 +68,8 @@
 		D110D4AE2156C79400E4918D /* MakeComplaintsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeComplaintsPresenter.swift; sourceTree = "<group>"; };
 		D110D4B22156CC8F00E4918D /* MyComplaintsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyComplaintsPresenter.swift; sourceTree = "<group>"; };
 		D110D4B42156CCA500E4918D /* MyComplaintsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyComplaintsProtocol.swift; sourceTree = "<group>"; };
+		D110D4B62156D6B800E4918D /* ButtonViewParameterization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewParameterization.swift; sourceTree = "<group>"; };
+		D110D4BA2156DEA800E4918D /* TypesComplaintsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesComplaintsViewController.swift; sourceTree = "<group>"; };
 		D17E45692151A76C00D6233C /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		D17E456C2151A77F00D6233C /* LoginProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocol.swift; sourceTree = "<group>"; };
 		D17E456F2151A79D00D6233C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -145,8 +149,8 @@
 		D110D4AA2156C75400E4918D /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				D110D4AC2156C78700E4918D /* MakeComplaintsProtocol.swift */,
 				D110D4AE2156C79400E4918D /* MakeComplaintsPresenter.swift */,
+				D110D4AC2156C78700E4918D /* MakeComplaintsProtocol.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -175,6 +179,23 @@
 				D1D9B9192155F60D00C14E27 /* MyComplaintsViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D110D4B82156DE7400E4918D /* Complaints */ = {
+			isa = PBXGroup;
+			children = (
+				D110D4AA2156C75400E4918D /* Presenter */,
+				D110D4AB2156C75F00E4918D /* View */,
+			);
+			path = Complaints;
+			sourceTree = "<group>";
+		};
+		D110D4B92156DE8600E4918D /* TypesComplaints */ = {
+			isa = PBXGroup;
+			children = (
+				D110D4BA2156DEA800E4918D /* TypesComplaintsViewController.swift */,
+			);
+			path = TypesComplaints;
 			sourceTree = "<group>";
 		};
 		D17E45652151A66800D6233C /* Login */ = {
@@ -319,6 +340,7 @@
 				D1B02FE32145B859003EE67F /* ImageOrientation.swift */,
 				D1B02FE52145BE92003EE67F /* PhotoTakenImg.swift */,
 				D110D4A821567E4700E4918D /* OverlayImages.swift */,
+				D110D4B62156D6B800E4918D /* ButtonViewParameterization.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -428,8 +450,8 @@
 		D1D9B9122155F21600C14E27 /* MakeComplaints */ = {
 			isa = PBXGroup;
 			children = (
-				D110D4AA2156C75400E4918D /* Presenter */,
-				D110D4AB2156C75F00E4918D /* View */,
+				D110D4B92156DE8600E4918D /* TypesComplaints */,
+				D110D4B82156DE7400E4918D /* Complaints */,
 			);
 			path = MakeComplaints;
 			sourceTree = "<group>";
@@ -561,6 +583,7 @@
 			files = (
 				D1D9B8FF2155DD9A00C14E27 /* ExtensionNSObject.swift in Sources */,
 				D1B02FE42145B859003EE67F /* ImageOrientation.swift in Sources */,
+				D110D4B72156D6B800E4918D /* ButtonViewParameterization.swift in Sources */,
 				D10D5832215678B100F7A105 /* MyComplaintsEmptyViewCell.swift in Sources */,
 				D1B02FE62145BE92003EE67F /* PhotoTakenImg.swift in Sources */,
 				D110D4B32156CC8F00E4918D /* MyComplaintsPresenter.swift in Sources */,
@@ -581,6 +604,7 @@
 				D1D9B8F72155DAD000C14E27 /* MainViewController.swift in Sources */,
 				D1D9B90D2155E16E00C14E27 /* RegisterProtocol.swift in Sources */,
 				D17E456D2151A77F00D6233C /* LoginProtocol.swift in Sources */,
+				D110D4BB2156DEA800E4918D /* TypesComplaintsViewController.swift in Sources */,
 				D10D582E2156723000F7A105 /* AppColor.swift in Sources */,
 				D1CD8E3B2149E68D00A688B5 /* ServiceError.swift in Sources */,
 				D17E45712151A79D00D6233C /* LoginViewController.swift in Sources */,
