@@ -10,6 +10,8 @@
 		5630DB440203A2CA34ACF220 /* Pods_SJ90.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 349B62EBE36F695AD6EF0B71 /* Pods_SJ90.framework */; };
 		D10D582C215671B000F7A105 /* Coloring.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10D582B215671B000F7A105 /* Coloring.swift */; };
 		D10D582E2156723000F7A105 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10D582D2156723000F7A105 /* AppColor.swift */; };
+		D10D5832215678B100F7A105 /* MyComplaintsEmptyViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10D5830215678B100F7A105 /* MyComplaintsEmptyViewCell.swift */; };
+		D10D5833215678B100F7A105 /* MyComplaintsEmptyViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D10D5831215678B100F7A105 /* MyComplaintsEmptyViewCell.xib */; };
 		D17E456A2151A76C00D6233C /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E45692151A76C00D6233C /* LoginPresenter.swift */; };
 		D17E456D2151A77F00D6233C /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E456C2151A77F00D6233C /* LoginProtocol.swift */; };
 		D17E45712151A79D00D6233C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E456F2151A79D00D6233C /* LoginViewController.swift */; };
@@ -52,6 +54,8 @@
 		A6A1567885B1309FEFF872E2 /* Pods-SJ90.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJ90.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SJ90/Pods-SJ90.debug.xcconfig"; sourceTree = "<group>"; };
 		D10D582B215671B000F7A105 /* Coloring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coloring.swift; sourceTree = "<group>"; };
 		D10D582D2156723000F7A105 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		D10D5830215678B100F7A105 /* MyComplaintsEmptyViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyComplaintsEmptyViewCell.swift; sourceTree = "<group>"; };
+		D10D5831215678B100F7A105 /* MyComplaintsEmptyViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyComplaintsEmptyViewCell.xib; sourceTree = "<group>"; };
 		D17E45692151A76C00D6233C /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		D17E456C2151A77F00D6233C /* LoginProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocol.swift; sourceTree = "<group>"; };
 		D17E456F2151A79D00D6233C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +121,15 @@
 				52BEE60425111FC342EE5985 /* Pods-SJ90.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		D10D582F2156787600F7A105 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				D10D5830215678B100F7A105 /* MyComplaintsEmptyViewCell.swift */,
+				D10D5831215678B100F7A105 /* MyComplaintsEmptyViewCell.xib */,
+			);
+			path = CustomView;
 			sourceTree = "<group>";
 		};
 		D17E45652151A66800D6233C /* Login */ = {
@@ -360,6 +373,7 @@
 		D1D9B9112155F1F900C14E27 /* MyComplaints */ = {
 			isa = PBXGroup;
 			children = (
+				D10D582F2156787600F7A105 /* CustomView */,
 				D1D9B9192155F60D00C14E27 /* MyComplaintsViewController.swift */,
 			);
 			path = MyComplaints;
@@ -441,6 +455,7 @@
 				D1D9B9052155E0FA00C14E27 /* RegisterViewCell.xib in Resources */,
 				D17E45722151A79D00D6233C /* LoginViewController.xib in Resources */,
 				D1B02FDE2145B049003EE67F /* TakePhotosViewController.xib in Resources */,
+				D10D5833215678B100F7A105 /* MyComplaintsEmptyViewCell.xib in Resources */,
 				D1B02FEC2145C6CA003EE67F /* SavePhotosViewController.xib in Resources */,
 				D1D9B8F82155DAD000C14E27 /* MainViewController.xib in Resources */,
 				D1B02FC92145A6C2003EE67F /* Main.storyboard in Resources */,
@@ -499,6 +514,7 @@
 			files = (
 				D1D9B8FF2155DD9A00C14E27 /* ExtensionNSObject.swift in Sources */,
 				D1B02FE42145B859003EE67F /* ImageOrientation.swift in Sources */,
+				D10D5832215678B100F7A105 /* MyComplaintsEmptyViewCell.swift in Sources */,
 				D1B02FE62145BE92003EE67F /* PhotoTakenImg.swift in Sources */,
 				D1CD8E3F2149E72200A688B5 /* ServiceManagerProtocol.swift in Sources */,
 				D1D9B9082155E10F00C14E27 /* RegisterViewController.swift in Sources */,

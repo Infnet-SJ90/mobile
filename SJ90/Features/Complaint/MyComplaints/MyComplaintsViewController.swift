@@ -15,6 +15,8 @@ class MyComplaintsViewController: UITableViewController {
         
         self.navigationItem_()
         self.tabBarItem_()
+        
+        self.tableView.register(UINib(nibName: MyComplaintsEmptyViewCell.identifier, bundle: nil), forCellReuseIdentifier: MyComplaintsEmptyViewCell.identifier)
     }
     
     func navigationItem_() {
@@ -34,14 +36,23 @@ class MyComplaintsViewController: UITableViewController {
     }
     
     // MARK: - Table view data source
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: MyComplaintsEmptyViewCell.identifier, for: indexPath) as! MyComplaintsEmptyViewCell
+        cell.delegate = self
+        return cell
+    }
+}
+
+extension MyComplaintsViewController: MyComplaintsEmptyCellDelegate {
+    func makeComplaintsButton() {
+        
     }
 }
