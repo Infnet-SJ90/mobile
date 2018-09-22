@@ -9,16 +9,23 @@
 import UIKit
 
 class RegisterViewCell: UITableViewCell {
+    
+    @IBOutlet fileprivate weak var nameTextField: UITextField!
+    @IBOutlet fileprivate weak var usernameTextField: UITextField!
+    @IBOutlet fileprivate weak var cpfTextField: UITextField!
+    @IBOutlet fileprivate weak var passwordTextField: UITextField!
+    @IBOutlet fileprivate weak var confirmPasswordTextField: UITextField!
+    @IBOutlet fileprivate weak var login: UIButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+       
+        self.nameTextField.layer.cornerRadius = 10
+        self.usernameTextField.layer.cornerRadius = 10
+        self.cpfTextField.layer.cornerRadius = 10
+        self.passwordTextField.layer.cornerRadius = 10
+        self.login.layer.cornerRadius = 10
+        self.confirmPasswordTextField.layer.cornerRadius = 10
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }

@@ -15,8 +15,8 @@ class MainViewController: UITableViewController, MainViewCellDelegate {
     }
     
     func b() {
-//        let nextController = RegisterViewController()
-//        self.present(nextController, animated: false, completion: nil)
+        let nextController = RegisterViewController()
+        self.present(nextController, animated: false, completion: nil)
     }
     
     
