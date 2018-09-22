@@ -8,18 +8,8 @@
 
 import UIKit
 
-class MainViewController: UITableViewController, MainViewCellDelegate {
-    func a() {
-        let nextController = LoginViewController()
-        self.present(nextController, animated: false, completion: nil)
-    }
-    
-    func b() {
-        let nextController = RegisterViewController()
-        self.present(nextController, animated: false, completion: nil)
-    }
-    
-    
+class MainViewController: UITableViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,16 +19,28 @@ class MainViewController: UITableViewController, MainViewCellDelegate {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+}
+
+// MARK: - MainViewCellDelegate
+extension MainViewController: MainViewCellDelegate {
+    func loginButton() {
+        let nextController = LoginViewController()
+        self.present(nextController, animated: false, completion: nil)
+    }
     
-    // MARK: - Table view data source
-    
+    func registerButton() {
+        let nextController = RegisterViewController()
+        self.present(nextController, animated: false, completion: nil)
+    }
+}
+
+// MARK: - Table view data source
+extension MainViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return 1
     }
     
@@ -46,7 +48,6 @@ class MainViewController: UITableViewController, MainViewCellDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: MainViewCell.identifier, for: indexPath) as! MainViewCell
         cell.delegate = self
         return cell
-        
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

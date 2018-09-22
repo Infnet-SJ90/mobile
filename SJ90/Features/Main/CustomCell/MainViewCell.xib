@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="gzK-do-6B2" customClass="MainViewCell" customModule="SJ90" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainViewCell" id="gzK-do-6B2" customClass="MainViewCell" customModule="SJ90" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="736"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gzK-do-6B2" id="Lqb-35-vjG">
@@ -41,7 +41,7 @@
                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
                         <connections>
-                            <action selector="aa1" destination="gzK-do-6B2" eventType="touchUpInside" id="DvA-9S-mgy"/>
+                            <action selector="loginButton" destination="gzK-do-6B2" eventType="touchUpInside" id="rXT-pX-qge"/>
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jak-aI-W1h">
@@ -51,7 +51,7 @@
                             <color key="titleColor" red="0.1176470588" green="0.08235294118" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
                         <connections>
-                            <action selector="aa2" destination="gzK-do-6B2" eventType="touchUpInside" id="Wbl-mu-YeW"/>
+                            <action selector="registerButton" destination="gzK-do-6B2" eventType="touchUpInside" id="ulK-xa-Rrb"/>
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Faça já o recolhimento de seu entulho." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5E-NW-EgN">
@@ -101,8 +101,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="F5w-V5-aWm"/>
             <connections>
-                <outlet property="b1" destination="W52-84-8cu" id="nuH-kh-S7Z"/>
-                <outlet property="b2" destination="jak-aI-W1h" id="Mrj-i8-i6C"/>
+                <outlet property="login" destination="W52-84-8cu" id="0W2-F5-e50"/>
+                <outlet property="register" destination="jak-aI-W1h" id="6xG-7W-xbk"/>
             </connections>
             <point key="canvasLocation" x="51.449275362318843" y="48.097826086956523"/>
         </tableViewCell>

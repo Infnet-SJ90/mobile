@@ -20,23 +20,33 @@ class RegisterViewController: UITableViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+}
+
+extension RegisterViewController: RegisterViewCellDelegate {
+    func loginButton() {
+        let nextController = LoginViewController()
+        self.present(nextController, animated: false, completion: nil)
+    }
     
-    // MARK: - Table view data source
-    
+    func createAccountButton() {
+        print("920")
+    }
+}
+
+// MARK: - Table view data source
+extension RegisterViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: RegisterViewCell.identifier, for: indexPath) as! RegisterViewCell
+        cell.delegate = self
         return cell
-        
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

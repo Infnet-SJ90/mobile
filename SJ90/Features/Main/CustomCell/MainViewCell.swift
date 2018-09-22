@@ -9,30 +9,32 @@
 import UIKit
 
 protocol MainViewCellDelegate: class {
-    func a()
-    func b()
+    func loginButton()
+    func registerButton()
 }
 
 class MainViewCell: UITableViewCell {
     
-    @IBOutlet weak var b2: UIButton!
-    @IBOutlet weak var b1: UIButton!
+    @IBOutlet weak var login: UIButton!
+    @IBOutlet weak var register: UIButton!
     
     var delegate: MainViewCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        b1.layer.cornerRadius = 5
-        b2.layer.cornerRadius = 5
+        self.login.layer.cornerRadius = 5
+        self.register.layer.cornerRadius = 5
+    }
+}
+
+// MARK: - Action methods
+extension MainViewCell {
+    @IBAction func loginButton(){
+        self.delegate?.loginButton()
     }
     
-    
-    @IBAction func aa1(){
-        self.delegate?.a()
-    }
-    
-    @IBAction func aa2(){
-        self.delegate?.b()
+    @IBAction func registerButton(){
+        self.delegate?.registerButton()
     }
 }
 

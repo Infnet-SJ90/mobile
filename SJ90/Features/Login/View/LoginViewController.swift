@@ -36,6 +36,11 @@ extension LoginViewController {
         guard let username = self.usernameTextField.text, let password = self.passwordTextField.text else { return  }
         self.presenter.login(username: username, password: password)
     }
+    
+    @IBAction func register(_ sender: UIButton) {
+        let nextController = RegisterViewController()
+        self.present(nextController, animated: false, completion: nil)
+    }
 }
 
 // MARK: - LoginProtocol

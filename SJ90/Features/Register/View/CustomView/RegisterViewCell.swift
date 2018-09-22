@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol RegisterViewCellDelegate: class {
+    func loginButton()
+    func createAccountButton()
+}
+
 class RegisterViewCell: UITableViewCell {
     
     @IBOutlet fileprivate weak var nameTextField: UITextField!
@@ -16,6 +21,8 @@ class RegisterViewCell: UITableViewCell {
     @IBOutlet fileprivate weak var passwordTextField: UITextField!
     @IBOutlet fileprivate weak var confirmPasswordTextField: UITextField!
     @IBOutlet fileprivate weak var login: UIButton!
+    
+    var delegate: RegisterViewCellDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,5 +34,16 @@ class RegisterViewCell: UITableViewCell {
         self.login.layer.cornerRadius = 10
         self.confirmPasswordTextField.layer.cornerRadius = 10
     }
-
 }
+
+// MARK: - Action methods
+extension RegisterViewCell {
+    @IBAction func loginButton(){
+        self.delegate?.loginButton()
+    }
+    
+    @IBAction func createAccountButton(){
+        self.delegate?.createAccountButton()
+    }
+}
+

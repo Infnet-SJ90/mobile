@@ -173,7 +173,7 @@
                                         <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmS-6J-KAn">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmS-6J-KAn" userLabel="create">
                                         <rect key="frame" x="0.0" y="27.5" width="343" height="40"/>
                                         <color key="backgroundColor" red="0.078431372550000003" green="0.2156862745" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -183,6 +183,9 @@
                                         <state key="normal" title="Criar conta">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="createAccountButton" destination="Oiu-Un-HQ6" eventType="touchUpInside" id="zWl-pR-c9T"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="e" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgI-dY-KRj">
                                         <rect key="frame" x="0.0" y="75.5" width="343" height="19.5"/>
@@ -196,6 +199,9 @@
                                         <state key="normal" title="Já tem conta? Entrar">
                                             <color key="titleColor" red="0.078431372550000003" green="0.2156862745" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="loginButton" destination="Oiu-Un-HQ6" eventType="touchUpInside" id="utX-51-Mbn"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>

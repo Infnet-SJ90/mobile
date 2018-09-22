@@ -130,6 +130,9 @@
                                     <state key="normal" title="Usuário novo? Cadastre - se">
                                         <color key="titleColor" red="0.078431372550000003" green="0.2156862745" blue="0.45882352939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
+                                    <connections>
+                                        <action selector="register:" destination="-1" eventType="touchUpInside" id="M6o-tU-b1x"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <constraints>
