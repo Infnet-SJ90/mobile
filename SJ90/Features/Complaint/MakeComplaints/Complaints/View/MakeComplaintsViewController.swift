@@ -101,6 +101,7 @@ extension MakeComplaintsViewController: MakeComplaintsProtocol {
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white, NSFontAttributeName : UIFont.systemFont(ofSize: 15.0, weight: UIFontWeightSemibold)]
         self.navigationController?.navigationBar.barTintColor = AppColor.shared.colorPrimary
         self.view.backgroundColor = AppColor.shared.colorGrayLighten70
+        self.navigationItem.setHidesBackButton(true, animated: false)
     }
     
     func startLoading() {

@@ -11,6 +11,8 @@ import SVProgressHUD
 
 class MyComplaintsViewController: UITableViewController {
     
+    @IBOutlet fileprivate weak var imageWithout: UIImageView!
+    
     fileprivate var presenter: MyComplaintsPresenter!
     
     override func viewDidLoad() {
@@ -19,7 +21,7 @@ class MyComplaintsViewController: UITableViewController {
         self.presenter = MyComplaintsPresenter(view: self)
         self.presenter.setupInitialization()
         
-        self.tableView.register(UINib(nibName: MyComplaintsEmptyViewCell.identifier, bundle: nil), forCellReuseIdentifier: MyComplaintsEmptyViewCell.identifier)
+        self.imageWithout.image = self.imageWithout.image?.overlayImage(AppColor.shared.colorPrimary)
     }
 }
 
@@ -33,17 +35,26 @@ extension MyComplaintsViewController {
         return 1
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: MyComplaintsEmptyViewCell.identifier, for: indexPath) as! MyComplaintsEmptyViewCell
-        cell.delegate = self
-        return cell
-    }
-}
-
-// MARK: - MyComplaintsEmptyCellDelegate
-extension MyComplaintsViewController: MyComplaintsEmptyCellDelegate {
-    func makeComplaintsButton() {
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         
+        let customView = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 41))
+        customView.backgroundColor = AppColor.shared.colorPrimary
+        customView.layer.cornerRadius = 10.0
+        customView.layer.shadowOpacity = 0.8
+        customView.layer.shadowColor = AppColor.shared.colorSnow.cgColor
+        customView.layer.shadowRadius = 3.0
+        customView.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
+        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 330, height: 50))
+        button.setTitle("              Fazer denúncias", for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 20.0, weight: UIFontWeightMedium)
+        button.addTarget(self, action: #selector(self.makeComplaints), for: .touchUpInside)
+        customView.addSubview(button)
+        
+        return customView
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 50
     }
 }
 
@@ -63,6 +74,11 @@ extension MyComplaintsViewController: MyComplaintsProtocol {
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white, NSFontAttributeName : UIFont.systemFont(ofSize: 15.0, weight: UIFontWeightSemibold)]
         self.navigationController?.navigationBar.barTintColor = AppColor.shared.colorPrimary
         self.view.backgroundColor = AppColor.shared.colorGrayLighten70
+    }
+    
+    @objc func makeComplaints() {
+        let types = "makeComplaints"
+        performSegue(withIdentifier: types, sender: nil)
     }
     
     func startLoading() {

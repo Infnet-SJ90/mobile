@@ -19,6 +19,7 @@ class SavePhotosViewController: UIViewController {
         super.viewDidLoad()
 
        self.capturedImage.image = PhotoTakenImg.sharedInstance.photoTakenImg.image
+        
        self.continuePhoto.image = self.continuePhoto.image?.overlayImage(AppColor.shared.colorPrimary)
     }
     

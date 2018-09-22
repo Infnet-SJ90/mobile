@@ -14,4 +14,5 @@ protocol MyComplaintsProtocol: class {
     func showAlertError(with title: String, message: String, buttonTitle: String)
     func setupNavigationController()
     func setupTabBarItem()
+    func makeComplaints()
 }

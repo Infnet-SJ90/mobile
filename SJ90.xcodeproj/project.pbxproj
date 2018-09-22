@@ -10,8 +10,6 @@
 		5630DB440203A2CA34ACF220 /* Pods_SJ90.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 349B62EBE36F695AD6EF0B71 /* Pods_SJ90.framework */; };
 		D10D582C215671B000F7A105 /* Coloring.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10D582B215671B000F7A105 /* Coloring.swift */; };
 		D10D582E2156723000F7A105 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10D582D2156723000F7A105 /* AppColor.swift */; };
-		D10D5832215678B100F7A105 /* MyComplaintsEmptyViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10D5830215678B100F7A105 /* MyComplaintsEmptyViewCell.swift */; };
-		D10D5833215678B100F7A105 /* MyComplaintsEmptyViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D10D5831215678B100F7A105 /* MyComplaintsEmptyViewCell.xib */; };
 		D110D4A921567E4700E4918D /* OverlayImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = D110D4A821567E4700E4918D /* OverlayImages.swift */; };
 		D110D4AD2156C78700E4918D /* MakeComplaintsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D110D4AC2156C78700E4918D /* MakeComplaintsProtocol.swift */; };
 		D110D4AF2156C79400E4918D /* MakeComplaintsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D110D4AE2156C79400E4918D /* MakeComplaintsPresenter.swift */; };
@@ -61,8 +59,6 @@
 		A6A1567885B1309FEFF872E2 /* Pods-SJ90.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJ90.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SJ90/Pods-SJ90.debug.xcconfig"; sourceTree = "<group>"; };
 		D10D582B215671B000F7A105 /* Coloring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coloring.swift; sourceTree = "<group>"; };
 		D10D582D2156723000F7A105 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
-		D10D5830215678B100F7A105 /* MyComplaintsEmptyViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyComplaintsEmptyViewCell.swift; sourceTree = "<group>"; };
-		D10D5831215678B100F7A105 /* MyComplaintsEmptyViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyComplaintsEmptyViewCell.xib; sourceTree = "<group>"; };
 		D110D4A821567E4700E4918D /* OverlayImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayImages.swift; sourceTree = "<group>"; };
 		D110D4AC2156C78700E4918D /* MakeComplaintsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeComplaintsProtocol.swift; sourceTree = "<group>"; };
 		D110D4AE2156C79400E4918D /* MakeComplaintsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeComplaintsPresenter.swift; sourceTree = "<group>"; };
@@ -137,15 +133,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		D10D582F2156787600F7A105 /* CustomView */ = {
-			isa = PBXGroup;
-			children = (
-				D10D5830215678B100F7A105 /* MyComplaintsEmptyViewCell.swift */,
-				D10D5831215678B100F7A105 /* MyComplaintsEmptyViewCell.xib */,
-			);
-			path = CustomView;
-			sourceTree = "<group>";
-		};
 		D110D4AA2156C75400E4918D /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,7 +162,6 @@
 		D110D4B12156CC5B00E4918D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D10D582F2156787600F7A105 /* CustomView */,
 				D1D9B9192155F60D00C14E27 /* MyComplaintsViewController.swift */,
 			);
 			path = View;
@@ -524,7 +510,6 @@
 				D1D9B9052155E0FA00C14E27 /* RegisterViewCell.xib in Resources */,
 				D17E45722151A79D00D6233C /* LoginViewController.xib in Resources */,
 				D1B02FDE2145B049003EE67F /* TakePhotosViewController.xib in Resources */,
-				D10D5833215678B100F7A105 /* MyComplaintsEmptyViewCell.xib in Resources */,
 				D1B02FEC2145C6CA003EE67F /* SavePhotosViewController.xib in Resources */,
 				D1D9B8F82155DAD000C14E27 /* MainViewController.xib in Resources */,
 				D1B02FC92145A6C2003EE67F /* Main.storyboard in Resources */,
@@ -584,7 +569,6 @@
 				D1D9B8FF2155DD9A00C14E27 /* ExtensionNSObject.swift in Sources */,
 				D1B02FE42145B859003EE67F /* ImageOrientation.swift in Sources */,
 				D110D4B72156D6B800E4918D /* ButtonViewParameterization.swift in Sources */,
-				D10D5832215678B100F7A105 /* MyComplaintsEmptyViewCell.swift in Sources */,
 				D1B02FE62145BE92003EE67F /* PhotoTakenImg.swift in Sources */,
 				D110D4B32156CC8F00E4918D /* MyComplaintsPresenter.swift in Sources */,
 				D110D4B52156CCA500E4918D /* MyComplaintsProtocol.swift in Sources */,
