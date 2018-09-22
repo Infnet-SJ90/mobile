@@ -13,11 +13,20 @@ class LoginViewController: UIViewController {
     
     @IBOutlet fileprivate weak var usernameTextField: UITextField!
     @IBOutlet fileprivate weak var passwordTextField: UITextField!
+    @IBOutlet fileprivate weak var login: UIButton!
     fileprivate var presenter: LoginPresenter!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.presenter = LoginPresenter(view: self)
+        login.layer.cornerRadius = 10
+        usernameTextField.layer.cornerRadius = 10
+        passwordTextField.layer.cornerRadius = 10
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
 }
 
@@ -49,3 +58,4 @@ extension LoginViewController: LoginProtocol {
         self.present(alert, animated: true, completion: nil)
     }
 }
+
