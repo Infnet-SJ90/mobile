@@ -33,8 +33,16 @@ class LoginViewController: UIViewController {
 // MARK: - Action methods
 extension LoginViewController {
     @IBAction func login(_ sender: UIButton) {
-        guard let username = self.usernameTextField.text, let password = self.passwordTextField.text else { return  }
-        self.presenter.login(username: username, password: password)
+//        guard let username = self.usernameTextField.text, let password = self.passwordTextField.text else { return  }
+//        self.presenter.login(username: username, password: password)
+//        
+        let storyboard = UIStoryboard(name: "Complaint", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "Complaint")
+        self.present(controller, animated: true, completion: nil)
+        
+//        let storyBoard: UIStoryboard = UIStoryboard(name: "Complaint", bundle: nil)
+//        let nextController = storyBoard.instantiateViewController(withIdentifier: "MyComplaintsViewController") as! MyComplaintsViewController
+//        self.navigationController?.pushViewController(nextController, animated: true)
     }
     
     @IBAction func register(_ sender: UIButton) {

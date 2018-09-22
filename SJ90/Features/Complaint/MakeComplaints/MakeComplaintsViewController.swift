@@ -9,22 +9,27 @@
 import UIKit
 
 class MakeComplaintsViewController: UITableViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+        
     }
-
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        tabBarItem = UITabBarItem(title: "Fazer denúncias", image: UIImage(named: "camera"), tag: 1)
+        self.tabBarController?.tabBar.backgroundColor = UIColor.white
+        self.tabBarController?.tabBar.tintColor =  UIColor.blue
+        self.tabBarController?.tabBar.unselectedItemTintColor = UIColor.black
+    }
+    
     // MARK: - Table view data source
-
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return 1
     }
 }
