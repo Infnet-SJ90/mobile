@@ -14,7 +14,8 @@ protocol MyComplaintsEmptyCellDelegate: class {
 
 class MyComplaintsEmptyViewCell: UITableViewCell {
     
-     @IBOutlet weak var makeComplaints: UIButton!
+    @IBOutlet fileprivate weak var makeComplaints: UIButton!
+    @IBOutlet fileprivate weak var imageWithout: UIImageView!
     
     var delegate: MyComplaintsEmptyCellDelegate?
 
@@ -22,6 +23,7 @@ class MyComplaintsEmptyViewCell: UITableViewCell {
         super.awakeFromNib()
         
         self.makeComplaints.layer.cornerRadius = 10
+        self.imageWithout.image = self.imageWithout.image?.overlayImage(AppColor.shared.colorPrimary)
     }
 }
 
