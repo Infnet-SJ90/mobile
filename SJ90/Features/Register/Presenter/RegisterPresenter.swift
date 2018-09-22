@@ -7,3 +7,23 @@
 //
 
 import Foundation
+
+final class RegisterPresenter {
+    
+    fileprivate unowned let view: RegisterProtocol
+    //    fileprivate let service: LoginService
+    fileprivate(set) var sucessLogin = Bool()
+    
+    init(view: RegisterProtocol) {
+        self.view = view
+        //        self.service = LoginService()
+    }
+}
+
+// MARK: - Public methods
+extension RegisterPresenter {
+}
+
+// MARK: - Private methods
+extension RegisterPresenter {
+}

@@ -13,6 +13,10 @@
 		D10D5832215678B100F7A105 /* MyComplaintsEmptyViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10D5830215678B100F7A105 /* MyComplaintsEmptyViewCell.swift */; };
 		D10D5833215678B100F7A105 /* MyComplaintsEmptyViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D10D5831215678B100F7A105 /* MyComplaintsEmptyViewCell.xib */; };
 		D110D4A921567E4700E4918D /* OverlayImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = D110D4A821567E4700E4918D /* OverlayImages.swift */; };
+		D110D4AD2156C78700E4918D /* MakeComplaintsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D110D4AC2156C78700E4918D /* MakeComplaintsProtocol.swift */; };
+		D110D4AF2156C79400E4918D /* MakeComplaintsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D110D4AE2156C79400E4918D /* MakeComplaintsPresenter.swift */; };
+		D110D4B32156CC8F00E4918D /* MyComplaintsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D110D4B22156CC8F00E4918D /* MyComplaintsPresenter.swift */; };
+		D110D4B52156CCA500E4918D /* MyComplaintsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D110D4B42156CCA500E4918D /* MyComplaintsProtocol.swift */; };
 		D17E456A2151A76C00D6233C /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E45692151A76C00D6233C /* LoginPresenter.swift */; };
 		D17E456D2151A77F00D6233C /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E456C2151A77F00D6233C /* LoginProtocol.swift */; };
 		D17E45712151A79D00D6233C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E456F2151A79D00D6233C /* LoginViewController.swift */; };
@@ -58,6 +62,10 @@
 		D10D5830215678B100F7A105 /* MyComplaintsEmptyViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyComplaintsEmptyViewCell.swift; sourceTree = "<group>"; };
 		D10D5831215678B100F7A105 /* MyComplaintsEmptyViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyComplaintsEmptyViewCell.xib; sourceTree = "<group>"; };
 		D110D4A821567E4700E4918D /* OverlayImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayImages.swift; sourceTree = "<group>"; };
+		D110D4AC2156C78700E4918D /* MakeComplaintsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeComplaintsProtocol.swift; sourceTree = "<group>"; };
+		D110D4AE2156C79400E4918D /* MakeComplaintsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeComplaintsPresenter.swift; sourceTree = "<group>"; };
+		D110D4B22156CC8F00E4918D /* MyComplaintsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyComplaintsPresenter.swift; sourceTree = "<group>"; };
+		D110D4B42156CCA500E4918D /* MyComplaintsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyComplaintsProtocol.swift; sourceTree = "<group>"; };
 		D17E45692151A76C00D6233C /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		D17E456C2151A77F00D6233C /* LoginProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocol.swift; sourceTree = "<group>"; };
 		D17E456F2151A79D00D6233C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +140,41 @@
 				D10D5831215678B100F7A105 /* MyComplaintsEmptyViewCell.xib */,
 			);
 			path = CustomView;
+			sourceTree = "<group>";
+		};
+		D110D4AA2156C75400E4918D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D110D4AC2156C78700E4918D /* MakeComplaintsProtocol.swift */,
+				D110D4AE2156C79400E4918D /* MakeComplaintsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D110D4AB2156C75F00E4918D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D1D9B9152155F59500C14E27 /* MakeComplaintsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D110D4B02156CC5200E4918D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D110D4B22156CC8F00E4918D /* MyComplaintsPresenter.swift */,
+				D110D4B42156CCA500E4918D /* MyComplaintsProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D110D4B12156CC5B00E4918D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D10D582F2156787600F7A105 /* CustomView */,
+				D1D9B9192155F60D00C14E27 /* MyComplaintsViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		D17E45652151A66800D6233C /* Login */ = {
@@ -376,8 +419,8 @@
 		D1D9B9112155F1F900C14E27 /* MyComplaints */ = {
 			isa = PBXGroup;
 			children = (
-				D10D582F2156787600F7A105 /* CustomView */,
-				D1D9B9192155F60D00C14E27 /* MyComplaintsViewController.swift */,
+				D110D4B02156CC5200E4918D /* Presenter */,
+				D110D4B12156CC5B00E4918D /* View */,
 			);
 			path = MyComplaints;
 			sourceTree = "<group>";
@@ -385,7 +428,8 @@
 		D1D9B9122155F21600C14E27 /* MakeComplaints */ = {
 			isa = PBXGroup;
 			children = (
-				D1D9B9152155F59500C14E27 /* MakeComplaintsViewController.swift */,
+				D110D4AA2156C75400E4918D /* Presenter */,
+				D110D4AB2156C75F00E4918D /* View */,
 			);
 			path = MakeComplaints;
 			sourceTree = "<group>";
@@ -519,7 +563,11 @@
 				D1B02FE42145B859003EE67F /* ImageOrientation.swift in Sources */,
 				D10D5832215678B100F7A105 /* MyComplaintsEmptyViewCell.swift in Sources */,
 				D1B02FE62145BE92003EE67F /* PhotoTakenImg.swift in Sources */,
+				D110D4B32156CC8F00E4918D /* MyComplaintsPresenter.swift in Sources */,
+				D110D4B52156CCA500E4918D /* MyComplaintsProtocol.swift in Sources */,
 				D1CD8E3F2149E72200A688B5 /* ServiceManagerProtocol.swift in Sources */,
+				D110D4AD2156C78700E4918D /* MakeComplaintsProtocol.swift in Sources */,
+				D110D4AF2156C79400E4918D /* MakeComplaintsPresenter.swift in Sources */,
 				D1D9B9082155E10F00C14E27 /* RegisterViewController.swift in Sources */,
 				D1CD8E412149E7AB00A688B5 /* ServiceURL.swift in Sources */,
 				D10D582C215671B000F7A105 /* Coloring.swift in Sources */,

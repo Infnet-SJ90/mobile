@@ -20,9 +20,9 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         self.presenter = LoginPresenter(view: self)
-        login.layer.cornerRadius = 10
-        usernameTextField.layer.cornerRadius = 10
-        passwordTextField.layer.cornerRadius = 10
+        self.login.layer.cornerRadius = 10
+        self.usernameTextField.layer.cornerRadius = 10
+        self.passwordTextField.layer.cornerRadius = 10
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -39,10 +39,6 @@ extension LoginViewController {
         let storyboard = UIStoryboard(name: "Complaint", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "Complaint")
         self.present(controller, animated: true, completion: nil)
-        
-//        let storyBoard: UIStoryboard = UIStoryboard(name: "Complaint", bundle: nil)
-//        let nextController = storyBoard.instantiateViewController(withIdentifier: "MyComplaintsViewController") as! MyComplaintsViewController
-//        self.navigationController?.pushViewController(nextController, animated: true)
     }
     
     @IBAction func register(_ sender: UIButton) {

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SJ90/Features/Login/View/LoginViewController.swift"
-            timestampString = "559283967.802956"
+            timestampString = "559337031.728723"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "LoginViewController"
             landmarkType = "21">
          </BreakpointContent>

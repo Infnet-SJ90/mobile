@@ -7,14 +7,17 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class RegisterViewController: UITableViewController {
+    
+    fileprivate var presenter: RegisterPresenter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.presenter = RegisterPresenter(view: self)
         self.tableView.register(UINib(nibName: RegisterViewCell.identifier, bundle: nil), forCellReuseIdentifier: RegisterViewCell.identifier)
-        
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -22,6 +25,7 @@ class RegisterViewController: UITableViewController {
     }
 }
 
+// MARK: - RegisterViewCellDelegate
 extension RegisterViewController: RegisterViewCellDelegate {
     func loginButton() {
         let nextController = LoginViewController()
@@ -51,5 +55,26 @@ extension RegisterViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 736
+    }
+}
+
+// MARK: - RegisterProtocol
+extension RegisterViewController: RegisterProtocol {
+    func startLoading() {
+        SVProgressHUD.setDefaultStyle(.custom)
+        SVProgressHUD.setForegroundColor(.white)
+        SVProgressHUD.setBackgroundColor(UIColor.lightGray)
+        SVProgressHUD.setDefaultMaskType(.clear)
+        SVProgressHUD.show()
+    }
+    
+    func stopLoading() {
+        SVProgressHUD.dismiss()
+    }
+    
+    func showAlertError(with title: String, message: String, buttonTitle: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: buttonTitle, style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
