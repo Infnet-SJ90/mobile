@@ -22,22 +22,79 @@ class TypesComplaintsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.radioCheckViewTypeA.layer.cornerRadius = self.radioCheckViewTypeA.bounds.width / 2
-        self.radioCheckViewTypeA.layer.borderWidth = 1
-        self.radioCheckViewTypeA.layer.borderColor = AppColor.shared.colorGrayLighten60.cgColor
-        self.radioCheckViewTypeA.backgroundColor = AppColor.shared.colorGrayLighten70
+        self.addGesture()
         
-        self.radioCheckedViewTypeA.layer.cornerRadius = self.radioCheckedViewTypeA.bounds.width / 2
-        self.radioCheckedViewTypeA.backgroundColor = AppColor.shared.colorPrimary
+        self.radioViewParameterization(radioCheckViewTypeA, radioCheckedViewTypeA)
+        self.radioViewParameterization(radioCheckViewTypeB, radioCheckedViewTypeB)
+        self.radioViewParameterization(radioCheckViewTypeC, radioCheckedViewTypeC)
+        self.radioViewParameterization(radioCheckViewTypeD, radioCheckedViewTypeD)
     }
 }
 
+// MARK: - Private methods
+extension TypesComplaintsViewController {
+    
+    fileprivate func radioViewParameterization(_ radioCheck: UIView, _ radioChecked: UIView) {
+        
+        radioCheck.layer.cornerRadius = radioCheck.bounds.width / 2
+        radioCheck.layer.borderWidth = 1
+        radioCheck.layer.borderColor = AppColor.shared.colorGrayLighten60.cgColor
+        radioCheck.backgroundColor = AppColor.shared.colorGrayLighten70
+        
+        radioChecked.layer.cornerRadius = radioChecked.bounds.width / 2
+        radioChecked.backgroundColor = AppColor.shared.colorGrayLighten70
+    }
+    
+    fileprivate func addGesture() {
+        let gestureA = UITapGestureRecognizer(target: self, action: #selector(tapGestureCheckedViewTypeA(sender:)))
+        self.radioCheckedViewTypeA.addGestureRecognizer(gestureA)
+        
+        let gestureB = UITapGestureRecognizer(target: self, action: #selector(tapGestureCheckedViewTypeB(sender:)))
+        self.radioCheckedViewTypeB.addGestureRecognizer(gestureB)
+        
+        let gestureC = UITapGestureRecognizer(target: self, action: #selector(tapGestureCheckedViewTypeC(sender:)))
+        self.radioCheckedViewTypeC.addGestureRecognizer(gestureC)
+        
+        let gestureD = UITapGestureRecognizer(target: self, action: #selector(tapGestureCheckedViewTypeD(sender:)))
+        self.radioCheckedViewTypeD.addGestureRecognizer(gestureD)
+    }
+    
+    private dynamic func tapGestureCheckedViewTypeA(sender: UITapGestureRecognizer) {
+        self.radioCheckedViewTypeA.backgroundColor = AppColor.shared.colorPrimary
+        self.radioCheckedViewTypeB.backgroundColor = AppColor.shared.colorGrayLighten70
+        self.radioCheckedViewTypeC.backgroundColor = AppColor.shared.colorGrayLighten70
+        self.radioCheckedViewTypeD.backgroundColor = AppColor.shared.colorGrayLighten70
+    }
+    
+    private dynamic func tapGestureCheckedViewTypeB(sender: UITapGestureRecognizer) {
+        self.radioCheckedViewTypeA.backgroundColor = AppColor.shared.colorGrayLighten70
+        self.radioCheckedViewTypeB.backgroundColor = AppColor.shared.colorPrimary
+        self.radioCheckedViewTypeC.backgroundColor = AppColor.shared.colorGrayLighten70
+        self.radioCheckedViewTypeD.backgroundColor = AppColor.shared.colorGrayLighten70
+    }
+    
+    private dynamic func tapGestureCheckedViewTypeC(sender: UITapGestureRecognizer) {
+        self.radioCheckedViewTypeA.backgroundColor = AppColor.shared.colorGrayLighten70
+        self.radioCheckedViewTypeB.backgroundColor = AppColor.shared.colorGrayLighten70
+        self.radioCheckedViewTypeC.backgroundColor = AppColor.shared.colorPrimary
+        self.radioCheckedViewTypeD.backgroundColor = AppColor.shared.colorGrayLighten70
+    }
+    
+    private dynamic func tapGestureCheckedViewTypeD(sender: UITapGestureRecognizer) {
+        self.radioCheckedViewTypeA.backgroundColor = AppColor.shared.colorGrayLighten70
+        self.radioCheckedViewTypeB.backgroundColor = AppColor.shared.colorGrayLighten70
+        self.radioCheckedViewTypeC.backgroundColor = AppColor.shared.colorGrayLighten70
+        self.radioCheckedViewTypeD.backgroundColor = AppColor.shared.colorPrimary
+    }
+}
+
+// MARK: - MakeComplaintsProtocol
 extension TypesComplaintsViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
 }

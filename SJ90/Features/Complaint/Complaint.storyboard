@@ -609,7 +609,13 @@
                     <navigationItem key="navigationItem" title="Fazer denúncias" id="HSm-LE-3QQ"/>
                     <connections>
                         <outlet property="radioCheckViewTypeA" destination="RGX-Ga-8kk" id="6BI-BM-nXv"/>
+                        <outlet property="radioCheckViewTypeB" destination="SqS-Ug-TG1" id="xoV-P8-7Ht"/>
+                        <outlet property="radioCheckViewTypeC" destination="08F-Gy-pv0" id="ip5-3B-VVr"/>
+                        <outlet property="radioCheckViewTypeD" destination="YhJ-si-ylm" id="tUl-fu-pnw"/>
                         <outlet property="radioCheckedViewTypeA" destination="SFk-5z-ByL" id="Aje-j1-bC0"/>
+                        <outlet property="radioCheckedViewTypeB" destination="yBB-uJ-V89" id="4gf-QI-i2y"/>
+                        <outlet property="radioCheckedViewTypeC" destination="gTu-CT-eUr" id="erx-IY-7F8"/>
+                        <outlet property="radioCheckedViewTypeD" destination="2Ck-C6-eJg" id="Msb-EO-xvd"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JVU-q6-UrV" userLabel="First Responder" sceneMemberID="firstResponder"/>
