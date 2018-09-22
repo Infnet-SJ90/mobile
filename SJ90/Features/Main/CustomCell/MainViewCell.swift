@@ -8,17 +8,31 @@
 
 import UIKit
 
-class MainViewCell: UITableViewCell {
+protocol MainViewCellDelegate: class {
+    func a()
+    func b()
+}
 
+class MainViewCell: UITableViewCell {
+    
+    @IBOutlet weak var b2: UIButton!
+    @IBOutlet weak var b1: UIButton!
+    
+    var delegate: MainViewCellDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        b1.layer.cornerRadius = 5
+        b2.layer.cornerRadius = 5
     }
     
+    
+    @IBAction func aa1(){
+        self.delegate?.a()
+    }
+    
+    @IBAction func aa2(){
+        self.delegate?.b()
+    }
 }
+
