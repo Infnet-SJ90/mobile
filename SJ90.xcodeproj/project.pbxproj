@@ -28,6 +28,10 @@
 		D1CD8E3D2149E6DE00A688B5 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD8E3C2149E6DE00A688B5 /* ServiceManager.swift */; };
 		D1CD8E3F2149E72200A688B5 /* ServiceManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD8E3E2149E72200A688B5 /* ServiceManagerProtocol.swift */; };
 		D1CD8E412149E7AB00A688B5 /* ServiceURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD8E402149E7AB00A688B5 /* ServiceURL.swift */; };
+		D1D9B8F72155DAD000C14E27 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D9B8F52155DAD000C14E27 /* MainViewController.swift */; };
+		D1D9B8F82155DAD000C14E27 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1D9B8F62155DAD000C14E27 /* MainViewController.xib */; };
+		D1D9B8FB2155DAE800C14E27 /* MainViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D9B8F92155DAE800C14E27 /* MainViewCell.swift */; };
+		D1D9B8FC2155DAE800C14E27 /* MainViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1D9B8FA2155DAE800C14E27 /* MainViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +60,10 @@
 		D1CD8E3C2149E6DE00A688B5 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		D1CD8E3E2149E72200A688B5 /* ServiceManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManagerProtocol.swift; sourceTree = "<group>"; };
 		D1CD8E402149E7AB00A688B5 /* ServiceURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceURL.swift; sourceTree = "<group>"; };
+		D1D9B8F52155DAD000C14E27 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D1D9B8F62155DAD000C14E27 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		D1D9B8F92155DAE800C14E27 /* MainViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCell.swift; sourceTree = "<group>"; };
+		D1D9B8FA2155DAE800C14E27 /* MainViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +171,7 @@
 		D1B02FD52145A7E3003EE67F /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				D1D9B8F32155DA8900C14E27 /* Main */,
 				D17E45652151A66800D6233C /* Login */,
 				D1B02FE72145C689003EE67F /* SavePhotos */,
 				D1B02FDA2145AF42003EE67F /* TakePhotos */,
@@ -253,6 +262,25 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		D1D9B8F32155DA8900C14E27 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D1D9B8F42155DAA200C14E27 /* CustomCell */,
+				D1D9B8F52155DAD000C14E27 /* MainViewController.swift */,
+				D1D9B8F62155DAD000C14E27 /* MainViewController.xib */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		D1D9B8F42155DAA200C14E27 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				D1D9B8F92155DAE800C14E27 /* MainViewCell.swift */,
+				D1D9B8FA2155DAE800C14E27 /* MainViewCell.xib */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -314,10 +342,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1B02FCE2145A6C7003EE67F /* LaunchScreen.storyboard in Resources */,
+				D1D9B8FC2155DAE800C14E27 /* MainViewCell.xib in Resources */,
 				D1B02FCB2145A6C7003EE67F /* Assets.xcassets in Resources */,
 				D17E45722151A79D00D6233C /* LoginViewController.xib in Resources */,
 				D1B02FDE2145B049003EE67F /* TakePhotosViewController.xib in Resources */,
 				D1B02FEC2145C6CA003EE67F /* SavePhotosViewController.xib in Resources */,
+				D1D9B8F82155DAD000C14E27 /* MainViewController.xib in Resources */,
 				D1B02FC92145A6C2003EE67F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -381,9 +411,11 @@
 				D1CD8E3D2149E6DE00A688B5 /* ServiceManager.swift in Sources */,
 				D1B02FE22145B2FC003EE67F /* CameraButton.swift in Sources */,
 				D1B02FEB2145C6CA003EE67F /* SavePhotosViewController.swift in Sources */,
+				D1D9B8F72155DAD000C14E27 /* MainViewController.swift in Sources */,
 				D17E456D2151A77F00D6233C /* LoginProtocol.swift in Sources */,
 				D1CD8E3B2149E68D00A688B5 /* ServiceError.swift in Sources */,
 				D17E45712151A79D00D6233C /* LoginViewController.swift in Sources */,
+				D1D9B8FB2155DAE800C14E27 /* MainViewCell.swift in Sources */,
 				D1B02FC42145A6C1003EE67F /* AppDelegate.swift in Sources */,
 				D17E45762151B34F00D6233C /* LoginService.swift in Sources */,
 			);

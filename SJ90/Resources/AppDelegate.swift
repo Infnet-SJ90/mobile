@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        let viewController = LoginViewController(nibName: "LoginViewController", bundle: nil)
+        let viewController = MainViewController(nibName: "MainViewController", bundle: nil)
 //        let navigationController = UINavigationController()
 //        navigationController.viewControllers = [viewController]
         self.window!.rootViewController = viewController
