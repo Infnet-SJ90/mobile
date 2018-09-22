@@ -13,23 +13,29 @@ class MakeComplaintsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.barTintColor = AppColor.shared.colorPrimary
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white, NSFontAttributeName : UIFont.systemFont(ofSize: 15.0, weight: UIFontWeightSemibold)]
+        self.navigationController?.navigationBar.barTintColor = AppColor.shared.colorPrimary
+        self.view.backgroundColor = AppColor.shared.colorGrayLighten70
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
-        tabBarItem = UITabBarItem(title: "Fazer denúncias", image: UIImage(named: "camera"), tag: 1)
+        tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "camera"), tag: 1)
+        tabBarItem.imageInsets = UIEdgeInsets(top: 9, left: 0, bottom: -9, right: 0)
         self.tabBarController?.tabBar.backgroundColor = UIColor.white
-        self.tabBarController?.tabBar.tintColor =  UIColor.blue
+        self.tabBarController?.tabBar.tintColor = AppColor.shared.colorPrimary
         self.tabBarController?.tabBar.unselectedItemTintColor = UIColor.black
     }
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return 0
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 0
     }
 }

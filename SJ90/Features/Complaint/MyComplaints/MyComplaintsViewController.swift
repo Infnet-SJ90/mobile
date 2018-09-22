@@ -18,14 +18,18 @@ class MyComplaintsViewController: UITableViewController {
     }
     
     func navigationItem_() {
-        self.navigationController?.navigationBar.barTintColor = UIColor.blue
+
+        self.title = "Minhas denúncias"        
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white, NSFontAttributeName : UIFont.systemFont(ofSize: 15.0, weight: UIFontWeightSemibold)]
+        self.navigationController?.navigationBar.barTintColor = AppColor.shared.colorPrimary
+        self.view.backgroundColor = AppColor.shared.colorGrayLighten70
     }
     
     func tabBarItem_() {
-        tabBarItem = UITabBarItem(title: "Minhas denúncias", image: UIImage(named: "checklist"), tag: 0)
-        self.tabBarController?.tabBarItem.title = "Minhas denúncias"
+        tabBarItem = UITabBarItem(title: nil, image: UIImage(named: "checklist"), tag: 0)
+        tabBarItem.imageInsets = UIEdgeInsets(top: 9, left: 0, bottom: -9, right: 0)
         self.tabBarController?.tabBar.backgroundColor = UIColor.white
-        self.tabBarController?.tabBar.tintColor = UIColor.blue
+        self.tabBarController?.tabBar.tintColor = AppColor.shared.colorPrimary
         self.tabBarController?.tabBar.unselectedItemTintColor = UIColor.black
     }
     

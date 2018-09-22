@@ -28,11 +28,11 @@
             </objects>
             <point key="canvasLocation" x="-1918" y="633"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="aoY-PB-K9E">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xr9-nW-CEG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="9ev-Yq-IxN"/>
+                    <tabBarItem key="tabBarItem" title="" id="9ev-Yq-IxN"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Au9-8M-xNI">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -47,11 +47,11 @@
             </objects>
             <point key="canvasLocation" x="-364" y="-91"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="VXq-TQ-fYc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3Ny-6I-J07" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="lxR-FT-9zU"/>
+                    <tabBarItem key="tabBarItem" title="" id="lxR-FT-9zU"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qF5-CH-Jp2">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -66,7 +66,7 @@
             </objects>
             <point key="canvasLocation" x="-364" y="732"/>
         </scene>
-        <!--Make Complaints View Controller-->
+        <!--Fazer denúncias-->
         <scene sceneID="BL7-LO-77a">
             <objects>
                 <tableViewController id="xOK-QY-y8X" customClass="MakeComplaintsViewController" customModule="SJ90" customModuleProvider="target" sceneMemberID="viewController">
@@ -79,7 +79,7 @@
                             <outlet property="delegate" destination="xOK-QY-y8X" id="Kw7-jb-G7n"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="TFU-dy-um5"/>
+                    <navigationItem key="navigationItem" title="Fazer denúncias" id="TFU-dy-um5"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oyl-1n-bgj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

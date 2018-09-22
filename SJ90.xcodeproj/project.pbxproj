@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5630DB440203A2CA34ACF220 /* Pods_SJ90.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 349B62EBE36F695AD6EF0B71 /* Pods_SJ90.framework */; };
 		D10D582C215671B000F7A105 /* Coloring.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10D582B215671B000F7A105 /* Coloring.swift */; };
+		D10D582E2156723000F7A105 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10D582D2156723000F7A105 /* AppColor.swift */; };
 		D17E456A2151A76C00D6233C /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E45692151A76C00D6233C /* LoginPresenter.swift */; };
 		D17E456D2151A77F00D6233C /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E456C2151A77F00D6233C /* LoginProtocol.swift */; };
 		D17E45712151A79D00D6233C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E456F2151A79D00D6233C /* LoginViewController.swift */; };
@@ -50,6 +51,7 @@
 		52BEE60425111FC342EE5985 /* Pods-SJ90.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJ90.release.xcconfig"; path = "Pods/Target Support Files/Pods-SJ90/Pods-SJ90.release.xcconfig"; sourceTree = "<group>"; };
 		A6A1567885B1309FEFF872E2 /* Pods-SJ90.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SJ90.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SJ90/Pods-SJ90.debug.xcconfig"; sourceTree = "<group>"; };
 		D10D582B215671B000F7A105 /* Coloring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coloring.swift; sourceTree = "<group>"; };
+		D10D582D2156723000F7A105 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		D17E45692151A76C00D6233C /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		D17E456C2151A77F00D6233C /* LoginProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocol.swift; sourceTree = "<group>"; };
 		D17E456F2151A79D00D6233C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				D1B02FCA2145A6C7003EE67F /* Assets.xcassets */,
 				D1B02FCF2145A6C7003EE67F /* Info.plist */,
 				D1CD8E402149E7AB00A688B5 /* ServiceURL.swift */,
+				D10D582D2156723000F7A105 /* AppColor.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -510,6 +513,7 @@
 				D1D9B8F72155DAD000C14E27 /* MainViewController.swift in Sources */,
 				D1D9B90D2155E16E00C14E27 /* RegisterProtocol.swift in Sources */,
 				D17E456D2151A77F00D6233C /* LoginProtocol.swift in Sources */,
+				D10D582E2156723000F7A105 /* AppColor.swift in Sources */,
 				D1CD8E3B2149E68D00A688B5 /* ServiceError.swift in Sources */,
 				D17E45712151A79D00D6233C /* LoginViewController.swift in Sources */,
 				D1D9B90F2155E17900C14E27 /* RegisterPresenter.swift in Sources */,
