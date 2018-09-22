@@ -12,6 +12,7 @@
 		D10D582E2156723000F7A105 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10D582D2156723000F7A105 /* AppColor.swift */; };
 		D10D5832215678B100F7A105 /* MyComplaintsEmptyViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D10D5830215678B100F7A105 /* MyComplaintsEmptyViewCell.swift */; };
 		D10D5833215678B100F7A105 /* MyComplaintsEmptyViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D10D5831215678B100F7A105 /* MyComplaintsEmptyViewCell.xib */; };
+		D110D4A921567E4700E4918D /* OverlayImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = D110D4A821567E4700E4918D /* OverlayImages.swift */; };
 		D17E456A2151A76C00D6233C /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E45692151A76C00D6233C /* LoginPresenter.swift */; };
 		D17E456D2151A77F00D6233C /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E456C2151A77F00D6233C /* LoginProtocol.swift */; };
 		D17E45712151A79D00D6233C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E456F2151A79D00D6233C /* LoginViewController.swift */; };
@@ -56,6 +57,7 @@
 		D10D582D2156723000F7A105 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		D10D5830215678B100F7A105 /* MyComplaintsEmptyViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyComplaintsEmptyViewCell.swift; sourceTree = "<group>"; };
 		D10D5831215678B100F7A105 /* MyComplaintsEmptyViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MyComplaintsEmptyViewCell.xib; sourceTree = "<group>"; };
+		D110D4A821567E4700E4918D /* OverlayImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayImages.swift; sourceTree = "<group>"; };
 		D17E45692151A76C00D6233C /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		D17E456C2151A77F00D6233C /* LoginProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocol.swift; sourceTree = "<group>"; };
 		D17E456F2151A79D00D6233C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -269,10 +271,11 @@
 			isa = PBXGroup;
 			children = (
 				D1B02FE12145B2FC003EE67F /* CameraButton.swift */,
+				D10D582B215671B000F7A105 /* Coloring.swift */,
+				D1D9B8FE2155DD9A00C14E27 /* ExtensionNSObject.swift */,
 				D1B02FE32145B859003EE67F /* ImageOrientation.swift */,
 				D1B02FE52145BE92003EE67F /* PhotoTakenImg.swift */,
-				D1D9B8FE2155DD9A00C14E27 /* ExtensionNSObject.swift */,
-				D10D582B215671B000F7A105 /* Coloring.swift */,
+				D110D4A821567E4700E4918D /* OverlayImages.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -526,6 +529,7 @@
 				D1CD8E3D2149E6DE00A688B5 /* ServiceManager.swift in Sources */,
 				D1B02FE22145B2FC003EE67F /* CameraButton.swift in Sources */,
 				D1B02FEB2145C6CA003EE67F /* SavePhotosViewController.swift in Sources */,
+				D110D4A921567E4700E4918D /* OverlayImages.swift in Sources */,
 				D1D9B8F72155DAD000C14E27 /* MainViewController.swift in Sources */,
 				D1D9B90D2155E16E00C14E27 /* RegisterProtocol.swift in Sources */,
 				D17E456D2151A77F00D6233C /* LoginProtocol.swift in Sources */,
