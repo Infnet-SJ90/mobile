@@ -32,6 +32,7 @@
 		D1D9B8F82155DAD000C14E27 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1D9B8F62155DAD000C14E27 /* MainViewController.xib */; };
 		D1D9B8FB2155DAE800C14E27 /* MainViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D9B8F92155DAE800C14E27 /* MainViewCell.swift */; };
 		D1D9B8FC2155DAE800C14E27 /* MainViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1D9B8FA2155DAE800C14E27 /* MainViewCell.xib */; };
+		D1D9B8FF2155DD9A00C14E27 /* ExtensionNSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D9B8FE2155DD9A00C14E27 /* ExtensionNSObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		D1D9B8F62155DAD000C14E27 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		D1D9B8F92155DAE800C14E27 /* MainViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCell.swift; sourceTree = "<group>"; };
 		D1D9B8FA2155DAE800C14E27 /* MainViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewCell.xib; sourceTree = "<group>"; };
+		D1D9B8FE2155DD9A00C14E27 /* ExtensionNSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionNSObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +233,7 @@
 				D1B02FE12145B2FC003EE67F /* CameraButton.swift */,
 				D1B02FE32145B859003EE67F /* ImageOrientation.swift */,
 				D1B02FE52145BE92003EE67F /* PhotoTakenImg.swift */,
+				D1D9B8FE2155DD9A00C14E27 /* ExtensionNSObject.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1D9B8FF2155DD9A00C14E27 /* ExtensionNSObject.swift in Sources */,
 				D1B02FE42145B859003EE67F /* ImageOrientation.swift in Sources */,
 				D1B02FE62145BE92003EE67F /* PhotoTakenImg.swift in Sources */,
 				D1CD8E3F2149E72200A688B5 /* ServiceManagerProtocol.swift in Sources */,
