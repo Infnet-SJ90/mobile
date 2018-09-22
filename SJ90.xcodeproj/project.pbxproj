@@ -39,6 +39,7 @@
 		D1D9B9092155E10F00C14E27 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1D9B9072155E10F00C14E27 /* RegisterViewController.xib */; };
 		D1D9B90D2155E16E00C14E27 /* RegisterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D9B90C2155E16E00C14E27 /* RegisterProtocol.swift */; };
 		D1D9B90F2155E17900C14E27 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D9B90E2155E17900C14E27 /* RegisterPresenter.swift */; };
+		D1D9B9142155F25D00C14E27 /* Complaint.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1D9B9132155F25D00C14E27 /* Complaint.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		D1D9B9072155E10F00C14E27 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		D1D9B90C2155E16E00C14E27 /* RegisterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProtocol.swift; sourceTree = "<group>"; };
 		D1D9B90E2155E17900C14E27 /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
+		D1D9B9132155F25D00C14E27 /* Complaint.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Complaint.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +187,7 @@
 		D1B02FD52145A7E3003EE67F /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				D1D9B9102155EF6F00C14E27 /* Complaint */,
 				D17E45652151A66800D6233C /* Login */,
 				D1D9B8F32155DA8900C14E27 /* Main */,
 				D1D9B9002155E0DD00C14E27 /* Register */,
@@ -334,6 +337,30 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		D1D9B9102155EF6F00C14E27 /* Complaint */ = {
+			isa = PBXGroup;
+			children = (
+				D1D9B9132155F25D00C14E27 /* Complaint.storyboard */,
+				D1D9B9122155F21600C14E27 /* MakeComplaints */,
+				D1D9B9112155F1F900C14E27 /* MyComplaints */,
+			);
+			path = Complaint;
+			sourceTree = "<group>";
+		};
+		D1D9B9112155F1F900C14E27 /* MyComplaints */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MyComplaints;
+			sourceTree = "<group>";
+		};
+		D1D9B9122155F21600C14E27 /* MakeComplaints */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MakeComplaints;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -396,6 +423,7 @@
 			files = (
 				D1B02FCE2145A6C7003EE67F /* LaunchScreen.storyboard in Resources */,
 				D1D9B9092155E10F00C14E27 /* RegisterViewController.xib in Resources */,
+				D1D9B9142155F25D00C14E27 /* Complaint.storyboard in Resources */,
 				D1D9B8FC2155DAE800C14E27 /* MainViewCell.xib in Resources */,
 				D1B02FCB2145A6C7003EE67F /* Assets.xcassets in Resources */,
 				D1D9B9052155E0FA00C14E27 /* RegisterViewCell.xib in Resources */,
