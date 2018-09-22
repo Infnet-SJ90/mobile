@@ -17,6 +17,8 @@
 		D110D4B52156CCA500E4918D /* MyComplaintsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D110D4B42156CCA500E4918D /* MyComplaintsProtocol.swift */; };
 		D110D4B72156D6B800E4918D /* ButtonViewParameterization.swift in Sources */ = {isa = PBXBuildFile; fileRef = D110D4B62156D6B800E4918D /* ButtonViewParameterization.swift */; };
 		D110D4BB2156DEA800E4918D /* TypesComplaintsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D110D4BA2156DEA800E4918D /* TypesComplaintsViewController.swift */; };
+		D110D4BD215705A400E4918D /* VSTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D110D4BC215705A400E4918D /* VSTextField.swift */; };
+		D110D4BF2157093E00E4918D /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D110D4BE2157093E00E4918D /* Alert.swift */; };
 		D17E456A2151A76C00D6233C /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E45692151A76C00D6233C /* LoginPresenter.swift */; };
 		D17E456D2151A77F00D6233C /* LoginProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E456C2151A77F00D6233C /* LoginProtocol.swift */; };
 		D17E45712151A79D00D6233C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E456F2151A79D00D6233C /* LoginViewController.swift */; };
@@ -66,6 +68,8 @@
 		D110D4B42156CCA500E4918D /* MyComplaintsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyComplaintsProtocol.swift; sourceTree = "<group>"; };
 		D110D4B62156D6B800E4918D /* ButtonViewParameterization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonViewParameterization.swift; sourceTree = "<group>"; };
 		D110D4BA2156DEA800E4918D /* TypesComplaintsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypesComplaintsViewController.swift; sourceTree = "<group>"; };
+		D110D4BC215705A400E4918D /* VSTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSTextField.swift; sourceTree = "<group>"; };
+		D110D4BE2157093E00E4918D /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		D17E45692151A76C00D6233C /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		D17E456C2151A77F00D6233C /* LoginProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginProtocol.swift; sourceTree = "<group>"; };
 		D17E456F2151A79D00D6233C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -275,6 +279,7 @@
 			children = (
 				D1CD8E422149E7F400A688B5 /* Service */,
 				D1B02FE02145B2DE003EE67F /* Extensions */,
+				D110D4BC215705A400E4918D /* VSTextField.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -327,6 +332,7 @@
 				D1B02FE52145BE92003EE67F /* PhotoTakenImg.swift */,
 				D110D4A821567E4700E4918D /* OverlayImages.swift */,
 				D110D4B62156D6B800E4918D /* ButtonViewParameterization.swift */,
+				D110D4BE2157093E00E4918D /* Alert.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -585,6 +591,8 @@
 				D1B02FE22145B2FC003EE67F /* CameraButton.swift in Sources */,
 				D1B02FEB2145C6CA003EE67F /* SavePhotosViewController.swift in Sources */,
 				D110D4A921567E4700E4918D /* OverlayImages.swift in Sources */,
+				D110D4BD215705A400E4918D /* VSTextField.swift in Sources */,
+				D110D4BF2157093E00E4918D /* Alert.swift in Sources */,
 				D1D9B8F72155DAD000C14E27 /* MainViewController.swift in Sources */,
 				D1D9B90D2155E16E00C14E27 /* RegisterProtocol.swift in Sources */,
 				D17E456D2151A77F00D6233C /* LoginProtocol.swift in Sources */,

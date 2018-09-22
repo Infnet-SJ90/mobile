@@ -67,7 +67,7 @@
             </objects>
             <point key="canvasLocation" x="-364" y="732"/>
         </scene>
-        <!--Fazer denúncias-->
+        <!--Fazer denúncia-->
         <scene sceneID="BL7-LO-77a">
             <objects>
                 <tableViewController id="xOK-QY-y8X" customClass="MakeComplaintsViewController" customModule="SJ90" customModuleProvider="target" sceneMemberID="viewController">
@@ -321,7 +321,7 @@
                             <outlet property="delegate" destination="xOK-QY-y8X" id="Kw7-jb-G7n"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Fazer denúncias" id="TFU-dy-um5"/>
+                    <navigationItem key="navigationItem" title="Fazer denúncia" id="TFU-dy-um5"/>
                     <connections>
                         <outlet property="CEP" destination="XNT-sV-nan" id="sMe-LB-Up8"/>
                         <outlet property="address" destination="13X-j7-U8w" id="OaN-gb-CnB"/>

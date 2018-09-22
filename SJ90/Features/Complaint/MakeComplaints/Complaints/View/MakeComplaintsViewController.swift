@@ -54,9 +54,40 @@ extension MakeComplaintsViewController {
         self.neighborhood.layer.cornerRadius = 10
         self.date.layer.cornerRadius = 10
     }
+    
     fileprivate func viewParameterization() {
         ButtonViewParameterization.cornerRadius(view: self.containerLocation)
         ButtonViewParameterization.shadowView(view: self.shadowLocation, color: .white)
+    }
+    
+    fileprivate func checkFields() -> Bool {
+        self.tintCell()
+        
+        guard let address = self.address.text, let CEP = self.CEP.text, let number = self.number.text, let neighborhood = self.neighborhood.text else {
+            return false
+        }
+        
+        if address.count >= 1, CEP.count >= 1, number.count >= 1, neighborhood.count >= 1 {
+            return true
+        }else {
+            return false
+        }
+    }
+    
+    func tintCell() {
+        
+        guard let address = self.address.text, let CEP = self.CEP.text, let number = self.number.text, let neighborhood = self.neighborhood.text else {
+            return
+        }
+        
+        if address.count < 1 { self.address.layer.borderColor = UIColor.red.cgColor }
+        else { self.address.layer.borderColor = UIColor.white.cgColor }
+        if CEP.count < 1 { self.CEP.layer.borderColor = UIColor.red.cgColor }
+        else { self.CEP.layer.borderColor = UIColor.white.cgColor }
+        if number.count < 1 { self.number.layer.borderColor = UIColor.red.cgColor}
+        else { self.number.layer.borderColor = UIColor.white.cgColor}
+        if neighborhood.count < 1 { self.neighborhood.layer.borderColor = UIColor.red.cgColor}
+        else { self.neighborhood.layer.borderColor = UIColor.white.cgColor}
     }
 }
 
@@ -113,8 +144,12 @@ extension MakeComplaintsViewController: MakeComplaintsProtocol {
     }
     
     @objc func typesComplaints() {
-        let types = "typesComplaints"
-        performSegue(withIdentifier: types, sender: nil)
+        if self.checkFields() {
+            let types = "typesComplaints"
+            performSegue(withIdentifier: types, sender: nil)
+        } else {
+            Alert.show(delegate: self, title: "Preenchar todos os campos", message: "Para continuar a denúncia você precisa preencher todos os campos", buttonTitle: "Tente novamente") { _ in }
+        }
     }
     
     func stopLoading() {
