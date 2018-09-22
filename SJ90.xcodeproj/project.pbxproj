@@ -33,6 +33,12 @@
 		D1D9B8FB2155DAE800C14E27 /* MainViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D9B8F92155DAE800C14E27 /* MainViewCell.swift */; };
 		D1D9B8FC2155DAE800C14E27 /* MainViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1D9B8FA2155DAE800C14E27 /* MainViewCell.xib */; };
 		D1D9B8FF2155DD9A00C14E27 /* ExtensionNSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D9B8FE2155DD9A00C14E27 /* ExtensionNSObject.swift */; };
+		D1D9B9042155E0FA00C14E27 /* RegisterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D9B9022155E0F900C14E27 /* RegisterViewCell.swift */; };
+		D1D9B9052155E0FA00C14E27 /* RegisterViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1D9B9032155E0F900C14E27 /* RegisterViewCell.xib */; };
+		D1D9B9082155E10F00C14E27 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D9B9062155E10F00C14E27 /* RegisterViewController.swift */; };
+		D1D9B9092155E10F00C14E27 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1D9B9072155E10F00C14E27 /* RegisterViewController.xib */; };
+		D1D9B90D2155E16E00C14E27 /* RegisterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D9B90C2155E16E00C14E27 /* RegisterProtocol.swift */; };
+		D1D9B90F2155E17900C14E27 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D9B90E2155E17900C14E27 /* RegisterPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +72,12 @@
 		D1D9B8F92155DAE800C14E27 /* MainViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCell.swift; sourceTree = "<group>"; };
 		D1D9B8FA2155DAE800C14E27 /* MainViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewCell.xib; sourceTree = "<group>"; };
 		D1D9B8FE2155DD9A00C14E27 /* ExtensionNSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionNSObject.swift; sourceTree = "<group>"; };
+		D1D9B9022155E0F900C14E27 /* RegisterViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewCell.swift; sourceTree = "<group>"; };
+		D1D9B9032155E0F900C14E27 /* RegisterViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewCell.xib; sourceTree = "<group>"; };
+		D1D9B9062155E10F00C14E27 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		D1D9B9072155E10F00C14E27 /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		D1D9B90C2155E16E00C14E27 /* RegisterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterProtocol.swift; sourceTree = "<group>"; };
+		D1D9B90E2155E17900C14E27 /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,8 +185,9 @@
 		D1B02FD52145A7E3003EE67F /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				D1D9B8F32155DA8900C14E27 /* Main */,
 				D17E45652151A66800D6233C /* Login */,
+				D1D9B8F32155DA8900C14E27 /* Main */,
+				D1D9B9002155E0DD00C14E27 /* Register */,
 				D1B02FE72145C689003EE67F /* SavePhotos */,
 				D1B02FDA2145AF42003EE67F /* TakePhotos */,
 			);
@@ -284,6 +297,43 @@
 			path = CustomCell;
 			sourceTree = "<group>";
 		};
+		D1D9B9002155E0DD00C14E27 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				D1D9B90B2155E15500C14E27 /* Presenter */,
+				D1D9B90A2155E14E00C14E27 /* View */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		D1D9B9012155E0E300C14E27 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				D1D9B9022155E0F900C14E27 /* RegisterViewCell.swift */,
+				D1D9B9032155E0F900C14E27 /* RegisterViewCell.xib */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		D1D9B90A2155E14E00C14E27 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D1D9B9012155E0E300C14E27 /* CustomView */,
+				D1D9B9062155E10F00C14E27 /* RegisterViewController.swift */,
+				D1D9B9072155E10F00C14E27 /* RegisterViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D1D9B90B2155E15500C14E27 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D1D9B90C2155E16E00C14E27 /* RegisterProtocol.swift */,
+				D1D9B90E2155E17900C14E27 /* RegisterPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -345,8 +395,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1B02FCE2145A6C7003EE67F /* LaunchScreen.storyboard in Resources */,
+				D1D9B9092155E10F00C14E27 /* RegisterViewController.xib in Resources */,
 				D1D9B8FC2155DAE800C14E27 /* MainViewCell.xib in Resources */,
 				D1B02FCB2145A6C7003EE67F /* Assets.xcassets in Resources */,
+				D1D9B9052155E0FA00C14E27 /* RegisterViewCell.xib in Resources */,
 				D17E45722151A79D00D6233C /* LoginViewController.xib in Resources */,
 				D1B02FDE2145B049003EE67F /* TakePhotosViewController.xib in Resources */,
 				D1B02FEC2145C6CA003EE67F /* SavePhotosViewController.xib in Resources */,
@@ -409,6 +461,7 @@
 				D1B02FE42145B859003EE67F /* ImageOrientation.swift in Sources */,
 				D1B02FE62145BE92003EE67F /* PhotoTakenImg.swift in Sources */,
 				D1CD8E3F2149E72200A688B5 /* ServiceManagerProtocol.swift in Sources */,
+				D1D9B9082155E10F00C14E27 /* RegisterViewController.swift in Sources */,
 				D1CD8E412149E7AB00A688B5 /* ServiceURL.swift in Sources */,
 				D17E456A2151A76C00D6233C /* LoginPresenter.swift in Sources */,
 				D1B02FDD2145B049003EE67F /* TakePhotosViewController.swift in Sources */,
@@ -416,12 +469,15 @@
 				D1B02FE22145B2FC003EE67F /* CameraButton.swift in Sources */,
 				D1B02FEB2145C6CA003EE67F /* SavePhotosViewController.swift in Sources */,
 				D1D9B8F72155DAD000C14E27 /* MainViewController.swift in Sources */,
+				D1D9B90D2155E16E00C14E27 /* RegisterProtocol.swift in Sources */,
 				D17E456D2151A77F00D6233C /* LoginProtocol.swift in Sources */,
 				D1CD8E3B2149E68D00A688B5 /* ServiceError.swift in Sources */,
 				D17E45712151A79D00D6233C /* LoginViewController.swift in Sources */,
+				D1D9B90F2155E17900C14E27 /* RegisterPresenter.swift in Sources */,
 				D1D9B8FB2155DAE800C14E27 /* MainViewCell.swift in Sources */,
 				D1B02FC42145A6C1003EE67F /* AppDelegate.swift in Sources */,
 				D17E45762151B34F00D6233C /* LoginService.swift in Sources */,
+				D1D9B9042155E0FA00C14E27 /* RegisterViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
