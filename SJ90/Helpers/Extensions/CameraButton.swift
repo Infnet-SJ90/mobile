@@ -13,7 +13,7 @@ class CameraButton: UIButton {
     override func draw(_ rect: CGRect) {
         layer.cornerRadius = bounds.size.width / 2
         layer.borderWidth = 3
-        layer.borderColor = UIColor.white.cgColor
+        layer.borderColor = AppColor.shared.colorPrimary.cgColor
         alpha = 0.7
         layer.masksToBounds = true
     }

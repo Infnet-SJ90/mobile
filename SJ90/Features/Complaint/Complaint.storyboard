@@ -356,7 +356,7 @@
             </objects>
             <point key="canvasLocation" x="436" y="-91"/>
         </scene>
-        <!--Fazer denúncias-->
+        <!--Tipo de Entulho-->
         <scene sceneID="1co-dv-eE7">
             <objects>
                 <tableViewController id="wuh-3h-7P8" customClass="TypesComplaintsViewController" customModule="SJ90" customModuleProvider="target" sceneMemberID="viewController">
@@ -540,26 +540,32 @@
                                                     <rect key="frame" x="16" y="6" width="343" height="342"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Classe A:  Alvenarias, concreto, argamassas e solos - podem ser reutilizados na forma de agregados." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwI-fK-OPf">
-                                                            <rect key="frame" x="8" y="0.0" width="327" height="61"/>
+                                                            <rect key="frame" x="8" y="4" width="327" height="61"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAT-s3-eQs">
-                                                            <rect key="frame" x="8" y="227.5" width="327" height="101.5"/>
+                                                            <rect key="frame" x="8" y="230" width="327" height="102"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="102" id="NbD-sO-DSU"/>
+                                                            </constraints>
                                                             <string key="text">Classe D: Resíduos perigosos, tais como tintas, solventes, óleos e outros, ou aqueles contaminados oriundos de obras em clínicas radiológicas, hospitais, instalações, industriais, etc.</string>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Classe C: Resíduos sem tecnologia para reciclagem. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dv8-7W-fwo">
-                                                            <rect key="frame" x="8" y="178.5" width="327" height="41"/>
+                                                            <rect key="frame" x="8" y="181" width="327" height="41"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="41" id="WyB-GC-beU"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mu-gl-cBF">
-                                                            <rect key="frame" x="8" y="69" width="327" height="101.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mu-gl-cBF">
+                                                            <rect key="frame" x="8" y="72" width="327" height="102"/>
                                                             <string key="text">Classe B: Restos de madeira, metal, plástico, papel, papelão, gesso, vidros - podem ser reutilizados no próprio canteiro de obra ou encaminhados para reciclagem.</string>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -570,17 +576,16 @@
                                                     <constraints>
                                                         <constraint firstItem="Dv8-7W-fwo" firstAttribute="leading" secondItem="1Di-rt-nbX" secondAttribute="leading" constant="8" id="1KN-1k-N86"/>
                                                         <constraint firstItem="7mu-gl-cBF" firstAttribute="leading" secondItem="1Di-rt-nbX" secondAttribute="leading" constant="8" id="60p-pD-kZJ"/>
-                                                        <constraint firstItem="cwI-fK-OPf" firstAttribute="top" secondItem="1Di-rt-nbX" secondAttribute="top" id="7zA-F7-SQv"/>
+                                                        <constraint firstItem="cwI-fK-OPf" firstAttribute="top" secondItem="1Di-rt-nbX" secondAttribute="top" constant="4" id="7zA-F7-SQv"/>
                                                         <constraint firstAttribute="trailing" secondItem="Dv8-7W-fwo" secondAttribute="trailing" constant="8" id="BK1-i6-NKM"/>
                                                         <constraint firstItem="pAT-s3-eQs" firstAttribute="leading" secondItem="1Di-rt-nbX" secondAttribute="leading" constant="8" id="Bg8-gS-aeQ"/>
                                                         <constraint firstAttribute="trailing" secondItem="cwI-fK-OPf" secondAttribute="trailing" constant="8" id="ChX-6I-OjU"/>
+                                                        <constraint firstAttribute="bottom" secondItem="pAT-s3-eQs" secondAttribute="bottom" constant="10" id="LJ3-dd-L8G"/>
                                                         <constraint firstItem="pAT-s3-eQs" firstAttribute="top" secondItem="Dv8-7W-fwo" secondAttribute="bottom" constant="8" id="Na9-yE-IcG"/>
-                                                        <constraint firstItem="pAT-s3-eQs" firstAttribute="top" secondItem="Dv8-7W-fwo" secondAttribute="bottom" constant="8" id="SiE-QT-E6r"/>
                                                         <constraint firstItem="cwI-fK-OPf" firstAttribute="leading" secondItem="1Di-rt-nbX" secondAttribute="leading" constant="8" id="TgN-QK-R4R"/>
-                                                        <constraint firstItem="7mu-gl-cBF" firstAttribute="top" secondItem="cwI-fK-OPf" secondAttribute="bottom" constant="8" id="WTN-zV-Won"/>
+                                                        <constraint firstItem="7mu-gl-cBF" firstAttribute="top" secondItem="cwI-fK-OPf" secondAttribute="bottom" constant="7" id="WTN-zV-Won"/>
                                                         <constraint firstAttribute="trailing" secondItem="pAT-s3-eQs" secondAttribute="trailing" constant="8" id="XdY-9t-AKf"/>
-                                                        <constraint firstItem="Dv8-7W-fwo" firstAttribute="top" secondItem="7mu-gl-cBF" secondAttribute="bottom" constant="8" id="bri-OE-UWu"/>
-                                                        <constraint firstItem="Dv8-7W-fwo" firstAttribute="top" secondItem="7mu-gl-cBF" secondAttribute="bottom" constant="8" id="lDq-o0-Bi6"/>
+                                                        <constraint firstItem="Dv8-7W-fwo" firstAttribute="top" secondItem="7mu-gl-cBF" secondAttribute="bottom" constant="7" id="eaN-Yt-mEa"/>
                                                         <constraint firstAttribute="trailing" secondItem="7mu-gl-cBF" secondAttribute="trailing" constant="8" id="t0f-RU-Aku"/>
                                                     </constraints>
                                                 </view>
@@ -606,8 +611,9 @@
                             <outlet property="delegate" destination="wuh-3h-7P8" id="dEn-TW-KLr"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Fazer denúncias" id="HSm-LE-3QQ"/>
+                    <navigationItem key="navigationItem" title="Tipo de Entulho" id="HSm-LE-3QQ"/>
                     <connections>
+                        <outlet property="containerView" destination="qaz-yT-9ZH" id="KXc-qA-Td1"/>
                         <outlet property="radioCheckViewTypeA" destination="RGX-Ga-8kk" id="6BI-BM-nXv"/>
                         <outlet property="radioCheckViewTypeB" destination="SqS-Ug-TG1" id="xoV-P8-7Ht"/>
                         <outlet property="radioCheckViewTypeC" destination="08F-Gy-pv0" id="ip5-3B-VVr"/>
@@ -616,6 +622,11 @@
                         <outlet property="radioCheckedViewTypeB" destination="yBB-uJ-V89" id="4gf-QI-i2y"/>
                         <outlet property="radioCheckedViewTypeC" destination="gTu-CT-eUr" id="erx-IY-7F8"/>
                         <outlet property="radioCheckedViewTypeD" destination="2Ck-C6-eJg" id="Msb-EO-xvd"/>
+                        <outlet property="shadowView" destination="1Di-rt-nbX" id="VVD-hq-S5V"/>
+                        <outlet property="typeA" destination="cwI-fK-OPf" id="gWS-L0-8og"/>
+                        <outlet property="typeB" destination="7mu-gl-cBF" id="8L4-r2-L9e"/>
+                        <outlet property="typeC" destination="Dv8-7W-fwo" id="obJ-7u-9A7"/>
+                        <outlet property="typeD" destination="pAT-s3-eQs" id="kAK-JH-1Wm"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JVU-q6-UrV" userLabel="First Responder" sceneMemberID="firstResponder"/>

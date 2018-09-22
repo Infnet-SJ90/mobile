@@ -43,6 +43,7 @@ class TakePhotosViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+    
 }
 
 // MARK: - Frame for capture methods
@@ -190,6 +191,7 @@ extension TakePhotosViewController {
                     flashOnImage?.withRenderingMode(UIImageRenderingMode.alwaysTemplate)
                     flashButton.setImage(flashOnImage, for: UIControlState())
                     flashButton.tintColor = UIColor.yellow
+                    
                 }
             }
         }
