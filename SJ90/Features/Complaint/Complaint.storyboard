@@ -299,16 +299,26 @@
                                                         <constraint firstItem="mno-mb-t1q" firstAttribute="top" secondItem="vfn-iH-l5Q" secondAttribute="top" constant="8" id="oF9-S2-axH"/>
                                                     </constraints>
                                                 </view>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWR-B1-jqc">
+                                                    <rect key="frame" x="72" y="16" width="230" height="150"/>
+                                                    <connections>
+                                                        <action selector="locationButton:" destination="xOK-QY-y8X" eventType="touchUpInside" id="uyf-tT-V4Y"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Hbt-A9-HQl" firstAttribute="width" secondItem="vfn-iH-l5Q" secondAttribute="width" id="DVZ-Mb-Iha"/>
+                                                <constraint firstItem="MWR-B1-jqc" firstAttribute="centerX" secondItem="Hbt-A9-HQl" secondAttribute="centerX" id="LsF-ff-Dh9"/>
                                                 <constraint firstItem="Hbt-A9-HQl" firstAttribute="centerX" secondItem="vfn-iH-l5Q" secondAttribute="centerX" id="ReN-pa-3TK"/>
                                                 <constraint firstItem="Hbt-A9-HQl" firstAttribute="height" secondItem="vfn-iH-l5Q" secondAttribute="height" id="Udm-wS-0Tk"/>
                                                 <constraint firstItem="Hbt-A9-HQl" firstAttribute="centerY" secondItem="vfn-iH-l5Q" secondAttribute="centerY" id="Vmz-fE-GbC"/>
                                                 <constraint firstItem="vfn-iH-l5Q" firstAttribute="leading" secondItem="2XY-np-JST" secondAttribute="leadingMargin" constant="56" id="aFm-7s-fhs"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="vfn-iH-l5Q" secondAttribute="trailing" constant="57" id="jA5-9g-i6t"/>
                                                 <constraint firstItem="vfn-iH-l5Q" firstAttribute="top" secondItem="2XY-np-JST" secondAttribute="topMargin" constant="7" id="nj8-NB-K3j"/>
+                                                <constraint firstItem="MWR-B1-jqc" firstAttribute="height" secondItem="Hbt-A9-HQl" secondAttribute="height" id="phi-V5-r20"/>
+                                                <constraint firstItem="MWR-B1-jqc" firstAttribute="top" secondItem="Hbt-A9-HQl" secondAttribute="bottom" constant="-152" id="tae-JJ-q1n"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="vfn-iH-l5Q" secondAttribute="bottom" constant="8" id="wry-NO-I6G"/>
+                                                <constraint firstItem="MWR-B1-jqc" firstAttribute="width" secondItem="Hbt-A9-HQl" secondAttribute="width" id="x4d-dy-0wJ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="0.158203125" colorSpace="calibratedWhite"/>

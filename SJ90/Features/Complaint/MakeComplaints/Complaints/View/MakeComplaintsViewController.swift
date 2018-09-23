@@ -7,7 +7,9 @@
 //
 
 import UIKit
+import AVFoundation
 import SVProgressHUD
+import CoreLocation
 
 class MakeComplaintsViewController: UITableViewController {
     
@@ -26,6 +28,11 @@ class MakeComplaintsViewController: UITableViewController {
     @IBOutlet fileprivate weak var shadowLocation: UIView!
     @IBOutlet fileprivate weak var containerLocation: UIView!
     @IBOutlet fileprivate weak var img: UIImageView!
+    
+    fileprivate let locationManager = CLLocationManager()
+    fileprivate var location: CLLocation?
+    fileprivate let geocoder = CLGeocoder()
+    fileprivate var placemark: CLPlacemark?
     
     fileprivate var presenter: MakeComplaintsPresenter!
     
@@ -54,6 +61,10 @@ class MakeComplaintsViewController: UITableViewController {
 // MARK: - Private methods
 extension MakeComplaintsViewController {
     
+    @IBAction private func locationButton(_ sender: AnyObject) {
+        self.getLocation()
+    }
+
     fileprivate func styleTextField() {
         self.address.layer.cornerRadius = 10
         self.CEP.layer.cornerRadius = 10
@@ -172,5 +183,83 @@ extension MakeComplaintsViewController: MakeComplaintsProtocol {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: buttonTitle, style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
+    }
+}
+
+// MARK: - Location methods
+extension MakeComplaintsViewController {
+    func getLocation()  {
+        self.startLoading()
+        let authStatus = CLLocationManager.authorizationStatus()
+        if authStatus == .notDetermined {
+            locationManager.requestWhenInUseAuthorization()
+        }
+        
+        if authStatus == .denied || authStatus == .restricted {
+        }
+        startLocationManager()
+    }
+    
+    func startLocationManager() {
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.startUpdatingLocation()
+        }
+    }
+    
+    func stopLocationManager() {
+        locationManager.stopUpdatingLocation()
+        locationManager.delegate = nil
+    }
+}
+
+
+extension MakeComplaintsViewController: CLLocationManagerDelegate {
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("didFailwithError\(error)")
+        stopLocationManager()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let latestLocation = locations.last!
+        
+        if latestLocation.horizontalAccuracy < 0 {
+            return
+        }
+        
+        if location == nil || location!.horizontalAccuracy > latestLocation.horizontalAccuracy {
+            location = latestLocation
+            stopLocationManager()
+            
+            geocoder.reverseGeocodeLocation(latestLocation, completionHandler: { (placemarks, error) in
+                if error == nil, let placemark = placemarks, !placemark.isEmpty {
+                    self.placemark = placemark.last
+                }
+                self.parsePlacemarks()
+                
+            })
+        }
+    }
+    
+    func parsePlacemarks() {
+        if let _ = location {
+            if let placemark = placemark {
+                if let city = placemark.locality, !city.isEmpty {
+                    self.neighborhood.text = city
+                }
+                if let thoroughfare = placemark.thoroughfare, !thoroughfare.isEmpty {
+                    self.address.text = thoroughfare
+                }
+                if let cep = placemark.postalCode, !cep.isEmpty {
+                    self.CEP.text = cep
+                }
+                self.stopLoading()
+            }
+        } else {
+            self.stopLoading()
+            Alert.show(delegate: self, title: "Erro", message: "Erro ao obter a Localização", buttonTitle: "Tente novamente") { _ in }
+        }
     }
 }
