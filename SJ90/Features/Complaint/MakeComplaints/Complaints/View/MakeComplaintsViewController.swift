@@ -16,6 +16,13 @@ class MakeComplaintsViewController: UITableViewController {
     @IBOutlet fileprivate weak var number: UITextField!
     @IBOutlet fileprivate weak var neighborhood: UITextField!
     @IBOutlet fileprivate weak var date: UITextField!
+    
+    @IBOutlet fileprivate weak var addressCell: UITableViewCell!
+    @IBOutlet fileprivate weak var CEPCell: UITableViewCell!
+    @IBOutlet fileprivate weak var numberCell: UITableViewCell!
+    @IBOutlet fileprivate weak var neighborhoodCell: UITableViewCell!
+    @IBOutlet fileprivate weak var dateCell: UITableViewCell!
+    
     @IBOutlet fileprivate weak var shadowLocation: UIView!
     @IBOutlet fileprivate weak var containerLocation: UIView!
     @IBOutlet fileprivate weak var img: UIImageView!
@@ -80,14 +87,14 @@ extension MakeComplaintsViewController {
             return
         }
         
-        if address.count < 1 { self.address.layer.borderColor = UIColor.red.cgColor }
-        else { self.address.layer.borderColor = UIColor.white.cgColor }
-        if CEP.count < 1 { self.CEP.layer.borderColor = UIColor.red.cgColor }
-        else { self.CEP.layer.borderColor = UIColor.white.cgColor }
-        if number.count < 1 { self.number.layer.borderColor = UIColor.red.cgColor}
-        else { self.number.layer.borderColor = UIColor.white.cgColor}
-        if neighborhood.count < 1 { self.neighborhood.layer.borderColor = UIColor.red.cgColor}
-        else { self.neighborhood.layer.borderColor = UIColor.white.cgColor}
+        if address.count < 1 { self.addressCell.backgroundColor = UIColor.red }
+        else { self.addressCell.backgroundColor = UIColor.clear }
+        if CEP.count < 1 { self.CEPCell.backgroundColor = UIColor.red  }
+        else { self.CEPCell.backgroundColor = UIColor.clear }
+        if number.count < 1 { self.numberCell.backgroundColor = UIColor.red  }
+        else {  self.numberCell.backgroundColor = UIColor.clear }
+        if neighborhood.count < 1 {  self.neighborhoodCell.backgroundColor = UIColor.red }
+        else { self.neighborhoodCell.backgroundColor = UIColor.clear }
     }
 }
 

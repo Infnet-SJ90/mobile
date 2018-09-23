@@ -35,6 +35,8 @@
 		D1B02FE62145BE92003EE67F /* PhotoTakenImg.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B02FE52145BE92003EE67F /* PhotoTakenImg.swift */; };
 		D1B02FEB2145C6CA003EE67F /* SavePhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B02FE92145C6CA003EE67F /* SavePhotosViewController.swift */; };
 		D1B02FEC2145C6CA003EE67F /* SavePhotosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1B02FEA2145C6CA003EE67F /* SavePhotosViewController.xib */; };
+		D1C5CE2F21571864004AA22F /* ComplaintsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C5CE2E21571864004AA22F /* ComplaintsViewModel.swift */; };
+		D1C5CE3121571993004AA22F /* ComplaintsTypesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C5CE3021571993004AA22F /* ComplaintsTypesViewModel.swift */; };
 		D1CD8E3B2149E68D00A688B5 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD8E3A2149E68D00A688B5 /* ServiceError.swift */; };
 		D1CD8E3D2149E6DE00A688B5 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD8E3C2149E6DE00A688B5 /* ServiceManager.swift */; };
 		D1CD8E3F2149E72200A688B5 /* ServiceManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD8E3E2149E72200A688B5 /* ServiceManagerProtocol.swift */; };
@@ -88,6 +90,8 @@
 		D1B02FE52145BE92003EE67F /* PhotoTakenImg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTakenImg.swift; sourceTree = "<group>"; };
 		D1B02FE92145C6CA003EE67F /* SavePhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePhotosViewController.swift; sourceTree = "<group>"; };
 		D1B02FEA2145C6CA003EE67F /* SavePhotosViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavePhotosViewController.xib; sourceTree = "<group>"; };
+		D1C5CE2E21571864004AA22F /* ComplaintsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplaintsViewModel.swift; sourceTree = "<group>"; };
+		D1C5CE3021571993004AA22F /* ComplaintsTypesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplaintsTypesViewModel.swift; sourceTree = "<group>"; };
 		D1CD8E3A2149E68D00A688B5 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		D1CD8E3C2149E6DE00A688B5 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		D1CD8E3E2149E72200A688B5 /* ServiceManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManagerProtocol.swift; sourceTree = "<group>"; };
@@ -174,6 +178,7 @@
 		D110D4B82156DE7400E4918D /* Complaints */ = {
 			isa = PBXGroup;
 			children = (
+				D1C5CE2D2157183C004AA22F /* Model */,
 				D110D4AA2156C75400E4918D /* Presenter */,
 				D110D4AB2156C75F00E4918D /* View */,
 			);
@@ -352,6 +357,15 @@
 				D1B02FEA2145C6CA003EE67F /* SavePhotosViewController.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D1C5CE2D2157183C004AA22F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D1C5CE2E21571864004AA22F /* ComplaintsViewModel.swift */,
+				D1C5CE3021571993004AA22F /* ComplaintsTypesViewModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		D1CD8E422149E7F400A688B5 /* Service */ = {
@@ -576,6 +590,7 @@
 				D1B02FE42145B859003EE67F /* ImageOrientation.swift in Sources */,
 				D110D4B72156D6B800E4918D /* ButtonViewParameterization.swift in Sources */,
 				D1B02FE62145BE92003EE67F /* PhotoTakenImg.swift in Sources */,
+				D1C5CE3121571993004AA22F /* ComplaintsTypesViewModel.swift in Sources */,
 				D110D4B32156CC8F00E4918D /* MyComplaintsPresenter.swift in Sources */,
 				D110D4B52156CCA500E4918D /* MyComplaintsProtocol.swift in Sources */,
 				D1CD8E3F2149E72200A688B5 /* ServiceManagerProtocol.swift in Sources */,
@@ -585,6 +600,7 @@
 				D1CD8E412149E7AB00A688B5 /* ServiceURL.swift in Sources */,
 				D10D582C215671B000F7A105 /* Coloring.swift in Sources */,
 				D17E456A2151A76C00D6233C /* LoginPresenter.swift in Sources */,
+				D1C5CE2F21571864004AA22F /* ComplaintsViewModel.swift in Sources */,
 				D1B02FDD2145B049003EE67F /* TakePhotosViewController.swift in Sources */,
 				D1D9B91A2155F60D00C14E27 /* MyComplaintsViewController.swift in Sources */,
 				D1CD8E3D2149E6DE00A688B5 /* ServiceManager.swift in Sources */,

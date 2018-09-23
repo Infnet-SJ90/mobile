@@ -100,7 +100,7 @@
                                                     </constraints>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -136,7 +136,7 @@
                                                     </constraints>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -172,7 +172,7 @@
                                                     </constraints>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="next"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -244,7 +244,7 @@
                                                     </constraints>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="go"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -324,12 +324,17 @@
                     <navigationItem key="navigationItem" title="Fazer denúncia" id="TFU-dy-um5"/>
                     <connections>
                         <outlet property="CEP" destination="XNT-sV-nan" id="sMe-LB-Up8"/>
+                        <outlet property="CEPCell" destination="8s1-dx-G28" id="jo0-GZ-O3s"/>
                         <outlet property="address" destination="13X-j7-U8w" id="OaN-gb-CnB"/>
+                        <outlet property="addressCell" destination="pSB-wk-O6x" id="gby-wE-ENW"/>
                         <outlet property="containerLocation" destination="Hbt-A9-HQl" id="ycd-9F-Vwb"/>
                         <outlet property="date" destination="WAQ-9F-dyj" id="4qq-LH-UXG"/>
+                        <outlet property="dateCell" destination="MWI-cm-h0w" id="FIz-Qy-2pf"/>
                         <outlet property="img" destination="mno-mb-t1q" id="1aG-td-fOM"/>
                         <outlet property="neighborhood" destination="fdM-Sj-LSF" id="1BH-qF-T4V"/>
+                        <outlet property="neighborhoodCell" destination="h99-u9-cM7" id="IJI-Kb-fcI"/>
                         <outlet property="number" destination="Z1A-jy-ZRU" id="s2B-s9-eC7"/>
+                        <outlet property="numberCell" destination="4Dh-9Q-Jl1" id="BY7-Un-TIi"/>
                         <outlet property="shadowLocation" destination="vfn-iH-l5Q" id="Baj-XP-Jaz"/>
                         <segue destination="wuh-3h-7P8" kind="show" identifier="typesComplaints" id="Gix-tC-wKQ"/>
                     </connections>
