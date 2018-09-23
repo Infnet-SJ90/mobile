@@ -318,7 +318,7 @@
 				D17E45652151A66800D6233C /* Login */,
 				D1D9B8F32155DA8900C14E27 /* Main */,
 				D1D9B9002155E0DD00C14E27 /* Register */,
-				D1B02FE72145C689003EE67F /* SavePhotos */,
+				D1B02FE72145C689003EE67F /* ShowPhotos */,
 				D1B02FDA2145AF42003EE67F /* TakePhotos */,
 			);
 			path = Features;
@@ -358,18 +358,10 @@
 		D1B02FDA2145AF42003EE67F /* TakePhotos */ = {
 			isa = PBXGroup;
 			children = (
-				D1B02FDF2145B29A003EE67F /* View */,
-			);
-			path = TakePhotos;
-			sourceTree = "<group>";
-		};
-		D1B02FDF2145B29A003EE67F /* View */ = {
-			isa = PBXGroup;
-			children = (
 				D1B02FDB2145B049003EE67F /* TakePhotosViewController.swift */,
 				D1B02FDC2145B049003EE67F /* TakePhotosViewController.xib */,
 			);
-			path = View;
+			path = TakePhotos;
 			sourceTree = "<group>";
 		};
 		D1B02FE02145B2DE003EE67F /* Extensions */ = {
@@ -388,21 +380,13 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		D1B02FE72145C689003EE67F /* SavePhotos */ = {
-			isa = PBXGroup;
-			children = (
-				D1B02FE82145C699003EE67F /* View */,
-			);
-			path = SavePhotos;
-			sourceTree = "<group>";
-		};
-		D1B02FE82145C699003EE67F /* View */ = {
+		D1B02FE72145C689003EE67F /* ShowPhotos */ = {
 			isa = PBXGroup;
 			children = (
 				D1B02FE92145C6CA003EE67F /* SavePhotosViewController.swift */,
 				D1B02FEA2145C6CA003EE67F /* SavePhotosViewController.xib */,
 			);
-			path = View;
+			path = ShowPhotos;
 			sourceTree = "<group>";
 		};
 		D1C5CE2D2157183C004AA22F /* Model */ = {

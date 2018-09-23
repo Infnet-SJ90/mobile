@@ -103,9 +103,6 @@
                                 <state key="normal" title="Foto da denúncia">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <action selector="complaintsImage:" destination="1MC-so-JEs" eventType="touchUpInside" id="1vv-0r-oYt"/>
-                                </connections>
                             </button>
                         </subviews>
                         <constraints>
@@ -174,6 +171,7 @@
             <connections>
                 <outlet property="CEP" destination="dnH-B1-ybm" id="lfq-am-TTW"/>
                 <outlet property="address" destination="KJJ-JG-nsd" id="tR8-D2-ke8"/>
+                <outlet property="complaintsImageButton" destination="tKz-8o-4o9" id="0wS-bE-Ma7"/>
                 <outlet property="container" destination="suf-z3-qIi" id="v1J-fE-fXc"/>
                 <outlet property="containerButton" destination="6g4-9y-Z9w" id="zcM-7h-af4"/>
                 <outlet property="date" destination="umQ-vn-aNC" id="5ay-bR-q9r"/>

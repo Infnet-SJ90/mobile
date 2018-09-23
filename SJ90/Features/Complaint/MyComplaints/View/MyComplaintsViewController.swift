@@ -19,11 +19,12 @@ class MyComplaintsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.startLoading()
         self.dataBase = try! Realm()
-        
         self.presenter = MyComplaintsPresenter(view: self)
         self.presenter.setupInitialization()
         self.updateData()
+        self.stopLoading()
         
         self.tableView.register(UINib(nibName: WithoutComplaintsViewCell.identifier, bundle: nil), forCellReuseIdentifier: WithoutComplaintsViewCell.identifier)
         
@@ -39,6 +40,7 @@ class MyComplaintsViewController: UITableViewController {
 
 // MARK: - Table view data source
 extension MyComplaintsViewController {
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -61,12 +63,18 @@ extension MyComplaintsViewController {
         }
 
         if complaint.count == 0 {
+            
             let cell = tableView.dequeueReusableCell(withIdentifier: WithoutComplaintsViewCell.identifier, for: indexPath) as! WithoutComplaintsViewCell
             return cell
+            
         } else  {
+            
             let cell = tableView.dequeueReusableCell(withIdentifier: ComplaintsViewCell.identifier, for: indexPath) as! ComplaintsViewCell
             cell.fillOutlets(complaints: complaint[indexPath.row])
+            cell.complaintsImageButton.tag = indexPath.row
+            cell.complaintsImageButton.addTarget(self, action: #selector(buttonTouched), for: .touchUpInside)
             return cell
+            
         }
     }
     
@@ -110,6 +118,23 @@ extension MyComplaintsViewController {
         } else {
             return 220
         }
+    }
+}
+
+// MARK: - Action
+extension MyComplaintsViewController {
+    
+    @IBAction func buttonTouched(_ sender: UIButton) {
+        guard let complaint = self.complaintModel else {
+            return
+        }
+        
+        let newViewController = SavePhotosViewController(nibName: "SavePhotosViewController", bundle: nil)
+        newViewController.isConfirmA = false
+        newViewController.isDisplayComplaintsA = true
+        newViewController.isDisplayA = false
+        newViewController.saveComplaintModel = complaint[sender.tag]
+        self.present(newViewController, animated: false, completion: nil)
     }
 }
 

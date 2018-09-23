@@ -16,20 +16,20 @@ class ComplaintsViewCell: UITableViewCell {
     @IBOutlet fileprivate weak var neighborhood: UILabel!
     @IBOutlet fileprivate weak var date: UILabel!
     @IBOutlet fileprivate weak var type: UILabel!
-//    @IBOutlet fileprivate weak var complaintsImage: UIImageView!
-    
     @IBOutlet fileprivate weak var shadow: UIView!
     @IBOutlet fileprivate weak var container: UIView!
     @IBOutlet fileprivate weak var shadowButton: UIView!
     @IBOutlet fileprivate weak var containerButton: UIView!
+    
+    @IBOutlet weak var complaintsImageButton: UIButton!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         
         ButtonViewParameterization.cornerRadius(view: self.container)
         ButtonViewParameterization.shadowView(view: self.shadow, color: .white)
-        ButtonViewParameterization.cornerRadius(view: self.shadowButton)
-        ButtonViewParameterization.shadowView(view: self.shadowButton, color: .white)
+        ButtonViewParameterization.cornerRadius(view: self.containerButton)
+        ButtonViewParameterization.shadowView(view: self.shadowButton, color: AppColor.shared.colorPrimary)
     }
     
     func fillOutlets(complaints: SaveComplaintModel) {
@@ -40,12 +40,5 @@ class ComplaintsViewCell: UITableViewCell {
         self.neighborhood.text = complaints.neighborhood
         self.date.text = complaints.date
         self.type.text = complaints.type
-        
-//        if let data = complaints.image as? Data {
-//            self.complaintsImage.image = UIImage(data: data)
-//        }
-    }
-    @IBAction func complaintsImage(_ sender: UIButton) {
-        
     }
 }

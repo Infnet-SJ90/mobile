@@ -152,6 +152,9 @@ extension TakePhotosViewController {
                             self.captureSession!.stopRunning()
                             
                             let newViewController = SavePhotosViewController(nibName: "SavePhotosViewController", bundle: nil)
+                            newViewController.isConfirmA = true
+                            newViewController.isDisplayComplaintsA = false
+                            newViewController.isDisplayA = false
                             self.present(newViewController, animated: true, completion: nil)
                         })
                     }
