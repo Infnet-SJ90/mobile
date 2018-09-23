@@ -10,7 +10,7 @@ import UIKit
 
 protocol RegisterViewCellDelegate: class {
     func loginButton()
-    func createAccountButton()
+    func createAccountButton(name: String, email: String, cpf: String, password: String)
 }
 
 class RegisterViewCell: UITableViewCell {
@@ -42,8 +42,11 @@ extension RegisterViewCell {
         self.delegate?.loginButton()
     }
     
-    @IBAction func createAccountButton(){
-        self.delegate?.createAccountButton()
+    @IBAction func createAccountButton() {
+        guard let name = self.nameTextField.text, let email = self.usernameTextField.text, let cpf = self.cpfTextField.text, let password = self.passwordTextField.text else {
+            return
+        }
+        self.delegate?.createAccountButton(name: name, email: email, cpf: cpf, password: password)
     }
 }
 

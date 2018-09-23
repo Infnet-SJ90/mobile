@@ -27,14 +27,15 @@ class RegisterViewController: UITableViewController {
 
 // MARK: - RegisterViewCellDelegate
 extension RegisterViewController: RegisterViewCellDelegate {
+    func createAccountButton(name: String, email: String, cpf: String, password: String) {
+//        self.presenter.Register(username: name, password: password, email: email, cpf: cpf)
+    }
+    
     func loginButton() {
         let nextController = LoginViewController()
         self.present(nextController, animated: false, completion: nil)
     }
-    
-    func createAccountButton() {
-        print("920")
-    }
+
 }
 
 // MARK: - Table view data source
@@ -60,6 +61,13 @@ extension RegisterViewController {
 
 // MARK: - RegisterProtocol
 extension RegisterViewController: RegisterProtocol {
+    
+    func successAccount() {
+        let storyboard = UIStoryboard(name: "Complaint", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "Complaint")
+        self.present(controller, animated: true, completion: nil)
+    }
+    
     func startLoading() {
         SVProgressHUD.setDefaultStyle(.custom)
         SVProgressHUD.setForegroundColor(.white)

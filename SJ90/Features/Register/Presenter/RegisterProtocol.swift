@@ -11,5 +11,6 @@ import Foundation
 protocol RegisterProtocol: class {
     func startLoading()
     func stopLoading()
+    func successAccount()
     func showAlertError(with title: String, message: String, buttonTitle: String)
 }

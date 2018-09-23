@@ -10,7 +10,7 @@ import Foundation
 
 final class LoginService {
     
-    func postLogin(username: String, password: String, success: @escaping (_ login: Bool) -> Void, fail: @escaping (_ error: ServiceError) -> Void) {
+    func login(username: String, password: String, success: @escaping (_ login: Bool) -> Void, fail: @escaping (_ error: ServiceError) -> Void) {
         
         let parms:[String: Any] = [
                 "Email": username,
@@ -18,10 +18,27 @@ final class LoginService {
                 "AuthenticationType": 1
                 ]
         
-        ServiceRequest.shared.request(method: .post, url: ServiceURL.postLogin.value, parameters: parms, encoding: .default, success: { result in
+        ServiceRequest.shared.request(method: .post, url: ServiceURL.login.value, parameters: parms, encoding: .default, success: { result in
             success(true)
         }) { error in
             fail(error!)
         }
     }
+    
+    func createAccount(username: String, password: String, email: String, cpf: String, success: @escaping (_ account: Bool) -> Void, fail: @escaping (_ error: ServiceError) -> Void) {
+        
+        let parms:[String: Any] = [
+            "Nome": username,
+            "Email": password,
+            "Cpf": cpf,
+            "Senha": password
+        ]
+        
+        ServiceRequest.shared.request(method: .post, url: ServiceURL.account.value, parameters: parms, encoding: .default, success: { result in
+            success(true)
+        }) { error in
+            fail(error!)
+        }
+    }
+    
 }

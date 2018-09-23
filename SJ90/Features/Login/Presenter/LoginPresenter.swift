@@ -25,12 +25,12 @@ extension LoginPresenter {
     
     func login(username: String, password: String) {
         self.view.startLoading()
-        self.service.postLogin(username: username, password: password, success: { sucess in
+        self.service.login(username: username, password: password, success: { sucess in
           self.sucessLogin = sucess
           self.view.stopLoading()
         }) { error in
-             self.view.stopLoading()
-             self.requestError(errorDescription: error.description)
+            self.view.stopLoading()
+            self.view.showAlertError(with: "Erro encontrado", message: "Vamos solucionar o mais possível", buttonTitle: "ok")
         }
     }
 }
