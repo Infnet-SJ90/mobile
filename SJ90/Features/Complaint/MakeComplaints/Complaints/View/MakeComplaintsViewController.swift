@@ -102,7 +102,7 @@ extension MakeComplaintsViewController {
             guard let address = self.address.text, let CEP = self.CEP.text, let number = self.number.text, let neighborhood = self.neighborhood.text else {
                 return
             }
-            self.presenter.saveData(address: address, CEP: CEP, number: number, neighborhood: neighborhood, date: " ")
+            self.presenter.saveData(address: address, CEP: CEP, number: number, neighborhood: neighborhood, date: "22/09/2018")
             
             let types = "typesComplaints"
             performSegue(withIdentifier: types, sender: nil)

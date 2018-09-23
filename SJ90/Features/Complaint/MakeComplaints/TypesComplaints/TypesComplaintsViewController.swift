@@ -29,7 +29,6 @@ class TypesComplaintsViewController: UITableViewController {
     
     fileprivate var select: Bool = false
     fileprivate var selectString = String()
-    fileprivate var complaintsTypesViewModel: ComplaintsTypesViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -142,13 +141,12 @@ extension TypesComplaintsViewController {
 
     @objc func takePhoto() {
         if self.select {
-            let types = ComplaintsTypesViewModel(type: self.selectString)
-            self.complaintsTypesViewModel = types
+            ComplaintsViewModel.shared.type = self.selectString
             let nextController = TakePhotosViewController()
             self.present(nextController, animated: false, completion: nil)
             
         } else  {
-            
+            Alert.show(delegate: self, title: "Escolha uma opção", message: "Para continuar a denúncia você precisa escolher uma opção", buttonTitle: "Tente novamente") { _ in }
         }
     }
 }

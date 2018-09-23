@@ -36,7 +36,10 @@
 		D1B02FEB2145C6CA003EE67F /* SavePhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B02FE92145C6CA003EE67F /* SavePhotosViewController.swift */; };
 		D1B02FEC2145C6CA003EE67F /* SavePhotosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1B02FEA2145C6CA003EE67F /* SavePhotosViewController.xib */; };
 		D1C5CE2F21571864004AA22F /* ComplaintsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C5CE2E21571864004AA22F /* ComplaintsViewModel.swift */; };
-		D1C5CE3121571993004AA22F /* ComplaintsTypesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C5CE3021571993004AA22F /* ComplaintsTypesViewModel.swift */; };
+		D1C5CE3A215721F3004AA22F /* ConfirmComplaintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C5CE39215721F3004AA22F /* ConfirmComplaintViewController.swift */; };
+		D1C5CE3C21572206004AA22F /* ConfirmComplaint.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1C5CE3B21572206004AA22F /* ConfirmComplaint.storyboard */; };
+		D1C5CE402157261D004AA22F /* ConfirmComplaintPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C5CE3F2157261D004AA22F /* ConfirmComplaintPresenter.swift */; };
+		D1C5CE422157262A004AA22F /* ConfirmComplaintProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C5CE412157262A004AA22F /* ConfirmComplaintProtocol.swift */; };
 		D1CD8E3B2149E68D00A688B5 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD8E3A2149E68D00A688B5 /* ServiceError.swift */; };
 		D1CD8E3D2149E6DE00A688B5 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD8E3C2149E6DE00A688B5 /* ServiceManager.swift */; };
 		D1CD8E3F2149E72200A688B5 /* ServiceManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD8E3E2149E72200A688B5 /* ServiceManagerProtocol.swift */; };
@@ -91,7 +94,10 @@
 		D1B02FE92145C6CA003EE67F /* SavePhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavePhotosViewController.swift; sourceTree = "<group>"; };
 		D1B02FEA2145C6CA003EE67F /* SavePhotosViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SavePhotosViewController.xib; sourceTree = "<group>"; };
 		D1C5CE2E21571864004AA22F /* ComplaintsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplaintsViewModel.swift; sourceTree = "<group>"; };
-		D1C5CE3021571993004AA22F /* ComplaintsTypesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplaintsTypesViewModel.swift; sourceTree = "<group>"; };
+		D1C5CE39215721F3004AA22F /* ConfirmComplaintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmComplaintViewController.swift; sourceTree = "<group>"; };
+		D1C5CE3B21572206004AA22F /* ConfirmComplaint.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConfirmComplaint.storyboard; sourceTree = "<group>"; };
+		D1C5CE3F2157261D004AA22F /* ConfirmComplaintPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmComplaintPresenter.swift; sourceTree = "<group>"; };
+		D1C5CE412157262A004AA22F /* ConfirmComplaintProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmComplaintProtocol.swift; sourceTree = "<group>"; };
 		D1CD8E3A2149E68D00A688B5 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		D1CD8E3C2149E6DE00A688B5 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		D1CD8E3E2149E72200A688B5 /* ServiceManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManagerProtocol.swift; sourceTree = "<group>"; };
@@ -269,6 +275,7 @@
 		D1B02FD52145A7E3003EE67F /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				D1C5CE322157202E004AA22F /* ConfirmComplaint */,
 				D1D9B9102155EF6F00C14E27 /* Complaint */,
 				D17E45652151A66800D6233C /* Login */,
 				D1D9B8F32155DA8900C14E27 /* Main */,
@@ -363,9 +370,35 @@
 			isa = PBXGroup;
 			children = (
 				D1C5CE2E21571864004AA22F /* ComplaintsViewModel.swift */,
-				D1C5CE3021571993004AA22F /* ComplaintsTypesViewModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D1C5CE322157202E004AA22F /* ConfirmComplaint */ = {
+			isa = PBXGroup;
+			children = (
+				D1C5CE3E2157259D004AA22F /* Presenter */,
+				D1C5CE3D21572592004AA22F /* View */,
+			);
+			path = ConfirmComplaint;
+			sourceTree = "<group>";
+		};
+		D1C5CE3D21572592004AA22F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D1C5CE39215721F3004AA22F /* ConfirmComplaintViewController.swift */,
+				D1C5CE3B21572206004AA22F /* ConfirmComplaint.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D1C5CE3E2157259D004AA22F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D1C5CE3F2157261D004AA22F /* ConfirmComplaintPresenter.swift */,
+				D1C5CE412157262A004AA22F /* ConfirmComplaintProtocol.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		D1CD8E422149E7F400A688B5 /* Service */ = {
@@ -533,6 +566,7 @@
 				D1B02FEC2145C6CA003EE67F /* SavePhotosViewController.xib in Resources */,
 				D1D9B8F82155DAD000C14E27 /* MainViewController.xib in Resources */,
 				D1B02FC92145A6C2003EE67F /* Main.storyboard in Resources */,
+				D1C5CE3C21572206004AA22F /* ConfirmComplaint.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,7 +624,7 @@
 				D1B02FE42145B859003EE67F /* ImageOrientation.swift in Sources */,
 				D110D4B72156D6B800E4918D /* ButtonViewParameterization.swift in Sources */,
 				D1B02FE62145BE92003EE67F /* PhotoTakenImg.swift in Sources */,
-				D1C5CE3121571993004AA22F /* ComplaintsTypesViewModel.swift in Sources */,
+				D1C5CE422157262A004AA22F /* ConfirmComplaintProtocol.swift in Sources */,
 				D110D4B32156CC8F00E4918D /* MyComplaintsPresenter.swift in Sources */,
 				D110D4B52156CCA500E4918D /* MyComplaintsProtocol.swift in Sources */,
 				D1CD8E3F2149E72200A688B5 /* ServiceManagerProtocol.swift in Sources */,
@@ -603,6 +637,7 @@
 				D1C5CE2F21571864004AA22F /* ComplaintsViewModel.swift in Sources */,
 				D1B02FDD2145B049003EE67F /* TakePhotosViewController.swift in Sources */,
 				D1D9B91A2155F60D00C14E27 /* MyComplaintsViewController.swift in Sources */,
+				D1C5CE402157261D004AA22F /* ConfirmComplaintPresenter.swift in Sources */,
 				D1CD8E3D2149E6DE00A688B5 /* ServiceManager.swift in Sources */,
 				D1B02FE22145B2FC003EE67F /* CameraButton.swift in Sources */,
 				D1B02FEB2145C6CA003EE67F /* SavePhotosViewController.swift in Sources */,
@@ -621,6 +656,7 @@
 				D1D9B9162155F59500C14E27 /* MakeComplaintsViewController.swift in Sources */,
 				D1B02FC42145A6C1003EE67F /* AppDelegate.swift in Sources */,
 				D17E45762151B34F00D6233C /* LoginService.swift in Sources */,
+				D1C5CE3A215721F3004AA22F /* ConfirmComplaintViewController.swift in Sources */,
 				D1D9B9042155E0FA00C14E27 /* RegisterViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

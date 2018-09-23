@@ -21,13 +21,24 @@ class SavePhotosViewController: UIViewController {
        self.capturedImage.image = PhotoTakenImg.sharedInstance.photoTakenImg.image
         
        self.continuePhoto.image = self.continuePhoto.image?.overlayImage(AppColor.shared.colorPrimary)
+        
+//
+//        let gesture = UITapGestureRecognizer(target: self, action: #selector(tapGesture(sender:)))
+//        self.continuePhoto.addGestureRecognizer(gesture)
     }
     
     override var prefersStatusBarHidden: Bool {
         return true
     }
+
     
     @IBAction private func cancelButtonTapped(_ sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction private func confirmComplaint(_ sender: AnyObject) {
+        let storyboard = UIStoryboard(name: "ConfirmComplaint", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "ConfirmComplaint")
+        self.present(controller, animated: true, completion: nil)
     }
 }

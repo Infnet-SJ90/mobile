@@ -8,20 +8,14 @@
 
 import Foundation
 
-final class ComplaintsViewModel: NSObject {
+class ComplaintsViewModel {
     
-    var address: String
-    var CEP : String
-    var number : String
-    var neighborhood : String
-    var date: String
-
-    init(address: String, CEP: String, number: String, neighborhood: String, date: String) {
-        
-        self.address = address
-        self.CEP = CEP
-        self.number = number
-        self.neighborhood = neighborhood
-        self.date = date
-    }
+    static public let shared = ComplaintsViewModel()
+    
+    var address: String?
+    var CEP : String?
+    var number : String?
+    var neighborhood : String?
+    var date: String?
+    var type: String?
 }

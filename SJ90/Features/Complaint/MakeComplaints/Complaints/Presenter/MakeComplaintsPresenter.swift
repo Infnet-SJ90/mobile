@@ -13,7 +13,6 @@ final class MakeComplaintsPresenter {
     fileprivate unowned let view: MakeComplaintsProtocol
 //    fileprivate let service: LoginService
     fileprivate(set) var sucessLogin = Bool()
-    fileprivate var complaintsViewModel: ComplaintsViewModel?
     
     init(view: MakeComplaintsProtocol) {
         self.view = view
@@ -30,14 +29,13 @@ extension MakeComplaintsPresenter {
     
     func saveData(address: String, CEP: String, number: String, neighborhood: String, date: String) {
         
-        let data = ComplaintsViewModel(address: address,
-                                       CEP: CEP,
-                                       number: number,
-                                       neighborhood: neighborhood,
-                                       date: date)
-        self.complaintsViewModel = data
+        ComplaintsViewModel.shared.address = address
+        ComplaintsViewModel.shared.CEP = CEP
+        ComplaintsViewModel.shared.number = number
+        ComplaintsViewModel.shared.neighborhood = neighborhood
+        ComplaintsViewModel.shared.date = date
+    
     }
-
 }
 
 // MARK: - Private methods
