@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Confirm Complaint View Controller-->
+        <!--Finalizar denúncia-->
         <scene sceneID="yrI-bP-Ef9">
             <objects>
                 <tableViewController id="L22-Ot-cDW" customClass="ConfirmComplaintViewController" customModule="SJ90" customModuleProvider="target" sceneMemberID="viewController">
@@ -243,7 +243,7 @@
                             <outlet property="delegate" destination="L22-Ot-cDW" id="SUA-du-4s3"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="OrN-oN-quC"/>
+                    <navigationItem key="navigationItem" title="Finalizar denúncia" id="OrN-oN-quC"/>
                     <connections>
                         <outlet property="CEP" destination="UI3-Tz-ZxW" id="rqw-wz-cvS"/>
                         <outlet property="address" destination="MRF-3b-sT3" id="BOZ-WB-3Fy"/>

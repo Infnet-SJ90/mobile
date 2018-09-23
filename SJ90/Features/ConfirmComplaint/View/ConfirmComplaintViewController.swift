@@ -43,6 +43,14 @@ extension ConfirmComplaintViewController {
         self.capturedImage.layer.cornerRadius = 10
         self.capturedImage.image = PhotoTakenImg.sharedInstance.photoTakenImg.image
     }
+    
+    func finalizeComplaint() {
+        Alert.show(delegate: self, title: "Denúncia Enviada", message: "Sua denúncia foi enviada com sucesso") { _ in
+            let storyboard = UIStoryboard(name: "Complaint", bundle: nil)
+            let controller = storyboard.instantiateViewController(withIdentifier: "Complaint")
+            self.present(controller, animated: true, completion: nil)
+        }
+    }
 }
 
 // MARK: - Table view data source
@@ -66,7 +74,7 @@ extension ConfirmComplaintViewController {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 330, height: 50))
         button.setTitle("                    Enviar denúncia", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 20.0, weight: UIFontWeightMedium)
-//        button.addTarget(self, action: #selector(self.takePhoto), for: .touchUpInside)
+        button.addTarget(self, action: #selector(self.finalizeComplaint), for: .touchUpInside)
         customView.addSubview(button)
         
         return customView

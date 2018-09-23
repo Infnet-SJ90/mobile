@@ -43,6 +43,8 @@ class MakeComplaintsViewController: UITableViewController {
         self.presenter.setupInitialization()
         self.styleTextField()
         self.viewParameterization()
+        self.date.text = Date().formatDateWithIntervalBehind(0)
+        self.date.isUserInteractionEnabled = false
         
         self.img.image = self.img.image?.overlayImage(AppColor.shared.colorPrimary)
     }
@@ -92,6 +94,13 @@ extension MakeComplaintsViewController {
         }
     }
     
+    fileprivate func resetField() {
+        self.address.text = " "
+        self.CEP.text = " "
+        self.number.text = " "
+        self.neighborhood.text = " "
+    }
+    
     func tintCell() {
         
         guard let address = self.address.text, let CEP = self.CEP.text, let number = self.number.text, let neighborhood = self.neighborhood.text else {
@@ -110,11 +119,13 @@ extension MakeComplaintsViewController {
     
     @objc func typesComplaints() {
         if self.checkFields() {
+            
             guard let address = self.address.text, let CEP = self.CEP.text, let number = self.number.text, let neighborhood = self.neighborhood.text else {
                 return
             }
             self.presenter.saveData(address: address, CEP: CEP, number: number, neighborhood: neighborhood, date: "22/09/2018")
             
+            self.resetField()
             let types = "typesComplaints"
             performSegue(withIdentifier: types, sender: nil)
         } else {

@@ -40,6 +40,7 @@
 		D1C5CE3C21572206004AA22F /* ConfirmComplaint.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1C5CE3B21572206004AA22F /* ConfirmComplaint.storyboard */; };
 		D1C5CE402157261D004AA22F /* ConfirmComplaintPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C5CE3F2157261D004AA22F /* ConfirmComplaintPresenter.swift */; };
 		D1C5CE422157262A004AA22F /* ConfirmComplaintProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C5CE412157262A004AA22F /* ConfirmComplaintProtocol.swift */; };
+		D1C5CE4421573BF5004AA22F /* FormatDateWithIntervalBehind.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C5CE4321573BF5004AA22F /* FormatDateWithIntervalBehind.swift */; };
 		D1CD8E3B2149E68D00A688B5 /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD8E3A2149E68D00A688B5 /* ServiceError.swift */; };
 		D1CD8E3D2149E6DE00A688B5 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD8E3C2149E6DE00A688B5 /* ServiceManager.swift */; };
 		D1CD8E3F2149E72200A688B5 /* ServiceManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1CD8E3E2149E72200A688B5 /* ServiceManagerProtocol.swift */; };
@@ -98,6 +99,7 @@
 		D1C5CE3B21572206004AA22F /* ConfirmComplaint.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConfirmComplaint.storyboard; sourceTree = "<group>"; };
 		D1C5CE3F2157261D004AA22F /* ConfirmComplaintPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmComplaintPresenter.swift; sourceTree = "<group>"; };
 		D1C5CE412157262A004AA22F /* ConfirmComplaintProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmComplaintProtocol.swift; sourceTree = "<group>"; };
+		D1C5CE4321573BF5004AA22F /* FormatDateWithIntervalBehind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatDateWithIntervalBehind.swift; sourceTree = "<group>"; };
 		D1CD8E3A2149E68D00A688B5 /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		D1CD8E3C2149E6DE00A688B5 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		D1CD8E3E2149E72200A688B5 /* ServiceManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManagerProtocol.swift; sourceTree = "<group>"; };
@@ -345,6 +347,7 @@
 				D110D4A821567E4700E4918D /* OverlayImages.swift */,
 				D110D4B62156D6B800E4918D /* ButtonViewParameterization.swift */,
 				D110D4BE2157093E00E4918D /* Alert.swift */,
+				D1C5CE4321573BF5004AA22F /* FormatDateWithIntervalBehind.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -645,6 +648,7 @@
 				D110D4BD215705A400E4918D /* VSTextField.swift in Sources */,
 				D110D4BF2157093E00E4918D /* Alert.swift in Sources */,
 				D1D9B8F72155DAD000C14E27 /* MainViewController.swift in Sources */,
+				D1C5CE4421573BF5004AA22F /* FormatDateWithIntervalBehind.swift in Sources */,
 				D1D9B90D2155E16E00C14E27 /* RegisterProtocol.swift in Sources */,
 				D17E456D2151A77F00D6233C /* LoginProtocol.swift in Sources */,
 				D110D4BB2156DEA800E4918D /* TypesComplaintsViewController.swift in Sources */,
