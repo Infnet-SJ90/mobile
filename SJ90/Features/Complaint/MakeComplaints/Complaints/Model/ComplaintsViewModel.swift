@@ -10,13 +10,14 @@ import Foundation
 
 final class ComplaintsViewModel: NSObject {
     
-    var address: Int
-    var CEP : Double
-    var number : Double
-    var neighborhood : Double
-    var date: Double
+    var address: String
+    var CEP : String
+    var number : String
+    var neighborhood : String
+    var date: String
 
-    init(address: Int, CEP: Double, number: Double, neighborhood: Double, date: Double) {
+    init(address: String, CEP: String, number: String, neighborhood: String, date: String) {
+        
         self.address = address
         self.CEP = CEP
         self.number = number

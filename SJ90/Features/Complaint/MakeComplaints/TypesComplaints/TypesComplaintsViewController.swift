@@ -27,6 +27,10 @@ class TypesComplaintsViewController: UITableViewController {
     @IBOutlet fileprivate weak var typeC: UILabel!
     @IBOutlet fileprivate weak var typeD: UILabel!
     
+    fileprivate var select: Bool = false
+    fileprivate var selectString = String()
+    fileprivate var complaintsTypesViewModel: ComplaintsTypesViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -101,6 +105,8 @@ extension TypesComplaintsViewController {
     }
     
     private dynamic func tapGestureCheckedViewTypeA(sender: UITapGestureRecognizer) {
+        self.select = true
+        self.selectString = "Classe A"
         self.radioCheckedViewTypeA.backgroundColor = AppColor.shared.colorPrimary
         self.radioCheckedViewTypeB.backgroundColor = AppColor.shared.colorGrayLighten70
         self.radioCheckedViewTypeC.backgroundColor = AppColor.shared.colorGrayLighten70
@@ -108,6 +114,8 @@ extension TypesComplaintsViewController {
     }
     
     private dynamic func tapGestureCheckedViewTypeB(sender: UITapGestureRecognizer) {
+        self.select = true
+        self.selectString = "Classe B"
         self.radioCheckedViewTypeA.backgroundColor = AppColor.shared.colorGrayLighten70
         self.radioCheckedViewTypeB.backgroundColor = AppColor.shared.colorPrimary
         self.radioCheckedViewTypeC.backgroundColor = AppColor.shared.colorGrayLighten70
@@ -115,6 +123,8 @@ extension TypesComplaintsViewController {
     }
     
     private dynamic func tapGestureCheckedViewTypeC(sender: UITapGestureRecognizer) {
+        self.select = true
+        self.selectString = "Classe C"
         self.radioCheckedViewTypeA.backgroundColor = AppColor.shared.colorGrayLighten70
         self.radioCheckedViewTypeB.backgroundColor = AppColor.shared.colorGrayLighten70
         self.radioCheckedViewTypeC.backgroundColor = AppColor.shared.colorPrimary
@@ -122,15 +132,24 @@ extension TypesComplaintsViewController {
     }
     
     private dynamic func tapGestureCheckedViewTypeD(sender: UITapGestureRecognizer) {
+        self.select = true
+        self.selectString = "Classe D"
         self.radioCheckedViewTypeA.backgroundColor = AppColor.shared.colorGrayLighten70
         self.radioCheckedViewTypeB.backgroundColor = AppColor.shared.colorGrayLighten70
         self.radioCheckedViewTypeC.backgroundColor = AppColor.shared.colorGrayLighten70
         self.radioCheckedViewTypeD.backgroundColor = AppColor.shared.colorPrimary
     }
-    
+
     @objc func takePhoto() {
-        let nextController = TakePhotosViewController()
-        self.present(nextController, animated: false, completion: nil)
+        if self.select {
+            let types = ComplaintsTypesViewModel(type: self.selectString)
+            self.complaintsTypesViewModel = types
+            let nextController = TakePhotosViewController()
+            self.present(nextController, animated: false, completion: nil)
+            
+        } else  {
+            
+        }
     }
 }
 

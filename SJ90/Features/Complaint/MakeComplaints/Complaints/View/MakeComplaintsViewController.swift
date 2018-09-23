@@ -96,6 +96,20 @@ extension MakeComplaintsViewController {
         if neighborhood.count < 1 {  self.neighborhoodCell.backgroundColor = UIColor.red }
         else { self.neighborhoodCell.backgroundColor = UIColor.clear }
     }
+    
+    @objc func typesComplaints() {
+        if self.checkFields() {
+            guard let address = self.address.text, let CEP = self.CEP.text, let number = self.number.text, let neighborhood = self.neighborhood.text else {
+                return
+            }
+            self.presenter.saveData(address: address, CEP: CEP, number: number, neighborhood: neighborhood, date: " ")
+            
+            let types = "typesComplaints"
+            performSegue(withIdentifier: types, sender: nil)
+        } else {
+            Alert.show(delegate: self, title: "Preenchar todos os campos", message: "Para continuar a denúncia você precisa preencher todos os campos", buttonTitle: "Tente novamente") { _ in }
+        }
+    }
 }
 
 // MARK: - MakeComplaintsProtocol
@@ -148,15 +162,6 @@ extension MakeComplaintsViewController: MakeComplaintsProtocol {
         SVProgressHUD.setBackgroundColor(UIColor.lightGray)
         SVProgressHUD.setDefaultMaskType(.clear)
         SVProgressHUD.show()
-    }
-    
-    @objc func typesComplaints() {
-        if self.checkFields() {
-            let types = "typesComplaints"
-            performSegue(withIdentifier: types, sender: nil)
-        } else {
-            Alert.show(delegate: self, title: "Preenchar todos os campos", message: "Para continuar a denúncia você precisa preencher todos os campos", buttonTitle: "Tente novamente") { _ in }
-        }
     }
     
     func stopLoading() {
