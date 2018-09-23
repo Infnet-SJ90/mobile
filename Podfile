@@ -7,7 +7,6 @@ target 'SJ90' do
 
   # Pods for SJ90
   		pod 'Alamofire', '~> 4.4'
-		pod 'AlamofireImage', '~> 3.3'
 		pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
-
+		pod 'RealmSwift' 
 end

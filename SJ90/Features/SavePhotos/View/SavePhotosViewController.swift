@@ -21,10 +21,6 @@ class SavePhotosViewController: UIViewController {
        self.capturedImage.image = PhotoTakenImg.sharedInstance.photoTakenImg.image
         
        self.continuePhoto.image = self.continuePhoto.image?.overlayImage(AppColor.shared.colorPrimary)
-        
-//
-//        let gesture = UITapGestureRecognizer(target: self, action: #selector(tapGesture(sender:)))
-//        self.continuePhoto.addGestureRecognizer(gesture)
     }
     
     override var prefersStatusBarHidden: Bool {

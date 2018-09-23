@@ -25,19 +25,6 @@ class RegisterViewController: UITableViewController {
     }
 }
 
-// MARK: - RegisterViewCellDelegate
-extension RegisterViewController: RegisterViewCellDelegate {
-    func createAccountButton(name: String, email: String, cpf: String, password: String) {
-//        self.presenter.Register(username: name, password: password, email: email, cpf: cpf)
-    }
-    
-    func loginButton() {
-        let nextController = LoginViewController()
-        self.present(nextController, animated: false, completion: nil)
-    }
-
-}
-
 // MARK: - Table view data source
 extension RegisterViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -57,6 +44,19 @@ extension RegisterViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 736
     }
+}
+
+// MARK: - RegisterViewCellDelegate
+extension RegisterViewController: RegisterViewCellDelegate {
+    func createAccountButton(name: String, email: String, cpf: String, password: String) {
+        //        self.presenter.Register(username: name, password: password, email: email, cpf: cpf)
+    }
+    
+    func loginButton() {
+        let nextController = LoginViewController()
+        self.present(nextController, animated: false, completion: nil)
+    }
+    
 }
 
 // MARK: - RegisterProtocol
