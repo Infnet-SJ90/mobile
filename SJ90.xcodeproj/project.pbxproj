@@ -24,6 +24,7 @@
 		D17E45712151A79D00D6233C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E456F2151A79D00D6233C /* LoginViewController.swift */; };
 		D17E45722151A79D00D6233C /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17E45702151A79D00D6233C /* LoginViewController.xib */; };
 		D17E45762151B34F00D6233C /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E45752151B34F00D6233C /* LoginService.swift */; };
+		D1ACC79B2157485700F84B5C /* ServiceHTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1ACC79A2157485700F84B5C /* ServiceHTTPMethod.swift */; };
 		D1B02FC42145A6C1003EE67F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B02FC32145A6C1003EE67F /* AppDelegate.swift */; };
 		D1B02FC92145A6C2003EE67F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1B02FC72145A6C2003EE67F /* Main.storyboard */; };
 		D1B02FCB2145A6C7003EE67F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1B02FCA2145A6C7003EE67F /* Assets.xcassets */; };
@@ -81,6 +82,7 @@
 		D17E456F2151A79D00D6233C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D17E45702151A79D00D6233C /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		D17E45752151B34F00D6233C /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		D1ACC79A2157485700F84B5C /* ServiceHTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHTTPMethod.swift; sourceTree = "<group>"; };
 		D1B02FC02145A6C1003EE67F /* SJ90.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SJ90.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1B02FC32145A6C1003EE67F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1B02FC82145A6C2003EE67F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -410,6 +412,7 @@
 				D1CD8E3A2149E68D00A688B5 /* ServiceError.swift */,
 				D1CD8E3C2149E6DE00A688B5 /* ServiceManager.swift */,
 				D1CD8E3E2149E72200A688B5 /* ServiceManagerProtocol.swift */,
+				D1ACC79A2157485700F84B5C /* ServiceHTTPMethod.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -635,6 +638,7 @@
 				D110D4AF2156C79400E4918D /* MakeComplaintsPresenter.swift in Sources */,
 				D1D9B9082155E10F00C14E27 /* RegisterViewController.swift in Sources */,
 				D1CD8E412149E7AB00A688B5 /* ServiceURL.swift in Sources */,
+				D1ACC79B2157485700F84B5C /* ServiceHTTPMethod.swift in Sources */,
 				D10D582C215671B000F7A105 /* Coloring.swift in Sources */,
 				D17E456A2151A76C00D6233C /* LoginPresenter.swift in Sources */,
 				D1C5CE2F21571864004AA22F /* ComplaintsViewModel.swift in Sources */,
