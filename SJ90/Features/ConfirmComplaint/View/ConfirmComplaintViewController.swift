@@ -45,6 +45,7 @@ extension ConfirmComplaintViewController {
     }
     
     func finalizeComplaint() {
+        self.presenter.saveComplaint()
         Alert.show(delegate: self, title: "Denúncia Enviada", message: "Sua denúncia foi enviada com sucesso") { _ in
             let storyboard = UIStoryboard(name: "Complaint", bundle: nil)
             let controller = storyboard.instantiateViewController(withIdentifier: "Complaint")
