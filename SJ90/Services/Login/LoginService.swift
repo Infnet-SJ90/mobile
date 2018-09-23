@@ -15,13 +15,13 @@ final class LoginService {
         let parms:[String: Any] = [
                 "Email": username,
                 "Senha": password,
-                "AuthenticationType":1
+                "AuthenticationType": 1
                 ]
         
-        ServiceManager.shared.GetData(url: ServiceURL.postLogin.value, parameters: parms, success: { result in
+        ServiceRequest.shared.request(method: .post, url: ServiceURL.postLogin.value, parameters: parms, encoding: .default, success: { result in
             success(true)
-        }, failure: { error in
-            fail(ServiceError(code: error.code))
-        })
+        }) { error in
+            fail(error!)
+        }
     }
 }

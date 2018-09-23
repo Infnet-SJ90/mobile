@@ -10,5 +10,6 @@ import Foundation
 
 protocol ServiceManagerProtocol {
     
-    func GetData(url: String, parameters: [String : Any]?, success: @escaping (Data) -> Void, failure: @escaping (ServiceError) -> Void)
+    // MARK: - Methods
+    func request(method: ServiceHTTPMethod, url: String, parameters: [String: Any]?, encoding: ServiceEncoding, success: @escaping (Data) -> Void, failure: @escaping (( _ responseError: ServiceError?)->()))
 }
