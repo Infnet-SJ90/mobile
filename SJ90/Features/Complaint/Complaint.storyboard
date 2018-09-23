@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -361,46 +360,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <sections>
-                            <tableViewSection id="u8M-Je-v8N">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="364" id="urq-uV-pE5">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="364"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="urq-uV-pE5" id="53T-5P-vc9">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="364"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="no-camera" translatesAutoresizingMaskIntoConstraints="NO" id="Bbe-tx-G5c">
-                                                    <rect key="frame" x="26" y="114" width="315" height="167"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="167" id="ctF-Kt-VvJ"/>
-                                                        <constraint firstAttribute="width" constant="315" id="fLu-F3-f0u"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Você não possui denúncias" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9s-M0-qdc">
-                                                    <rect key="frame" x="62" y="289" width="243" height="23"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="19"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="I9s-M0-qdc" secondAttribute="trailing" constant="54" id="6nN-cD-xv2"/>
-                                                <constraint firstItem="I9s-M0-qdc" firstAttribute="top" secondItem="Bbe-tx-G5c" secondAttribute="bottom" constant="8" id="BBp-Ae-MPl"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Bbe-tx-G5c" secondAttribute="trailing" constant="18" id="CWD-Vc-eWv"/>
-                                                <constraint firstItem="I9s-M0-qdc" firstAttribute="leading" secondItem="53T-5P-vc9" secondAttribute="leadingMargin" constant="46" id="DDC-b1-Tcr"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="I9s-M0-qdc" secondAttribute="bottom" constant="41" id="XJS-pz-G7w"/>
-                                                <constraint firstItem="Bbe-tx-G5c" firstAttribute="leading" secondItem="53T-5P-vc9" secondAttribute="leadingMargin" constant="10" id="Xg9-VP-vNZ"/>
-                                                <constraint firstItem="Bbe-tx-G5c" firstAttribute="top" secondItem="53T-5P-vc9" secondAttribute="topMargin" constant="103" id="t1H-jG-ezz"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <viewLayoutGuide key="safeArea" id="Ff1-r6-I2A"/>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="yza-cg-NzO" id="p8u-1E-agO"/>
                             <outlet property="delegate" destination="yza-cg-NzO" id="745-Ms-TI6"/>
@@ -408,7 +368,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="9Up-f3-gxk"/>
                     <connections>
-                        <outlet property="imageWithout" destination="Bbe-tx-G5c" id="XmA-zt-jqf"/>
                         <segue destination="xOK-QY-y8X" kind="show" identifier="makeComplaints" id="mbG-wH-Jwn"/>
                     </connections>
                 </tableViewController>
@@ -696,7 +655,6 @@
     </scenes>
     <resources>
         <image name="iconMapa" width="512" height="512"/>
-        <image name="no-camera" width="1600" height="1600"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="mbG-wH-Jwn"/>

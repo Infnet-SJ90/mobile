@@ -8,20 +8,32 @@
 
 import UIKit
 import SVProgressHUD
+import RealmSwift
 
 class MyComplaintsViewController: UITableViewController {
     
-    @IBOutlet fileprivate weak var imageWithout: UIImageView!
-    
+    fileprivate var dataBase: Realm?
+    fileprivate var complaintModel: RealmSwift.Results<SaveComplaintModel>?
     fileprivate var presenter: MyComplaintsPresenter!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.dataBase = try! Realm()
+        
         self.presenter = MyComplaintsPresenter(view: self)
         self.presenter.setupInitialization()
+        self.updateData()
         
-        self.imageWithout.image = self.imageWithout.image?.overlayImage(AppColor.shared.colorPrimary)
+        self.tableView.register(UINib(nibName: WithoutComplaintsViewCell.identifier, bundle: nil), forCellReuseIdentifier: WithoutComplaintsViewCell.identifier)
+        
+        self.tableView.register(UINib(nibName: ComplaintsViewCell.identifier, bundle: nil), forCellReuseIdentifier: ComplaintsViewCell.identifier)
+    }
+    
+    func updateData() {
+        guard let dataBase = self.dataBase else { return }
+        complaintModel = dataBase.objects(SaveComplaintModel.self)
+        tableView.reloadData()
     }
 }
 
@@ -32,7 +44,30 @@ extension MyComplaintsViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        guard let complaint = self.complaintModel else {
+            return 0
+        }
+        
+        if complaint.count == 0 {
+            return 1
+        }
+        return complaint.count
+    }
+    
+    internal override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        guard let complaint = self.complaintModel else {
+            return UITableViewCell()
+        }
+
+        if complaint.count == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: WithoutComplaintsViewCell.identifier, for: indexPath) as! WithoutComplaintsViewCell
+            return cell
+        } else  {
+            let cell = tableView.dequeueReusableCell(withIdentifier: ComplaintsViewCell.identifier, for: indexPath) as! ComplaintsViewCell
+            cell.fillOutlets(complaints: complaint[indexPath.row])
+            return cell
+        }
     }
     
     override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
@@ -45,7 +80,7 @@ extension MyComplaintsViewController {
         customView.layer.shadowRadius = 3.0
         customView.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 330, height: 50))
-        button.setTitle("              Fazer denúncias", for: .normal)
+        button.setTitle("              Fazer denúncia", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: 20.0, weight: UIFontWeightMedium)
         button.addTarget(self, action: #selector(self.makeComplaints), for: .touchUpInside)
         customView.addSubview(button)
@@ -54,7 +89,27 @@ extension MyComplaintsViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 50
+        guard let complaint = self.complaintModel else {
+            return 0
+        }
+        
+        if complaint.count == 0 {
+            return 50
+        } else {
+            return 0
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        guard let complaint = self.complaintModel else {
+            return 0
+        }
+        
+        if complaint.count == 0 {
+            return 187
+        } else {
+            return 220
+        }
     }
 }
 

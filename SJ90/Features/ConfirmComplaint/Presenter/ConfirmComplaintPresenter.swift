@@ -26,6 +26,7 @@ extension ConfirmComplaintPresenter {
     }
     
     func saveComplaint() {
+        self.view.startLoading()
         let realm = try! Realm()
         
         guard let address = ComplaintsViewModel.shared.address, let cep = ComplaintsViewModel.shared.CEP, let date = ComplaintsViewModel.shared.date, let neighborhood = ComplaintsViewModel.shared.neighborhood, let number = ComplaintsViewModel.shared.number, let type = ComplaintsViewModel.shared.type else {
@@ -47,6 +48,7 @@ extension ConfirmComplaintPresenter {
             }
             
             realm.add(database)
+            self.view.stopLoading()
         }
     }
 }

@@ -25,6 +25,10 @@
 		D17E45722151A79D00D6233C /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17E45702151A79D00D6233C /* LoginViewController.xib */; };
 		D17E45762151B34F00D6233C /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D17E45752151B34F00D6233C /* LoginService.swift */; };
 		D1943D7B21581B4400BD3010 /* SaveComplaintModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1943D7A21581B4400BD3010 /* SaveComplaintModel.swift */; };
+		D1943D7F21582D7B00BD3010 /* WithoutComplaintsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1943D7D21582D7B00BD3010 /* WithoutComplaintsViewCell.swift */; };
+		D1943D8021582D7B00BD3010 /* WithoutComplaintsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1943D7E21582D7B00BD3010 /* WithoutComplaintsViewCell.xib */; };
+		D1943D832158381300BD3010 /* ComplaintsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1943D812158381300BD3010 /* ComplaintsViewCell.swift */; };
+		D1943D842158381300BD3010 /* ComplaintsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1943D822158381300BD3010 /* ComplaintsViewCell.xib */; };
 		D1ACC79B2157485700F84B5C /* ServiceHTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1ACC79A2157485700F84B5C /* ServiceHTTPMethod.swift */; };
 		D1ACC79D21574A1A00F84B5C /* ServiceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1ACC79C21574A1A00F84B5C /* ServiceRequest.swift */; };
 		D1ACC79F21574A5400F84B5C /* ServiceEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1ACC79E21574A5400F84B5C /* ServiceEncoding.swift */; };
@@ -86,6 +90,10 @@
 		D17E45702151A79D00D6233C /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		D17E45752151B34F00D6233C /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		D1943D7A21581B4400BD3010 /* SaveComplaintModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveComplaintModel.swift; sourceTree = "<group>"; };
+		D1943D7D21582D7B00BD3010 /* WithoutComplaintsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithoutComplaintsViewCell.swift; sourceTree = "<group>"; };
+		D1943D7E21582D7B00BD3010 /* WithoutComplaintsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WithoutComplaintsViewCell.xib; sourceTree = "<group>"; };
+		D1943D812158381300BD3010 /* ComplaintsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplaintsViewCell.swift; sourceTree = "<group>"; };
+		D1943D822158381300BD3010 /* ComplaintsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ComplaintsViewCell.xib; sourceTree = "<group>"; };
 		D1ACC79A2157485700F84B5C /* ServiceHTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHTTPMethod.swift; sourceTree = "<group>"; };
 		D1ACC79C21574A1A00F84B5C /* ServiceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequest.swift; sourceTree = "<group>"; };
 		D1ACC79E21574A5400F84B5C /* ServiceEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceEncoding.swift; sourceTree = "<group>"; };
@@ -186,6 +194,7 @@
 		D110D4B12156CC5B00E4918D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D1943D7C21582D2A00BD3010 /* CustomCell */,
 				D1D9B9192155F60D00C14E27 /* MyComplaintsViewController.swift */,
 			);
 			path = View;
@@ -258,6 +267,17 @@
 				D1943D7A21581B4400BD3010 /* SaveComplaintModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		D1943D7C21582D2A00BD3010 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				D1943D7D21582D7B00BD3010 /* WithoutComplaintsViewCell.swift */,
+				D1943D7E21582D7B00BD3010 /* WithoutComplaintsViewCell.xib */,
+				D1943D812158381300BD3010 /* ComplaintsViewCell.swift */,
+				D1943D822158381300BD3010 /* ComplaintsViewCell.xib */,
+			);
+			path = CustomCell;
 			sourceTree = "<group>";
 		};
 		D1B02FB72145A6C1003EE67F = {
@@ -578,12 +598,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1943D842158381300BD3010 /* ComplaintsViewCell.xib in Resources */,
 				D1B02FCE2145A6C7003EE67F /* LaunchScreen.storyboard in Resources */,
 				D1D9B9092155E10F00C14E27 /* RegisterViewController.xib in Resources */,
 				D1D9B9142155F25D00C14E27 /* Complaint.storyboard in Resources */,
 				D1D9B8FC2155DAE800C14E27 /* MainViewCell.xib in Resources */,
 				D1B02FCB2145A6C7003EE67F /* Assets.xcassets in Resources */,
 				D1D9B9052155E0FA00C14E27 /* RegisterViewCell.xib in Resources */,
+				D1943D8021582D7B00BD3010 /* WithoutComplaintsViewCell.xib in Resources */,
 				D17E45722151A79D00D6233C /* LoginViewController.xib in Resources */,
 				D1B02FDE2145B049003EE67F /* TakePhotosViewController.xib in Resources */,
 				D1B02FEC2145C6CA003EE67F /* SavePhotosViewController.xib in Resources */,
@@ -655,6 +677,7 @@
 				D1CD8E3F2149E72200A688B5 /* ServiceManagerProtocol.swift in Sources */,
 				D110D4AD2156C78700E4918D /* MakeComplaintsProtocol.swift in Sources */,
 				D110D4AF2156C79400E4918D /* MakeComplaintsPresenter.swift in Sources */,
+				D1943D832158381300BD3010 /* ComplaintsViewCell.swift in Sources */,
 				D1D9B9082155E10F00C14E27 /* RegisterViewController.swift in Sources */,
 				D1CD8E412149E7AB00A688B5 /* ServiceURL.swift in Sources */,
 				D1ACC79B2157485700F84B5C /* ServiceHTTPMethod.swift in Sources */,
@@ -676,6 +699,7 @@
 				D1D9B90D2155E16E00C14E27 /* RegisterProtocol.swift in Sources */,
 				D17E456D2151A77F00D6233C /* LoginProtocol.swift in Sources */,
 				D110D4BB2156DEA800E4918D /* TypesComplaintsViewController.swift in Sources */,
+				D1943D7F21582D7B00BD3010 /* WithoutComplaintsViewCell.swift in Sources */,
 				D10D582E2156723000F7A105 /* AppColor.swift in Sources */,
 				D1CD8E3B2149E68D00A688B5 /* ServiceError.swift in Sources */,
 				D1ACC79D21574A1A00F84B5C /* ServiceRequest.swift in Sources */,
