@@ -60,13 +60,13 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seja bem vindo!" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iri-1l-jh0">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seja bem vindo!" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iri-1l-jh0">
                         <rect key="frame" x="43" y="310" width="288" height="140"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="140" id="TN7-dr-pmY"/>
                             <constraint firstAttribute="width" constant="288" id="Tcx-np-hf4"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="50"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="40"/>
                         <color key="textColor" red="0.1176470588" green="0.08235294118" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>

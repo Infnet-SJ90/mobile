@@ -11,5 +11,6 @@ import Foundation
 protocol LoginProtocol: class {
     func startLoading()
     func stopLoading()
+    func success()
     func showAlertError(with title: String, message: String, buttonTitle: String)
 }

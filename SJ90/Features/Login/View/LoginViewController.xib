@@ -68,6 +68,9 @@
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="Xfu-xf-FUd"/>
+                                            </connections>
                                         </textField>
                                     </subviews>
                                     <variation key="heightClass=compact" axis="horizontal"/>
@@ -86,7 +89,10 @@
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="g4a-eN-ENz"/>
+                                            </connections>
                                         </textField>
                                     </subviews>
                                     <variation key="heightClass=compact" axis="horizontal"/>

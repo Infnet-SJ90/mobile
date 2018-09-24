@@ -19,6 +19,8 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        passwordTextField.returnKeyType = .done
+        usernameTextField.returnKeyType = .done
         self.presenter = LoginPresenter(view: self)
         self.login.layer.cornerRadius = 10
         self.usernameTextField.layer.cornerRadius = 10
@@ -35,10 +37,11 @@ extension LoginViewController {
     @IBAction func login(_ sender: UIButton) {
 //        guard let username = self.usernameTextField.text, let password = self.passwordTextField.text else { return  }
 //        self.presenter.login(username: username, password: password)
-//        
+        
         let storyboard = UIStoryboard(name: "Complaint", bundle: nil)
         let controller = storyboard.instantiateViewController(withIdentifier: "Complaint")
         self.present(controller, animated: true, completion: nil)
+    
     }
     
     @IBAction func register(_ sender: UIButton) {
@@ -49,6 +52,13 @@ extension LoginViewController {
 
 // MARK: - LoginProtocol
 extension LoginViewController: LoginProtocol {
+    
+    func success() {
+        let storyboard = UIStoryboard(name: "Complaint", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "Complaint")
+        self.present(controller, animated: true, completion: nil)
+    }
+    
     func startLoading() {
         SVProgressHUD.setDefaultStyle(.custom)
         SVProgressHUD.setForegroundColor(.white)

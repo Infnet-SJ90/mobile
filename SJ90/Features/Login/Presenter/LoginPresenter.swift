@@ -27,6 +27,7 @@ extension LoginPresenter {
         self.view.startLoading()
         self.service.login(username: username, password: password, success: { sucess in
           self.sucessLogin = sucess
+          self.view.success()
           self.view.stopLoading()
         }) { error in
             self.view.stopLoading()

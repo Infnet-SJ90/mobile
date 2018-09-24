@@ -14,7 +14,7 @@ enum ServiceURL {
     
     var value: String {
         switch self {
-            case .login: return "https://"
+            case .login: return "http://localhost:8080/v1/authentication"
             case .account: return "/cidadao"
         }
     }
