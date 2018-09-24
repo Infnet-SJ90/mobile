@@ -218,12 +218,12 @@
                   moduleName = "SJ90"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ronilsonbatista/Documents/mobile/SJ90/Services/Login/LoginService.swift"
-                  timestampString = "559444759.819945"
+                  timestampString = "559447009.307862"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "21"
                   endingLineNumber = "21"
-                  offsetFromSymbolStart = "436">
+                  offsetFromSymbolStart = "548">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -233,12 +233,12 @@
                   moduleName = "SJ90"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ronilsonbatista/Documents/mobile/SJ90/Services/Login/LoginService.swift"
-                  timestampString = "559444759.821876"
+                  timestampString = "559447009.3122571"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "22"
                   endingLineNumber = "22"
-                  offsetFromSymbolStart = "36">
+                  offsetFromSymbolStart = "30">
                </Location>
             </Locations>
          </BreakpointContent>
