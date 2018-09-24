@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TakePhotosViewController" customModule="SJ90" customModuleProvider="target">
+            <connections>
+                <outlet property="flashButton" destination="d9v-gS-Cqn" id="pyZ-ZM-s35"/>
+                <outlet property="frameForCapture" destination="wyJ-pn-Jpc" id="3kb-vS-GvB"/>
+                <outlet property="takePhotoButton" destination="dBo-xk-d70" id="5K8-5r-5FG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wyJ-pn-Jpc" userLabel="Frame For Capture">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBo-xk-d70" customClass="CameraButton" customModule="SJ90" customModuleProvider="target">
+                            <rect key="frame" x="154" y="563" width="66" height="66"/>
+                            <color key="backgroundColor" red="0.89411764709999997" green="0.94509803920000002" blue="0.99607843139999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="66" id="Dw2-yK-skK"/>
+                                <constraint firstAttribute="width" constant="66" id="inU-q9-Zda"/>
+                            </constraints>
+                            <state key="normal">
+                                <color key="titleColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="takePhoto:" destination="-1" eventType="touchUpInside" id="Foi-b4-f4y"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9v-gS-Cqn">
+                            <rect key="frame" x="16" y="36" width="44" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="44" id="Oqt-4k-HBB"/>
+                                <constraint firstAttribute="height" constant="44" id="VzU-Za-zwn"/>
+                            </constraints>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" image="betterflash">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="flashButton:" destination="-1" eventType="touchUpInside" id="xeV-ps-SR5"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="d9v-gS-Cqn" firstAttribute="top" secondItem="wyJ-pn-Jpc" secondAttribute="top" constant="36" id="WHI-hv-x56"/>
+                        <constraint firstItem="d9v-gS-Cqn" firstAttribute="leading" secondItem="wyJ-pn-Jpc" secondAttribute="leading" constant="16" id="Yiw-bN-A7b"/>
+                        <constraint firstItem="dBo-xk-d70" firstAttribute="centerX" secondItem="wyJ-pn-Jpc" secondAttribute="centerX" id="fNi-CL-6lM"/>
+                        <constraint firstAttribute="bottom" secondItem="dBo-xk-d70" secondAttribute="bottom" constant="38" id="mZS-iz-Bk3"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wyJ-pn-Jpc" secondAttribute="trailing" id="7PE-Fq-usk"/>
+                <constraint firstItem="wyJ-pn-Jpc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="-20" id="7SR-Z9-wZX"/>
+                <constraint firstItem="wyJ-pn-Jpc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Y3E-NO-Uuo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="wyJ-pn-Jpc" secondAttribute="bottom" id="yYM-hm-GG3"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="-151.5" y="-29.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="betterflash" width="188" height="224"/>
+    </resources>
+</document>

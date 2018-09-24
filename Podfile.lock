@@ -1,0 +1,38 @@
+PODS:
+  - Alamofire (4.7.3)
+  - Realm (3.9.0):
+    - Realm/Headers (= 3.9.0)
+  - Realm/Headers (3.9.0)
+  - RealmSwift (3.9.0):
+    - Realm (= 3.9.0)
+  - SVProgressHUD (2.2.5)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.4)
+  - RealmSwift
+  - SVProgressHUD (from `https://github.com/SVProgressHUD/SVProgressHUD.git`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Realm
+    - RealmSwift
+
+EXTERNAL SOURCES:
+  SVProgressHUD:
+    :git: https://github.com/SVProgressHUD/SVProgressHUD.git
+
+CHECKOUT OPTIONS:
+  SVProgressHUD:
+    :commit: d860511141f71fa0fb40c3241a0701be06ad7838
+    :git: https://github.com/SVProgressHUD/SVProgressHUD.git
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  Realm: 3d36f208bf3aff8335dc3298742140182bde4edb
+  RealmSwift: aa4d11917bfcfaa3ed51f219102a487ecd895447
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+
+PODFILE CHECKSUM: 0a78c2dd2854db2de8a033caf65de12cc71f0773
+
+COCOAPODS: 1.5.3
