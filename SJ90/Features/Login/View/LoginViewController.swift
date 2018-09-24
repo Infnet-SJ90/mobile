@@ -11,8 +11,8 @@ import SVProgressHUD
 
 class LoginViewController: UIViewController {
     
-    @IBOutlet fileprivate weak var usernameTextField: UITextField!
-    @IBOutlet fileprivate weak var passwordTextField: UITextField!
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet fileprivate weak var login: UIButton!
     fileprivate var presenter: LoginPresenter!
     

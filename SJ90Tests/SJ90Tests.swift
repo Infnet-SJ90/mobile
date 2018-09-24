@@ -11,15 +11,18 @@ import XCTest
 
 class SJ90Tests: XCTestCase {
 
-    var viewControllerUnderTest: RegisterViewController!
+    var rigisterControllerUnderTest: RegisterViewController!
+    var mainViewControllerUnderTest: MainViewController!
     
     override func setUp() {
        
+        self.rigisterControllerUnderTest = RegisterViewController(nibName: "RegisterViewController", bundle: nil)
+        self.rigisterControllerUnderTest.loadView()
+        self.rigisterControllerUnderTest.viewDidLoad()
         
-        self.viewControllerUnderTest = RegisterViewController(nibName: "RegisterViewController", bundle: nil)
-        
-        self.viewControllerUnderTest.loadView()
-        self.viewControllerUnderTest.viewDidLoad()
+        self.mainViewControllerUnderTest = MainViewController(nibName: "MainViewController", bundle: nil)
+        self.mainViewControllerUnderTest.loadView()
+        self.mainViewControllerUnderTest.viewDidLoad()
     }
     
     override func tearDown() {
@@ -27,26 +30,50 @@ class SJ90Tests: XCTestCase {
         super.tearDown()
     }
     
-    func testHasATableView() {
-        XCTAssertNotNil(viewControllerUnderTest.tableView)
+    
+    func registerViewControllerRestHasATableView() {
+        XCTAssertNotNil(rigisterControllerUnderTest.tableView)
     }
     
-    func testTableViewHasDelegate() {
-        XCTAssertNotNil(viewControllerUnderTest.tableView.delegate)
+    func registerViewControllerTestTableViewHasDelegate() {
+        XCTAssertNotNil(rigisterControllerUnderTest.tableView.delegate)
     }
     
-    func testTableViewConfromsToTableViewDelegateProtocol() {
-        XCTAssertTrue(viewControllerUnderTest.conforms(to: UITableViewDelegate.self))
+    func registerViewControllerTestTableViewConfromsToTableViewDelegateProtocol() {
+        XCTAssertTrue(rigisterControllerUnderTest.conforms(to: UITableViewDelegate.self))
     }
     
-    func testTableViewHasDataSource() {
-        XCTAssertNotNil(viewControllerUnderTest.tableView.dataSource)
+    func registerViewControllerTestTableViewHasDataSource() {
+        XCTAssertNotNil(rigisterControllerUnderTest.tableView.dataSource)
     }
     
-    func testTableViewConformsToTableViewDataSourceProtocol() {
-        XCTAssertTrue(viewControllerUnderTest.conforms(to: UITableViewDataSource.self))
-        XCTAssertTrue(viewControllerUnderTest.responds(to: #selector(viewControllerUnderTest.numberOfSections(in:))))
-        XCTAssertTrue(viewControllerUnderTest.responds(to: #selector(viewControllerUnderTest.tableView(_:numberOfRowsInSection:))))
-        XCTAssertTrue(viewControllerUnderTest.responds(to: #selector(viewControllerUnderTest.tableView(_:cellForRowAt:))))
+    func registerViewControllerTestTableViewConformsToTableViewDataSourceProtocol() {
+        XCTAssertTrue(mainViewControllerUnderTest.conforms(to: UITableViewDataSource.self))
+        XCTAssertTrue(mainViewControllerUnderTest.responds(to: #selector(mainViewControllerUnderTest.numberOfSections(in:))))
+        XCTAssertTrue(mainViewControllerUnderTest.responds(to: #selector(mainViewControllerUnderTest.tableView(_:numberOfRowsInSection:))))
+        XCTAssertTrue(mainViewControllerUnderTest.responds(to: #selector(mainViewControllerUnderTest.tableView(_:cellForRowAt:))))
+    }
+    
+    func mainViewControllerRestHasATableView() {
+        XCTAssertNotNil(mainViewControllerUnderTest.tableView)
+    }
+    
+    func mainViewControllerTestTableViewHasDelegate() {
+        XCTAssertNotNil(mainViewControllerUnderTest.tableView.delegate)
+    }
+    
+    func mainViewControllerTestTableViewConfromsToTableViewDelegateProtocol() {
+        XCTAssertTrue(mainViewControllerUnderTest.conforms(to: UITableViewDelegate.self))
+    }
+    
+    func mainViewControllerTestTableViewHasDataSource() {
+        XCTAssertNotNil(mainViewControllerUnderTest.tableView.dataSource)
+    }
+    
+    func mainViewControllerTestTableViewConformsToTableViewDataSourceProtocol() {
+        XCTAssertTrue(mainViewControllerUnderTest.conforms(to: UITableViewDataSource.self))
+        XCTAssertTrue(mainViewControllerUnderTest.responds(to: #selector(mainViewControllerUnderTest.numberOfSections(in:))))
+        XCTAssertTrue(mainViewControllerUnderTest.responds(to: #selector(mainViewControllerUnderTest.tableView(_:numberOfRowsInSection:))))
+        XCTAssertTrue(mainViewControllerUnderTest.responds(to: #selector(mainViewControllerUnderTest.tableView(_:cellForRowAt:))))
     }
 }
